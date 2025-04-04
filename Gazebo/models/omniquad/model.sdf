@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <sdf version="1.9">
-  <model name="ombiquad">
+  <model name="omniquad">
     <link name="base_link">
       <inertial>
         <mass>1</mass>
@@ -14,17 +14,206 @@
         </inertia>
       </inertial>
       <collision name="collision">
+        <pose degrees="true">0 0 0 0 0 0</pose>
         <geometry>
           <box>
             <size>0.3 0.3 0.3</size>
           </box>
         </geometry>
       </collision>
-      <visual name="visual">
+      <visual name="frame_visual">
+        <pose>0 0 0 0 0 0</pose>
         <geometry>
-          <box>
-            <size>0.3 0.3 0.3</size>
-          </box>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/frame_sm.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+      <visual name="frame_bottom_visual">
+        <pose degrees="true">0 0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/frame-bottom.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+
+      <visual name="m1_coupling_arm_up_visual">
+        <pose degrees="true">0.267 0 0.0177 0 0 180</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-up.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="m1_coupling_arm_down_visual">
+        <pose degrees="true">0.267 0 0.0177 0 0 180</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-down.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="m1_arm_visual">
+        <pose degrees="true">0.267 0 0.0177 0 0 180</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+
+      <visual name="m2_coupling_arm_up_visual">
+        <pose degrees="true">-0.267 0 0.0177 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-up.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="m2_coupling_arm_down_visual">
+        <pose degrees="true">-0.267 0 0.0177 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-down.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="m2_arm_visual">
+        <pose degrees="true">-0.267 0 0.0177 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+
+     <visual name="m3_coupling_arm_up_visual">
+        <pose degrees="true">0 0.267 0.0177 0 0 -90</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-up.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="m3_coupling_arm_down_visual">
+        <pose degrees="true">0 0.267 0.0177 0 0 -90</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-down.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="m3_arm_visual">
+        <pose degrees="true">0 0.267 0.0177 0 0 -90</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+
+     <visual name="m4_coupling_arm_up_visual">
+        <pose degrees="true">0 -0.267 0.0177 0 0 90</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-up.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="m4_coupling_arm_down_visual">
+        <pose degrees="true">0 -0.267 0.0177 0 0 90</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-down.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="m4_arm_visual">
+        <pose degrees="true">0 -0.267 0.0177 0 0 90</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
         </geometry>
         <material>
           <ambient>1 0 0</ambient>

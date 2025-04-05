@@ -33,6 +33,11 @@
           <ambient>1 0 0</ambient>
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
       <visual name="frame_bottom_visual">
@@ -47,6 +52,11 @@
           <ambient>1 0 0</ambient>
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
       <!--
@@ -63,6 +73,11 @@
           <ambient>1 0 0</ambient>
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual> -->
 
@@ -78,6 +93,11 @@
           <ambient>1 0 0</ambient>
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
      <visual name="m1_coupling_arm_down_visual">
@@ -92,6 +112,11 @@
           <ambient>1 0 0</ambient>
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
      <visual name="m1_arm_visual">
@@ -106,6 +131,11 @@
           <ambient>1 0 0</ambient>
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
 
@@ -121,6 +151,11 @@
           <ambient>1 0 0</ambient>
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
      <visual name="m2_coupling_arm_down_visual">
@@ -135,6 +170,11 @@
           <ambient>1 0 0</ambient>
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
      <visual name="m2_arm_visual">
@@ -149,6 +189,11 @@
           <ambient>1 0 0</ambient>
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
 
@@ -164,6 +209,11 @@
           <ambient>1 0 0</ambient>
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
      <visual name="m3_coupling_arm_down_visual">
@@ -178,6 +228,11 @@
           <ambient>1 0 0</ambient>
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
      <visual name="m3_arm_visual">
@@ -192,6 +247,11 @@
           <ambient>1 0 0</ambient>
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
 
@@ -207,6 +267,11 @@
           <ambient>1 0 0</ambient>
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
      <visual name="m4_coupling_arm_down_visual">
@@ -221,6 +286,11 @@
           <ambient>1 0 0</ambient>
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
      <visual name="m4_arm_visual">
@@ -235,6 +305,11 @@
           <ambient>1 0 0</ambient>
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual> -->
 
@@ -247,7 +322,7 @@
     </link>
 
     <link name="m1_arm_link">
-      <pose degrees="true">0.267 0 0.0177 0 0 180</pose>
+      <pose degrees="true">0.267 0 0.022 0 0 180</pose>
       <inertial>
         <pose degrees="true">0.125 0 0 0 0 0</pose>
         <mass>0.1</mass>
@@ -260,8 +335,17 @@
           <izz>0.0333</izz>
         </inertia>
       </inertial>
-      <collision name="arm_collision">
-        <!-- <pose degrees="true">0.267 0 0.0177 0 0 180</pose> -->
+      <collision name="arm_up_collision">
+        <pose degrees="true">0 0 -0.0006 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="arm_dn_collision">
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -270,7 +354,7 @@
         </geometry>
       </collision>
       <visual name="coupling_arm_up_visual">
-        <!-- <pose degrees="true">0.267 0 0.0177 0 0 180</pose> -->
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -278,13 +362,18 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
-     <visual name="coupling_arm_down_visual">
-        <!-- <pose degrees="true">0.267 0 0.0177 0 0 180</pose> -->
+      <visual name="coupling_arm_dn_visual">
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -292,13 +381,18 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
-     <visual name="arm_visual">
-        <!-- <pose degrees="true">0.267 0 0.0177 0 0 180</pose> -->
+      <visual name="arm_up_visual">
+        <pose degrees="true">0 0 -0.0006 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -306,9 +400,33 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
-          <specular>0.1 0.1 0.1</specular>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+      <visual name="arm_dn_visual">
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
     </link>
@@ -329,7 +447,7 @@
     </joint>
 
     <link name="m2_arm_link">
-      <pose degrees="true">-0.267 0 0.0177 0 0 0</pose>
+      <pose degrees="true">-0.267 0 0.022 0 0 0</pose>
       <inertial>
         <pose degrees="true">0.125 0 0 0 0 0</pose>
         <mass>0.1</mass>
@@ -342,8 +460,17 @@
           <izz>0.0333</izz>
         </inertia>
       </inertial>
-      <collision name="arm_collision">
-        <!-- <pose degrees="true">-0.267 0 0.0177 0 0 0</pose> -->
+      <collision name="arm_up_collision">
+        <pose degrees="true">0 0 -0.0006 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="arm_dn_collision">
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -352,7 +479,7 @@
         </geometry>
       </collision>
       <visual name="coupling_arm_up_visual">
-        <!-- <pose degrees="true">-0.267 0 0.0177 0 0 0</pose> -->
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -360,13 +487,18 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
-     <visual name="coupling_arm_down_visual">
-        <!-- <pose degrees="true">-0.267 0 0.0177 0 0 0</pose> -->
+      <visual name="coupling_arm_down_visual">
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -374,13 +506,18 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
-     <visual name="arm_visual">
-        <!-- <pose degrees="true">-0.267 0 0.0177 0 0 0</pose> -->
+      <visual name="arm_up_visual">
+        <pose degrees="true">0 0 -0.0006 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -388,9 +525,33 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
-          <specular>0.1 0.1 0.1</specular>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+      <visual name="arm_dn_visual">
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
     </link>
@@ -411,7 +572,7 @@
     </joint>
 
     <link name="m3_arm_link">
-      <pose degrees="true">0 0.267 0.0177 0 0 -90</pose>
+      <pose degrees="true">0 0.267 0.022 0 0 -90</pose>
       <inertial>
         <pose degrees="true">0.125 0 0 0 0 0</pose>
         <mass>0.1</mass>
@@ -424,8 +585,17 @@
           <izz>0.0333</izz>
         </inertia>
       </inertial>
-      <collision name="arm_collision">
-        <!-- <pose degrees="true">0 0.267 0.0177 0 0 -90</pose> -->
+      <collision name="arm_up_collision">
+        <pose degrees="true">0 0 -0.0006 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="arm_dn_collision">
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -434,7 +604,7 @@
         </geometry>
       </collision>
       <visual name="coupling_arm_up_visual">
-        <!-- <pose degrees="true">0 0.267 0.0177 0 0 -90</pose> -->
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -442,13 +612,18 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
-     <visual name="coupling_arm_down_visual">
-        <!-- <pose degrees="true">0 0.267 0.0177 0 0 -90</pose> -->
+      <visual name="coupling_arm_down_visual">
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -456,13 +631,18 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
-     <visual name="arm_visual">
-        <!-- <pose degrees="true">0 0.267 0.0177 0 0 -90</pose> -->
+      <visual name="arm_up_visual">
+        <pose degrees="true">0 0 -0.0006 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -470,9 +650,33 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
-          <specular>0.1 0.1 0.1</specular>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+      <visual name="arm_dn_visual">
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
     </link>
@@ -493,7 +697,7 @@
     </joint>
 
     <link name="m4_arm_link">
-      <pose degrees="true">0 -0.267 0.0177 0 0 90</pose>
+      <pose degrees="true">0 -0.267 0.022 0 0 90</pose>
       <inertial>
         <pose degrees="true">0.125 0 0 0 0 0</pose>
         <mass>0.1</mass>
@@ -506,8 +710,17 @@
           <izz>0.0333</izz>
         </inertia>
       </inertial>
-      <collision name="arm_collision">
-        <!-- <pose degrees="true">0 -0.267 0.0177 0 0 90</pose> -->
+      <collision name="arm_up_collision">
+        <pose degrees="true">0 0 -0.0006 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="arm_dn_collision">
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -516,7 +729,7 @@
         </geometry>
       </collision>
       <visual name="coupling_arm_up_visual">
-        <!-- <pose degrees="true">0 -0.267 0.0177 0 0 90</pose> -->
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -524,13 +737,18 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
-     <visual name="coupling_arm_down_visual">
-        <!-- <pose degrees="true">0 -0.267 0.0177 0 0 90</pose> -->
+      <visual name="coupling_arm_down_visual">
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -538,13 +756,18 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
-     <visual name="arm_visual">
-        <!-- <pose degrees="true">0 -0.267 0.0177 0 0 90</pose> -->
+      <visual name="arm_up_visual">
+        <pose degrees="true">0 0 -0.0006 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -552,9 +775,33 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
-          <specular>0.1 0.1 0.1</specular>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+      <visual name="arm_dn_visual">
+        <pose degrees="true">0 0 -0.0036 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
         </material>
       </visual>
     </link>

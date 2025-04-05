@@ -14,13 +14,89 @@
         </inertia>
       </inertial>
       <collision name="frame_collision">
-        <pose degrees="true">0 0 0 0 0 0</pose>
+        <pose degrees="true">0 0 0.03 0 0 45</pose>
         <geometry>
           <box>
-            <size>0.3 0.3 0.3</size>
+            <size>0.2 0.2 0.1</size>
           </box>
         </geometry>
       </collision>
+      <collision name="leg1_collision">
+        <pose degrees="true">0.091 0 -0.05 0 -15 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.008</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="foot1_collision">
+        <pose degrees="true">0.107 0 -0.11 0 -15 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/landing-gear-tip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <collision name="leg2_collision">
+        <pose degrees="true">-0.091 0 -0.05 0 15 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.008</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="foot2_collision">
+        <pose degrees="true">-0.107 0 -0.11 0 15 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/landing-gear-tip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <collision name="leg3_collision">
+        <pose degrees="true">0 0.091 -0.05 15 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.008</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="foot3_collision">
+        <pose degrees="true">0 0.107 -0.11 15 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/landing-gear-tip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <collision name="leg4_collision">
+        <pose degrees="true">0 -0.091 -0.05 -15 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.008</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="foot4_collision">
+        <pose degrees="true">0 -0.107 -0.11 -15 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/landing-gear-tip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
       <visual name="frame_visual">
         <pose>0 0 0 0 0 0</pose>
         <geometry>
@@ -59,6 +135,163 @@
           </pbr>
         </material>
       </visual>
+
+      <visual name="leg1_visual">
+        <pose degrees="true">0.091 0 -0.05 0 -15 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.008</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+      <visual name="foot1_visual">
+        <pose degrees="true">0.107 0 -0.11 0 -15 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/landing-gear-tip.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1</ambient>
+          <diffuse>0.1 0.1 0.1</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+
+      <visual name="leg2_visual">
+        <pose degrees="true">-0.091 0 -0.05 0 15 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.008</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+      <visual name="foot2_visual">
+        <pose degrees="true">-0.107 0 -0.11 0 15 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/landing-gear-tip.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1</ambient>
+          <diffuse>0.1 0.1 0.1</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+
+      <visual name="leg3_visual">
+        <pose degrees="true">0 0.091 -0.05 15 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.008</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+      <visual name="foot3_visual">
+        <pose degrees="true">0 0.107 -0.11 15 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/landing-gear-tip.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1</ambient>
+          <diffuse>0.1 0.1 0.1</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+
+      <visual name="leg4_visual">
+        <pose degrees="true">0 -0.091 -0.05 -15 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.008</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+      <visual name="foot4_visual">
+        <pose degrees="true">0 -0.107 -0.11 -15 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/landing-gear-tip.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1</ambient>
+          <diffuse>0.1 0.1 0.1</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+                <metalness>0.1</metalness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+
       <!--
         TODO: establish correct pose for battery spacer
         <visual name="battery_spacer_visual">

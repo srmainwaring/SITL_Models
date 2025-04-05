@@ -13,7 +13,7 @@
           <izz>0.333</izz>
         </inertia>
       </inertial>
-      <collision name="collision">
+      <collision name="frame_collision">
         <pose degrees="true">0 0 0 0 0 0</pose>
         <geometry>
           <box>
@@ -49,8 +49,24 @@
           <specular>0.1 0.1 0.1</specular>
         </material>
       </visual>
+      <!--
+        TODO: establish correct pose for battery spacer
+        <visual name="battery_spacer_visual">
+        <pose degrees="true">0 0 -0.06 0 0 45</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/battery-spacer.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual> -->
 
-      <visual name="m1_coupling_arm_up_visual">
+      <!-- <visual name="m1_coupling_arm_up_visual">
         <pose degrees="true">0.267 0 0.0177 0 0 180</pose>
         <geometry>
           <mesh>
@@ -220,7 +236,7 @@
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1</specular>
         </material>
-      </visual>
+      </visual> -->
 
       <!-- senors -->
       <sensor name="imu_sensor" type="imu">
@@ -229,5 +245,334 @@
         <update_rate>1000.0</update_rate>
       </sensor>
     </link>
+
+    <link name="m1_arm_link">
+      <pose degrees="true">0.267 0 0.0177 0 0 180</pose>
+      <inertial>
+        <pose degrees="true">0.125 0 0 0 0 0</pose>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.0333</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0333</iyy>
+          <iyz>0</iyz>
+          <izz>0.0333</izz>
+        </inertia>
+      </inertial>
+      <collision name="arm_collision">
+        <!-- <pose degrees="true">0.267 0 0.0177 0 0 180</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="coupling_arm_up_visual">
+        <!-- <pose degrees="true">0.267 0 0.0177 0 0 180</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-up.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="coupling_arm_down_visual">
+        <!-- <pose degrees="true">0.267 0 0.0177 0 0 180</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-down.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="arm_visual">
+        <!-- <pose degrees="true">0.267 0 0.0177 0 0 180</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="m1_arm_joint" type="revolute">
+      <pose degrees="true">0.1675 0 0 0 0 0</pose>
+      <child>m1_arm_link</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="m2_arm_link">
+      <pose degrees="true">-0.267 0 0.0177 0 0 0</pose>
+      <inertial>
+        <pose degrees="true">0.125 0 0 0 0 0</pose>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.0333</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0333</iyy>
+          <iyz>0</iyz>
+          <izz>0.0333</izz>
+        </inertia>
+      </inertial>
+      <collision name="arm_collision">
+        <!-- <pose degrees="true">-0.267 0 0.0177 0 0 0</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="coupling_arm_up_visual">
+        <!-- <pose degrees="true">-0.267 0 0.0177 0 0 0</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-up.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="coupling_arm_down_visual">
+        <!-- <pose degrees="true">-0.267 0 0.0177 0 0 0</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-down.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="arm_visual">
+        <!-- <pose degrees="true">-0.267 0 0.0177 0 0 0</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="m2_arm_joint" type="revolute">
+      <pose degrees="true">0.1675 0 0 0 0 0</pose>
+      <child>m2_arm_link</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="m3_arm_link">
+      <pose degrees="true">0 0.267 0.0177 0 0 -90</pose>
+      <inertial>
+        <pose degrees="true">0.125 0 0 0 0 0</pose>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.0333</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0333</iyy>
+          <iyz>0</iyz>
+          <izz>0.0333</izz>
+        </inertia>
+      </inertial>
+      <collision name="arm_collision">
+        <!-- <pose degrees="true">0 0.267 0.0177 0 0 -90</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="coupling_arm_up_visual">
+        <!-- <pose degrees="true">0 0.267 0.0177 0 0 -90</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-up.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="coupling_arm_down_visual">
+        <!-- <pose degrees="true">0 0.267 0.0177 0 0 -90</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-down.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="arm_visual">
+        <!-- <pose degrees="true">0 0.267 0.0177 0 0 -90</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="m3_arm_joint" type="revolute">
+      <pose degrees="true">0.1675 0 0 0 0 0</pose>
+      <child>m3_arm_link</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="m4_arm_link">
+      <pose degrees="true">0 -0.267 0.0177 0 0 90</pose>
+      <inertial>
+        <pose degrees="true">0.125 0 0 0 0 0</pose>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.0333</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0333</iyy>
+          <iyz>0</iyz>
+          <izz>0.0333</izz>
+        </inertia>
+      </inertial>
+      <collision name="arm_collision">
+        <!-- <pose degrees="true">0 -0.267 0.0177 0 0 90</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="coupling_arm_up_visual">
+        <!-- <pose degrees="true">0 -0.267 0.0177 0 0 90</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-up.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="coupling_arm_down_visual">
+        <!-- <pose degrees="true">0 -0.267 0.0177 0 0 90</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/coupling-arm-down.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+     <visual name="arm_visual">
+        <!-- <pose degrees="true">0 -0.267 0.0177 0 0 90</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://omniquad/meshes/arm.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="m4_arm_joint" type="revolute">
+      <pose degrees="true">0.1675 0 0 0 0 0</pose>
+      <child>m4_arm_link</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
   </model>
 </sdf>

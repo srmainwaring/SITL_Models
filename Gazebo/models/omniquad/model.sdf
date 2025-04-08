@@ -1399,7 +1399,7 @@
       <!-- Sensors -->
       <imuName>base_link::imu_sensor</imuName>
 
-      <!-- Motors pwm[0], ..., pwm[3] -->
+      <!-- Motors: SERVO1, ..., SERVO4 -->
       <control channel="0">
         <jointName>motor1_joint</jointName>
         <useForce>1</useForce>
@@ -1442,6 +1442,51 @@
         <servo_max>2000</servo_max>
         <type>COMMAND</type>
         <cmd_topic>/motor4_joint/cmd_vel</cmd_topic>
+      </control>
+
+      <!-- Arms: SERVO5, SERVO6 -->
+      <control channel="4">
+        <jointName>arm1_joint</jointName>
+        <useForce>1</useForce>
+        <multiplier>6.28318531</multiplier>
+        <offset>-0.5</offset>
+        <servo_min>1000</servo_min>
+        <servo_max>2000</servo_max>
+        <type>COMMAND</type>
+        <cmd_topic>/arm1_joint/cmd_pos</cmd_topic>
+      </control>
+
+      <control channel="4">
+        <jointName>arm2_joint</jointName>
+        <useForce>1</useForce>
+        <multiplier>6.28318531</multiplier>
+        <offset>-0.5</offset>
+        <servo_min>1000</servo_min>
+        <servo_max>2000</servo_max>
+        <type>COMMAND</type>
+        <cmd_topic>/arm2_joint/cmd_pos</cmd_topic>
+      </control>
+
+      <control channel="5">
+        <jointName>arm3_joint</jointName>
+        <useForce>1</useForce>
+        <multiplier>6.28318531</multiplier>
+        <offset>-0.5</offset>
+        <servo_min>1000</servo_min>
+        <servo_max>2000</servo_max>
+        <type>COMMAND</type>
+        <cmd_topic>/arm3_joint/cmd_pos</cmd_topic>
+      </control>
+
+      <control channel="5">
+        <jointName>arm4_joint</jointName>
+        <useForce>1</useForce>
+        <multiplier>6.28318531</multiplier>
+        <offset>-0.5</offset>
+        <servo_min>1000</servo_min>
+        <servo_max>2000</servo_max>
+        <type>COMMAND</type>
+        <cmd_topic>/arm4_joint/cmd_pos</cmd_topic>
       </control>
 
     </plugin>

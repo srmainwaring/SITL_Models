@@ -1444,7 +1444,7 @@
         <cmd_topic>/motor4_joint/cmd_vel</cmd_topic>
       </control>
 
-      <!-- Arms: SERVO5, SERVO6 -->
+      <!-- Arms: SERVO5, SERVO8 -->
       <control channel="4">
         <jointName>arm1_joint</jointName>
         <useForce>1</useForce>
@@ -1456,7 +1456,7 @@
         <cmd_topic>/arm1_joint/cmd_pos</cmd_topic>
       </control>
 
-      <control channel="4">
+      <control channel="5">
         <jointName>arm2_joint</jointName>
         <useForce>1</useForce>
         <multiplier>6.28318531</multiplier>
@@ -1467,7 +1467,7 @@
         <cmd_topic>/arm2_joint/cmd_pos</cmd_topic>
       </control>
 
-      <control channel="5">
+      <control channel="6">
         <jointName>arm3_joint</jointName>
         <useForce>1</useForce>
         <multiplier>6.28318531</multiplier>
@@ -1478,7 +1478,7 @@
         <cmd_topic>/arm3_joint/cmd_pos</cmd_topic>
       </control>
 
-      <control channel="5">
+      <control channel="7">
         <jointName>arm4_joint</jointName>
         <useForce>1</useForce>
         <multiplier>6.28318531</multiplier>

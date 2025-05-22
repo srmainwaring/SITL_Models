@@ -127,24 +127,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
         </material>
       </visual> -->
 
-      <visual name="visual_swash_plate_down_part">
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
-            <submesh>
-              <name>swash_plate_down_part</name>
-            </submesh>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2</ambient>
-          <diffuse>0.2 0.2 0.2</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual>
-
-      <visual name="visual_swash_plate_up_part">
+      <!-- <visual name="visual_swash_plate_up_part">
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -159,9 +142,26 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
           <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
-      </visual>
-      
-      <visual name="visual_swash_plate_bearing">
+      </visual> -->
+
+      <!-- <visual name="visual_swash_plate_down_part">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>swash_plate_down_part</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual> -->
+
+      <!-- <visual name="visual_swash_plate_bearing">
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -176,7 +176,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
           <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
-      </visual>
+      </visual> -->
 
       <!-- <visual name="visual_lever_1">
         <geometry>
@@ -246,7 +246,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
         </material>
       </visual>
 
-      <visual name="visual_blade_coupling_1">
+      <!-- <visual name="visual_blade_coupling_1">
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -261,9 +261,9 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
           <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
-      </visual>
+      </visual> -->
       
-      <visual name="visual_blade_coupling_2">
+      <!-- <visual name="visual_blade_coupling_2">
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -278,12 +278,12 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
           <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
-      </visual>
+      </visual> -->
     </link>
 
     <link name="blade_grip_1_link">
       <inertial>
-        <pose>0 0 0 0 0 0</pose>
+        <pose degrees="true">-0.031 0 0 0 0 0</pose>
         <mass>0.10</mass>
         <inertia>
           <ixx>0.0001</ixx>
@@ -323,7 +323,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
       </visual>
     </link>
     <joint name="blade_grip_1_joint" type="revolute">
-      <pose degrees="true">0.031 0 0 0 0 0</pose>
+      <pose degrees="true">-0.031 0 0 0 0 0</pose>
       <parent>main_link</parent>
       <child>blade_grip_1_link</child>
       <axis>
@@ -340,7 +340,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
 
     <link name="blade_grip_2_link">
       <inertial>
-        <pose>0 0 0 0 0 0</pose>
+        <pose degrees="true">0.031 0 0 0 0 180</pose>
         <mass>0.10</mass>
         <inertia>
           <ixx>0.0001</ixx>
@@ -380,7 +380,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
       </visual>
     </link>
     <joint name="blade_grip_2_joint" type="revolute">
-      <pose degrees="true">-0.031 0 0 0 0 180</pose>
+      <pose degrees="true">0.031 0 0 0 0 180</pose>
       <parent>main_link</parent>
       <child>blade_grip_2_link</child>
       <axis>
@@ -397,7 +397,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
 
     <link name="lever_1_link">
       <inertial>
-        <pose>0 0 0 0 0 0</pose>
+        <pose degrees="true">-0.00949 0.012 -0.036 0 0 0</pose>
         <mass>0.10</mass>
         <inertia>
           <ixx>0.0001</ixx>
@@ -454,7 +454,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
 
     <link name="lever_2_link">
       <inertial>
-        <pose>0 0 0 0 0 0</pose>
+        <pose degrees="true">0.00949 -0.012 -0.036 0 0 180</pose>
         <mass>0.10</mass>
         <inertia>
           <ixx>0.0001</ixx>
@@ -508,6 +508,262 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
         </dynamics>
       </axis>
     </joint>
+
+    <link name="swash_plate_bearing_link">
+      <inertial>
+        <pose degrees="true">0 0 -0.0696 0 0 0</pose>
+        <mass>0.10</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>swash_plate_bearing</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>swash_plate_bearing</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="swash_plate_bearing_joint" type="prismatic">
+      <pose degrees="true">0 0 -0.0696 0 0 0</pose>
+      <parent>main_link</parent>
+      <child>swash_plate_bearing_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.2</lower>
+          <upper>0.2</upper>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="swash_plate_up_part_link">
+      <inertial>
+        <pose degrees="true">0 0 -0.0696 0 0 0</pose>
+        <mass>0.10</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>swash_plate_up_part</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>swash_plate_up_part</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="swash_plate_up_part_joint" type="ball">
+      <pose degrees="true">0 0 -0.0696 0 0 0</pose>
+      <parent>swash_plate_bearing_link</parent>
+      <child>swash_plate_up_part_link</child>
+    </joint>
+
+    <link name="swash_plate_down_part_link">
+      <inertial>
+        <pose degrees="true">0 0 -0.076 0 0 0</pose>
+        <mass>0.10</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>swash_plate_down_part</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>swash_plate_down_part</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="swash_plate_down_part_joint" type="revolute">
+      <pose degrees="true">0 0 -0.076 0 0 0</pose>
+      <parent>swash_plate_up_part_link</parent>
+      <child>swash_plate_down_part_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.0e16</lower>
+          <upper>1.0e16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="blade_coupling_1_link">
+      <inertial>
+        <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
+        <mass>0.10</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>blade_coupling_1</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>blade_coupling_1</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="blade_coupling_1_joint" type="ball">
+      <pose degrees="true">0 0.0349 0.000880 0 0 0</pose>
+      <parent>blade_grip_1_link</parent>
+      <child>blade_coupling_1_link</child>
+    </joint>
+
+    <link name="blade_coupling_2_link">
+      <inertial>
+        <pose degrees="true">0 -0.02875 -0.03356 10.3 0 0</pose>
+        <mass>0.10</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>blade_coupling_2</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>blade_coupling_2</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="blade_coupling_2_joint" type="ball">
+      <pose degrees="true">0 -0.0349 0.000880 0 0 0</pose>
+      <parent>blade_grip_2_link</parent>
+      <child>blade_coupling_2_link</child>
+    </joint>
+
 
     <!-- plugins -->
     <plugin name="gz::sim::systems::JointStatePublisher"
@@ -566,5 +822,18 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
       <cmd_min>-2.5</cmd_min>
     </plugin>
 
-  </model>
+    <!-- <plugin name="gz::sim::systems::JointPositionController"
+      filename="gz-sim-joint-position-controller-system">
+      <joint_name>swash_plate_bearing_joint</joint_name>
+      <topic>/model/rotor_head/joint/swash_plate_bearing_joint/0/cmd_pos</topic>
+      <p_gain>0.3</p_gain>
+      <i_gain>0</i_gain>
+      <d_gain>0</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>2.5</cmd_max>
+      <cmd_min>-2.5</cmd_min>
+      </plugin> -->
+
+</model>
 </sdf>

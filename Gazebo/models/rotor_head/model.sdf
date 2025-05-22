@@ -1,0 +1,570 @@
+<?xml version="1.0"?>
+<!--
+Blender > Export > Collada > Forward axis: +Z, Up axis: +X
+-->
+<sdf version="1.9">
+  <model name="rotor_head">
+    <!-- base included for testing -->
+    <link name="base_link">
+      <pose degrees="true">0 0 -0.2 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>10</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="main_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>main_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="main_link">
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.10</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="visual_main_body">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>main_body</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+
+      <!-- <visual name="visual_blade_grip_1">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>blade_grip_1</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual> -->
+
+      <!-- <visual name="visual_blade_grip_2">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>blade_grip_2</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual> -->
+
+      <visual name="visual_swash_plate_down_part">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>swash_plate_down_part</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+
+      <visual name="visual_swash_plate_up_part">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>swash_plate_up_part</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="visual_swash_plate_bearing">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>swash_plate_bearing</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+
+      <!-- <visual name="visual_lever_1">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>lever_1</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual> -->
+
+      <!-- <visual name="visual_lever_2">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>lever_2</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual> -->
+
+      <visual name="visual_lever_coupling_1">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>lever_coupling_1</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="visual_lever_coupling_2">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>lever_coupling_2</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+
+      <visual name="visual_blade_coupling_1">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>blade_coupling_1</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="visual_blade_coupling_2">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>blade_coupling_2</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+
+    <link name="blade_grip_1_link">
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.10</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>blade_grip_1</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>blade_grip_1</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="blade_grip_1_joint" type="revolute">
+      <pose degrees="true">0.031 0 0 0 0 0</pose>
+      <parent>main_link</parent>
+      <child>blade_grip_1_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.785398</lower>
+          <upper>0.785398</upper>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="blade_grip_2_link">
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.10</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>blade_grip_2</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>blade_grip_2</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="blade_grip_2_joint" type="revolute">
+      <pose degrees="true">-0.031 0 0 0 0 180</pose>
+      <parent>main_link</parent>
+      <child>blade_grip_2_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.785398</lower>
+          <upper>0.785398</upper>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="lever_1_link">
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.10</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>lever_1</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>lever_1</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="lever_1_joint" type="revolute">
+      <pose degrees="true">-0.00949 0.012 -0.036 0 0 0</pose>
+      <parent>main_link</parent>
+      <child>lever_1_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.785398</lower>
+          <upper>0.785398</upper>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="lever_2_link">
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.10</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>lever_2</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_v2.dae</uri>
+            <submesh>
+              <name>lever_2</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="lever_2_joint" type="revolute">
+      <pose degrees="true">0.00949 -0.012 -0.036 0 0 180</pose>
+      <parent>main_link</parent>
+      <child>lever_2_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.785398</lower>
+          <upper>0.785398</upper>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <!-- plugins -->
+    <plugin name="gz::sim::systems::JointStatePublisher"
+        filename="gz-sim-joint-state-publisher-system">
+    </plugin>
+
+    <plugin name="gz::sim::systems::JointPositionController"
+        filename="gz-sim-joint-position-controller-system">
+      <joint_name>blade_grip_1_joint</joint_name>
+      <topic>/model/rotor_head/joint/blade_grip_1_joint/0/cmd_pos</topic>
+      <p_gain>0.3</p_gain>
+      <i_gain>0</i_gain>
+      <d_gain>0</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>2.5</cmd_max>
+      <cmd_min>-2.5</cmd_min>
+    </plugin>
+
+    <plugin name="gz::sim::systems::JointPositionController"
+        filename="gz-sim-joint-position-controller-system">
+      <joint_name>blade_grip_2_joint</joint_name>
+      <topic>/model/rotor_head/joint/blade_grip_2_joint/0/cmd_pos</topic>
+      <p_gain>0.3</p_gain>
+      <i_gain>0</i_gain>
+      <d_gain>0</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>2.5</cmd_max>
+      <cmd_min>-2.5</cmd_min>
+    </plugin>
+
+    <plugin name="gz::sim::systems::JointPositionController"
+        filename="gz-sim-joint-position-controller-system">
+      <joint_name>lever_1_joint</joint_name>
+      <topic>/model/rotor_head/joint/lever_1_joint/0/cmd_pos</topic>
+      <p_gain>0.3</p_gain>
+      <i_gain>0</i_gain>
+      <d_gain>0</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>2.5</cmd_max>
+      <cmd_min>-2.5</cmd_min>
+    </plugin>
+
+    <plugin name="gz::sim::systems::JointPositionController"
+        filename="gz-sim-joint-position-controller-system">
+      <joint_name>lever_2_joint</joint_name>
+      <topic>/model/rotor_head/joint/lever_2_joint/0/cmd_pos</topic>
+      <p_gain>0.3</p_gain>
+      <i_gain>0</i_gain>
+      <d_gain>0</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>2.5</cmd_max>
+      <cmd_min>-2.5</cmd_min>
+    </plugin>
+
+  </model>
+</sdf>

@@ -13,6 +13,10 @@ lever couplings
 1. [0.40 mm  -68.00 mm  22.52 mm]
 2. [-0.40 mm  -68.00 mm  -22.52 mm]
 
+
+Closed kinematic chains in gz-sim
+https://github.com/oKermorgant/gz_attach_links
+
 -->
 <sdf version="1.9">
   <model name="rotor_head">
@@ -23,12 +27,12 @@ lever couplings
         <pose>0 0 0 0 0 0</pose>
         <mass>10</mass>
         <inertia>
-          <ixx>0.01</ixx>
+          <ixx>0.004166667</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.01</iyy>
+          <iyy>0.004166667</iyy>
           <iyz>0</iyz>
-          <izz>0.01</izz>
+          <izz>0.004166667</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -61,32 +65,24 @@ lever couplings
           <upper>0</upper>
         </limit>
         <dynamics>
-          <damping>0.1</damping>
+          <damping>0.01</damping>
         </dynamics>
       </axis>
     </joint>
 
     <link name="main_link">
       <inertial>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 -0.1 0 0 0</pose>
         <mass>0.10</mass>
         <inertia>
-          <ixx>0.0001</ixx>
+          <ixx>0.000444167</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.0001</iyy>
+          <iyy>0.000444167</iyy>
           <iyz>0</iyz>
-          <izz>0.0001</izz>
+          <izz>6.66667E-06</izz>
         </inertia>
       </inertial>
-      <!-- <collision name="collision">
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
-          </mesh>
-        </geometry>
-      </collision> -->
       <collision name="collision">
         <pose>0 0 -0.1 0 0 0</pose>
         <geometry>
@@ -95,7 +91,6 @@ lever couplings
           </box>
         </geometry>
       </collision>
-
       <visual name="visual_main_body">
         <geometry>
           <mesh>
@@ -303,27 +298,20 @@ lever couplings
 
     <link name="blade_grip_1_link">
       <inertial>
-        <pose degrees="true">-0.031 0 0 0 0 0</pose>
+        <pose degrees="true">-0.06 0 0 0 0 0</pose>
         <mass>0.10</mass>
         <inertia>
-          <ixx>0.0001</ixx>
+          <ixx>1.12667E-05</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.0001</iyy>
+          <iyy>8.89667E-05</iyy>
           <iyz>0</iyz>
-          <izz>0.0001</izz>
+          <izz>8.89667E-05</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0.06 0 0 0 0 0</pose>
+        <pose degrees="true">-0.06 0 0 0 0 0</pose>
         <geometry>
-          <!-- <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
-            <submesh>
-              <name>blade_grip_1</name>
-            </submesh>
-          </mesh> -->
           <box>
             <size>0.1 0.026 0.026</size>
           </box>
@@ -353,38 +341,31 @@ lever couplings
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>-0.785398</lower>
-          <upper>0.785398</upper>
+          <lower>-1.5</lower>
+          <upper>1.5</upper>
         </limit>
         <dynamics>
-          <damping>0.1</damping>
+          <damping>0.01</damping>
         </dynamics>
       </axis>
     </joint>
 
     <link name="blade_grip_2_link">
       <inertial>
-        <pose degrees="true">0.031 0 0 0 0 180</pose>
+        <pose degrees="true">0.06 0 0 0 0 180</pose>
         <mass>0.10</mass>
         <inertia>
-          <ixx>0.0001</ixx>
+          <ixx>1.12667E-05</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.0001</iyy>
+          <iyy>8.89667E-05</iyy>
           <iyz>0</iyz>
-          <izz>0.0001</izz>
+          <izz>8.89667E-05</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">-0.06 0 0 0 0 0</pose>
+        <pose degrees="true">0.06 0 0 0 0 0</pose>
         <geometry>
-          <!-- <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
-            <submesh>
-              <name>blade_grip_2</name>
-            </submesh>
-          </mesh> -->
           <box>
             <size>0.1 0.026 0.026</size>
           </box>
@@ -414,39 +395,31 @@ lever couplings
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>-0.785398</lower>
-          <upper>0.785398</upper>
+          <lower>-1.5</lower>
+          <upper>1.5</upper>
         </limit>
         <dynamics>
-          <damping>0.1</damping>
+          <damping>0.01</damping>
         </dynamics>
       </axis>
     </joint>
 
     <link name="lever_1_link">
       <inertial>
-        <pose degrees="true">0.007 0.012 -0.036 0 0 0</pose>
-        <mass>0.10</mass>
+        <pose degrees="true">0.006 0.012 -0.036 0 0 0</pose>
+        <mass>0.010</mass>
         <inertia>
-          <ixx>0.0001</ixx>
+          <ixx>1.84167E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.0001</iyy>
+          <iyy>1.64167E-06</iyy>
           <iyz>0</iyz>
-          <izz>0.0001</izz>
+          <izz>1.62417E-06</izz>
         </inertia>
       </inertial>
-      <!-- [12.00 mm  -36.00 mm  -9.49 mm] -->
       <collision name="collision">
-        <pose degrees="true">0.007 0.012 -0.036 0 0 0</pose>
+        <pose degrees="true">0.006 0.012 -0.036 0 0 0</pose>
         <geometry>
-          <!-- <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
-            <submesh>
-              <name>lever_1</name>
-            </submesh>
-          </mesh> -->
           <box>
             <size>0.043 0.01 0.011</size>
           </box>
@@ -476,38 +449,31 @@ lever couplings
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-0.785398</lower>
-          <upper>0.785398</upper>
+          <lower>-1.5</lower>
+          <upper>1.5</upper>
         </limit>
         <dynamics>
-          <damping>0.1</damping>
+          <damping>0.01</damping>
         </dynamics>
       </axis>
     </joint>
 
     <link name="lever_2_link">
       <inertial>
-        <pose degrees="true">-0.007 -0.012 -0.036 0 0 180</pose>
-        <mass>0.10</mass>
+        <pose degrees="true">-0.006 -0.012 -0.036 0 0 180</pose>
+        <mass>0.010</mass>
         <inertia>
-          <ixx>0.0001</ixx>
+          <ixx>1.84167E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.0001</iyy>
+          <iyy>1.64167E-06</iyy>
           <iyz>0</iyz>
-          <izz>0.0001</izz>
+          <izz>1.62417E-06</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">-0.007 -0.012 -0.036 0 0 180</pose>
+        <pose degrees="true">-0.006 -0.012 -0.036 0 0 180</pose>
         <geometry>
-          <!-- <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
-            <submesh>
-              <name>lever_2</name>
-            </submesh>
-          </mesh> -->
           <box>
             <size>0.043 0.01 0.011</size>
           </box>
@@ -537,11 +503,11 @@ lever couplings
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-0.785398</lower>
-          <upper>0.785398</upper>
+          <lower>-1.5</lower>
+          <upper>1.5</upper>
         </limit>
         <dynamics>
-          <damping>0.1</damping>
+          <damping>0.01</damping>
         </dynamics>
       </axis>
     </joint>
@@ -549,26 +515,23 @@ lever couplings
     <link name="swash_plate_bearing_link">
       <inertial>
         <pose degrees="true">0 0 -0.0696 0 0 0</pose>
-        <mass>0.10</mass>
+        <mass>0.01</mass>
         <inertia>
-          <ixx>0.0001</ixx>
+          <ixx>2.85833E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.0001</iyy>
+          <iyy>2.85833E-07</iyy>
           <iyz>0</iyz>
-          <izz>0.0001</izz>
+          <izz>0.000000405</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0 0 0 0 0</pose>
+        <pose degrees="true">0 0 -0.0696 0 0 0</pose>
         <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
-            <submesh>
-              <name>swash_plate_bearing</name>
-            </submesh>
-          </mesh>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.009</radius>
+          </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
@@ -595,38 +558,84 @@ lever couplings
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-          <lower>-0.2</lower>
-          <upper>0.2</upper>
+          <lower>-0.02</lower>
+          <upper>0.02</upper>
         </limit>
         <dynamics>
-          <damping>0.1</damping>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="swash_plate_up_part_ball_link">
+      <pose degrees="true">0 0 -0.0696 0 0 0</pose>
+      <inertial>
+        <mass>0.002</mass>
+        <inertia>
+          <ixx>7.20000E-09</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>7.20000E-09</iyy>
+          <iyz>0</iyz>
+          <izz>7.20000E-09</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.01</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.01</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="swash_plate_up_part_ball_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>swash_plate_bearing_link</parent>
+      <child>swash_plate_up_part_ball_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.3</lower>
+          <upper>0.3</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
         </dynamics>
       </axis>
     </joint>
 
     <link name="swash_plate_up_part_link">
       <inertial>
-        <pose degrees="true">0 0 -0.0696 0 0 0</pose>
-        <mass>0.10</mass>
+        <pose degrees="true">0 0 -0.073 0 0 0</pose>
+        <mass>0.03</mass>
         <inertia>
-          <ixx>0.0001</ixx>
+          <ixx>0.00000607</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.0001</iyy>
+          <iyy>0.00000607</iyy>
           <iyz>0</iyz>
-          <izz>0.0001</izz>
+          <izz>0.00001014</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0 0 0 0 0</pose>
+        <pose degrees="true">0 0 -0.073 0 0 0</pose>
         <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
-            <submesh>
-              <name>swash_plate_up_part</name>
-            </submesh>
-          </mesh>
+          <cylinder>
+            <length>0.02</length>
+            <radius>0.026</radius>
+          </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
@@ -646,35 +655,42 @@ lever couplings
         </material>
       </visual>
     </link>
-    <joint name="swash_plate_up_part_joint" type="ball">
+    <joint name="swash_plate_up_part_joint" type="revolute">
       <pose degrees="true">0 0 -0.0696 0 0 0</pose>
-      <parent>swash_plate_bearing_link</parent>
+      <parent>swash_plate_up_part_ball_link</parent>
       <child>swash_plate_up_part_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.3</lower>
+          <upper>0.3</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <link name="swash_plate_down_part_link">
       <inertial>
         <pose degrees="true">0 0 -0.076 0 0 0</pose>
-        <mass>0.10</mass>
+        <mass>0.03</mass>
         <inertia>
-          <ixx>0.0001</ixx>
+          <ixx>5.7175E-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.0001</iyy>
+          <iyy>5.7175E-06</iyy>
           <iyz>0</iyz>
-          <izz>0.0001</izz>
+          <izz>0.000010935</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0 0 0 0 0</pose>
+        <pose degrees="true">0 0 -0.076 0 0 0</pose>
         <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
-            <submesh>
-              <name>swash_plate_down_part</name>
-            </submesh>
-          </mesh>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.027</radius>
+          </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
@@ -705,7 +721,56 @@ lever couplings
           <upper>1.0e16</upper>
         </limit>
         <dynamics>
-          <damping>0.1</damping>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="blade_coupling_ball_1_link">
+      <pose degrees="true">0 0.0349 0.000880 0 0 0</pose>
+      <inertial>
+        <mass>0.002</mass>
+        <inertia>
+          <ixx>7.20000E-09</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>7.20000E-09</iyy>
+          <iyz>0</iyz>
+          <izz>7.20000E-09</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="blade_coupling_ball_1_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>blade_grip_1_link</parent>
+      <child>blade_coupling_ball_1_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
         </dynamics>
       </axis>
     </joint>
@@ -713,26 +778,23 @@ lever couplings
     <link name="blade_coupling_1_link">
       <inertial>
         <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
-        <mass>0.10</mass>
+        <mass>0.010</mass>
         <inertia>
-          <ixx>0.0001</ixx>
+          <ixx>2.2575E-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.0001</iyy>
+          <iyy>2.2575E-06</iyy>
           <iyz>0</iyz>
-          <izz>0.0001</izz>
+          <izz>0.00000018</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0 0 0 0 0</pose>
+        <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
         <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
-            <submesh>
-              <name>blade_coupling_1</name>
-            </submesh>
-          </mesh>
+          <cylinder>
+            <length>0.051</length>
+            <radius>0.006</radius>
+          </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
@@ -752,35 +814,91 @@ lever couplings
         </material>
       </visual>
     </link>
-    <joint name="blade_coupling_1_joint" type="ball">
+    <joint name="blade_coupling_1_joint" type="revolute">
       <pose degrees="true">0 0.0349 0.000880 0 0 0</pose>
-      <parent>blade_grip_1_link</parent>
+      <parent>blade_coupling_ball_1_link</parent>
       <child>blade_coupling_1_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="blade_coupling_ball_2_link">
+      <pose degrees="true">0 -0.0349 0.000880 0 0 0</pose>
+      <inertial>
+        <mass>0.002</mass>
+        <inertia>
+          <ixx>7.20000E-09</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>7.20000E-09</iyy>
+          <iyz>0</iyz>
+          <izz>7.20000E-09</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="blade_coupling_ball_2_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>blade_grip_2_link</parent>
+      <child>blade_coupling_ball_2_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <link name="blade_coupling_2_link">
       <inertial>
         <pose degrees="true">0 -0.02875 -0.03356 10.3 0 0</pose>
-        <mass>0.10</mass>
+        <mass>0.010</mass>
         <inertia>
-          <ixx>0.0001</ixx>
+          <ixx>2.2575E-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.0001</iyy>
+          <iyy>2.2575E-06</iyy>
           <iyz>0</iyz>
-          <izz>0.0001</izz>
+          <izz>0.00000018</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0 0 0 0 0</pose>
+        <pose degrees="true">0 -0.02875 -0.03356 10.3 0 0</pose>
         <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
-            <submesh>
-              <name>blade_coupling_2</name>
-            </submesh>
-          </mesh>
+          <cylinder>
+            <length>0.051</length>
+            <radius>0.006</radius>
+          </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
@@ -800,23 +918,34 @@ lever couplings
         </material>
       </visual>
     </link>
-    <joint name="blade_coupling_2_joint" type="ball">
+    <joint name="blade_coupling_2_joint" type="revolute">
       <pose degrees="true">0 -0.0349 0.000880 0 0 0</pose>
-      <parent>blade_grip_2_link</parent>
+      <parent>blade_coupling_ball_2_link</parent>
       <child>blade_coupling_2_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+        </dynamics>
+      </axis>
     </joint>
 
+    <!--
     <link name="lever_coupling_1_link">
       <inertial>
         <pose degrees="true">0.02251 0 -0.054 0 0 0</pose>
-        <mass>0.10</mass>
+        <mass>0.010</mass>
         <inertia>
-          <ixx>0.0001</ixx>
+          <ixx>0.000001</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.0001</iyy>
+          <iyy>0.000001</iyy>
           <iyz>0</iyz>
-          <izz>0.0001</izz>
+          <izz>0.000001</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -848,23 +977,33 @@ lever couplings
         </material>
       </visual>
     </link>
-    <joint name="lever_coupling_1_joint" type="ball">
+    <joint name="lever_coupling_1_joint" type="revolute">
       <pose degrees="true">0.02251 0 -0.036 0 0 0</pose>
       <parent>lever_1_link</parent>
       <child>lever_coupling_1_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <link name="lever_coupling_2_link">
       <inertial>
         <pose degrees="true">-0.02251 0 -0.054 0 0 0</pose>
-        <mass>0.10</mass>
+        <mass>0.010</mass>
         <inertia>
-          <ixx>0.0001</ixx>
+          <ixx>0.000001</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.0001</iyy>
+          <iyy>0.000001</iyy>
           <iyz>0</iyz>
-          <izz>0.0001</izz>
+          <izz>0.000001</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -896,11 +1035,22 @@ lever couplings
         </material>
       </visual>
     </link>
-    <joint name="lever_coupling_2_joint" type="ball">
+    <joint name="lever_coupling_2_joint" type="revolute">
       <pose degrees="true">-0.02251 0 -0.036 0 0 0</pose>
       <parent>lever_2_link</parent>
       <child>lever_coupling_2_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
+    -->
 
     <!-- plugins -->
     <plugin name="gz::sim::systems::JointStatePublisher"
@@ -911,9 +1061,10 @@ lever couplings
         filename="gz-sim-joint-position-controller-system">
       <joint_name>blade_grip_1_joint</joint_name>
       <topic>/model/rotor_head/joint/blade_grip_1_joint/0/cmd_pos</topic>
-      <p_gain>0.3</p_gain>
+      <initial_position>0.0</initial_position>
+      <p_gain>1.0</p_gain>
       <i_gain>0</i_gain>
-      <d_gain>0</d_gain>
+      <d_gain>0.01</d_gain>
       <i_max>1</i_max>
       <i_min>-1</i_min>
       <cmd_max>2.5</cmd_max>
@@ -924,9 +1075,10 @@ lever couplings
         filename="gz-sim-joint-position-controller-system">
       <joint_name>blade_grip_2_joint</joint_name>
       <topic>/model/rotor_head/joint/blade_grip_2_joint/0/cmd_pos</topic>
-      <p_gain>0.3</p_gain>
+      <initial_position>0.0</initial_position>
+      <p_gain>1.0</p_gain>
       <i_gain>0</i_gain>
-      <d_gain>0</d_gain>
+      <d_gain>0.01</d_gain>
       <i_max>1</i_max>
       <i_min>-1</i_min>
       <cmd_max>2.5</cmd_max>
@@ -937,9 +1089,10 @@ lever couplings
         filename="gz-sim-joint-position-controller-system">
       <joint_name>lever_1_joint</joint_name>
       <topic>/model/rotor_head/joint/lever_1_joint/0/cmd_pos</topic>
-      <p_gain>0.3</p_gain>
+      <initial_position>0.0</initial_position>
+      <p_gain>0.5</p_gain>
       <i_gain>0</i_gain>
-      <d_gain>0</d_gain>
+      <d_gain>0.001</d_gain>
       <i_max>1</i_max>
       <i_min>-1</i_min>
       <cmd_max>2.5</cmd_max>
@@ -950,27 +1103,57 @@ lever couplings
         filename="gz-sim-joint-position-controller-system">
       <joint_name>lever_2_joint</joint_name>
       <topic>/model/rotor_head/joint/lever_2_joint/0/cmd_pos</topic>
-      <p_gain>0.3</p_gain>
+      <initial_position>0.0</initial_position>
+      <p_gain>0.5</p_gain>
       <i_gain>0</i_gain>
-      <d_gain>0</d_gain>
+      <d_gain>0.001</d_gain>
       <i_max>1</i_max>
       <i_min>-1</i_min>
       <cmd_max>2.5</cmd_max>
       <cmd_min>-2.5</cmd_min>
     </plugin>
 
-    <!-- <plugin name="gz::sim::systems::JointPositionController"
+    <plugin name="gz::sim::systems::JointPositionController"
       filename="gz-sim-joint-position-controller-system">
       <joint_name>swash_plate_bearing_joint</joint_name>
       <topic>/model/rotor_head/joint/swash_plate_bearing_joint/0/cmd_pos</topic>
-      <p_gain>0.3</p_gain>
+      <initial_position>0.0</initial_position>
+      <p_gain>30.0</p_gain>
       <i_gain>0</i_gain>
-      <d_gain>0</d_gain>
+      <d_gain>0.3</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>10000.0</cmd_max>
+      <cmd_min>-10000.0</cmd_min>
+      </plugin>
+
+    <plugin name="gz::sim::systems::JointPositionController"
+      filename="gz-sim-joint-position-controller-system">
+      <joint_name>swash_plate_up_part_ball_joint</joint_name>
+      <topic>/model/rotor_head/joint/swash_plate_up_part_ball_joint/0/cmd_pos</topic>
+      <initial_position>0.0</initial_position>
+      <p_gain>1.0</p_gain>
+      <i_gain>0</i_gain>
+      <d_gain>0.01</d_gain>
       <i_max>1</i_max>
       <i_min>-1</i_min>
       <cmd_max>2.5</cmd_max>
       <cmd_min>-2.5</cmd_min>
-      </plugin> -->
+    </plugin>
 
-</model>
+    <plugin name="gz::sim::systems::JointPositionController"
+      filename="gz-sim-joint-position-controller-system">
+      <joint_name>swash_plate_up_part_joint</joint_name>
+      <topic>/model/rotor_head/joint/swash_plate_up_part_joint/0/cmd_pos</topic>
+      <initial_position>0.0</initial_position>
+      <p_gain>1.0</p_gain>
+      <i_gain>0</i_gain>
+      <d_gain>0.01</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>2.5</cmd_max>
+      <cmd_min>-2.5</cmd_min>
+    </plugin>
+
+  </model>
 </sdf>

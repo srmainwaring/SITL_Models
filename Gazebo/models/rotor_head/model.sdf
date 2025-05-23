@@ -1,6 +1,18 @@
 <?xml version="1.0"?>
 <!--
 Blender > Export > Collada > Forward axis: +Z, Up axis: +X
+
+
+FreeCAD positions of swashplate joints
+
+blade grip couplings
+1. [-22.52 mm  -68.00 mm  0.40 mm]
+2. [22.52 mm  -68.00 mm  -0.40 mm]
+
+lever couplings
+1. [0.40 mm  -68.00 mm  22.52 mm]
+2. [-0.40 mm  -68.00 mm  -22.52 mm]
+
 -->
 <sdf version="1.9">
   <model name="rotor_head">
@@ -67,12 +79,20 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
           <izz>0.0001</izz>
         </inertia>
       </inertial>
-      <collision name="collision">
+      <!-- <collision name="collision">
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
             <uri>meshes/rotor_head_v2.dae</uri>
           </mesh>
+        </geometry>
+      </collision> -->
+      <collision name="collision">
+        <pose>0 0 -0.1 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.02 0.02 0.23</size>
+          </box>
         </geometry>
       </collision>
 
@@ -295,14 +315,18 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
         </inertia>
       </inertial>
       <collision name="collision">
+        <pose degrees="true">0.06 0 0 0 0 0</pose>
         <geometry>
-          <mesh>
+          <!-- <mesh>
             <scale>1 1 1</scale>
             <uri>meshes/rotor_head_v2.dae</uri>
             <submesh>
               <name>blade_grip_1</name>
             </submesh>
-          </mesh>
+          </mesh> -->
+          <box>
+            <size>0.1 0.026 0.026</size>
+          </box>
         </geometry>
       </collision>
       <visual name="visual">
@@ -352,14 +376,18 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
         </inertia>
       </inertial>
       <collision name="collision">
+        <pose degrees="true">-0.06 0 0 0 0 0</pose>
         <geometry>
-          <mesh>
+          <!-- <mesh>
             <scale>1 1 1</scale>
             <uri>meshes/rotor_head_v2.dae</uri>
             <submesh>
               <name>blade_grip_2</name>
             </submesh>
-          </mesh>
+          </mesh> -->
+          <box>
+            <size>0.1 0.026 0.026</size>
+          </box>
         </geometry>
       </collision>
       <visual name="visual">
@@ -397,7 +425,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
 
     <link name="lever_1_link">
       <inertial>
-        <pose degrees="true">-0.00949 0.012 -0.036 0 0 0</pose>
+        <pose degrees="true">0.007 0.012 -0.036 0 0 0</pose>
         <mass>0.10</mass>
         <inertia>
           <ixx>0.0001</ixx>
@@ -408,15 +436,20 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
           <izz>0.0001</izz>
         </inertia>
       </inertial>
+      <!-- [12.00 mm  -36.00 mm  -9.49 mm] -->
       <collision name="collision">
+        <pose degrees="true">0.007 0.012 -0.036 0 0 0</pose>
         <geometry>
-          <mesh>
+          <!-- <mesh>
             <scale>1 1 1</scale>
             <uri>meshes/rotor_head_v2.dae</uri>
             <submesh>
               <name>lever_1</name>
             </submesh>
-          </mesh>
+          </mesh> -->
+          <box>
+            <size>0.043 0.01 0.011</size>
+          </box>
         </geometry>
       </collision>
       <visual name="visual">
@@ -454,7 +487,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
 
     <link name="lever_2_link">
       <inertial>
-        <pose degrees="true">0.00949 -0.012 -0.036 0 0 180</pose>
+        <pose degrees="true">-0.007 -0.012 -0.036 0 0 180</pose>
         <mass>0.10</mass>
         <inertia>
           <ixx>0.0001</ixx>
@@ -466,14 +499,18 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
         </inertia>
       </inertial>
       <collision name="collision">
+        <pose degrees="true">-0.007 -0.012 -0.036 0 0 180</pose>
         <geometry>
-          <mesh>
+          <!-- <mesh>
             <scale>1 1 1</scale>
             <uri>meshes/rotor_head_v2.dae</uri>
             <submesh>
               <name>lever_2</name>
             </submesh>
-          </mesh>
+          </mesh> -->
+          <box>
+            <size>0.043 0.01 0.011</size>
+          </box>
         </geometry>
       </collision>
       <visual name="visual">
@@ -523,6 +560,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
         </inertia>
       </inertial>
       <collision name="collision">
+        <pose degrees="true">0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -580,6 +618,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
         </inertia>
       </inertial>
       <collision name="collision">
+        <pose degrees="true">0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -627,6 +666,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
         </inertia>
       </inertial>
       <collision name="collision">
+        <pose degrees="true">0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -684,6 +724,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
         </inertia>
       </inertial>
       <collision name="collision">
+        <pose degrees="true">0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -731,6 +772,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
         </inertia>
       </inertial>
       <collision name="collision">
+        <pose degrees="true">0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -778,6 +820,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
         </inertia>
       </inertial>
       <collision name="collision">
+        <pose degrees="true">0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -825,6 +868,7 @@ Blender > Export > Collada > Forward axis: +Z, Up axis: +X
         </inertia>
       </inertial>
       <collision name="collision">
+        <pose degrees="true">0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>

@@ -2269,6 +2269,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>

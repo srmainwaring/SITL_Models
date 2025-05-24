@@ -1553,7 +1553,7 @@ https://github.com/oKermorgant/gz_attach_links
       </axis>
     </joint>
 
-    <link name="lever_coupling_1_ball_revy_link">
+    <!-- <link name="lever_coupling_1_ball_revy_link">
       <pose degrees="true">0.02251 0 -0.036 0 0 0</pose>
       <inertial>
         <mass>0.002</mass>
@@ -1649,7 +1649,7 @@ https://github.com/oKermorgant/gz_attach_links
           <damping>0.001</damping>
         </dynamics>
       </axis>
-    </joint>
+    </joint> -->
 
     <link name="lever_coupling_1_link">
       <inertial>
@@ -1690,12 +1690,12 @@ https://github.com/oKermorgant/gz_attach_links
         </material>
       </visual>
     </link>
-    <joint name="lever_coupling_1_ball_revz_joint" type="revolute">
+    <joint name="lever_coupling_1_joint" type="revolute">
       <pose degrees="true">0.02251 0 -0.036 0 0 0</pose>
-      <parent>lever_coupling_1_ball_revx_link</parent>
+      <parent>lever_1_link</parent>
       <child>lever_coupling_1_link</child>
       <axis>
-        <xyz>0 0 1</xyz>
+        <xyz>0 1 0</xyz>
         <limit>
           <lower>-3.14</lower>
           <upper>3.14</upper>
@@ -1706,7 +1706,7 @@ https://github.com/oKermorgant/gz_attach_links
       </axis>
     </joint>
 
-    <link name="lever_coupling_2_ball_revy_link">
+    <!-- <link name="lever_coupling_2_ball_revy_link">
       <pose degrees="true">-0.02251 0 -0.036 0 0 180</pose>
       <inertial>
         <mass>0.002</mass>
@@ -1802,7 +1802,7 @@ https://github.com/oKermorgant/gz_attach_links
           <damping>0.001</damping>
         </dynamics>
       </axis>
-    </joint>
+    </joint> -->
 
     <link name="lever_coupling_2_link">
       <inertial>
@@ -1843,12 +1843,12 @@ https://github.com/oKermorgant/gz_attach_links
         </material>
       </visual>
     </link>
-    <joint name="lever_coupling_2_ball_revz_joint" type="revolute">
-      <pose degrees="true">-0.02251 0 -0.036 0 0 0</pose>
-      <parent>lever_coupling_2_ball_revx_link</parent>
+    <joint name="lever_coupling_2_joint" type="revolute">
+      <pose degrees="true">-0.02251 0 -0.036 0 0 180</pose>
+      <parent>lever_2_link</parent>
       <child>lever_coupling_2_link</child>
       <axis>
-        <xyz>0 0 1</xyz>
+        <xyz>0 1 0</xyz>
         <limit>
           <lower>-3.14</lower>
           <upper>3.14</upper>

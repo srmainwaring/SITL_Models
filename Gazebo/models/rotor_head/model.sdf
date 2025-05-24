@@ -85,7 +85,8 @@ Command motor angular velocity
           <upper>1.0e16</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -136,6 +137,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -185,6 +187,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -234,6 +237,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -283,6 +287,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -332,6 +337,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint> -->
@@ -790,7 +796,8 @@ Command motor angular velocity
           <upper>1.5</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -844,7 +851,8 @@ Command motor angular velocity
           <upper>1.5</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -898,7 +906,8 @@ Command motor angular velocity
           <upper>1.0</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -952,7 +961,8 @@ Command motor angular velocity
           <upper>1.0</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1007,7 +1017,8 @@ Command motor angular velocity
           <upper>0.02</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1056,7 +1067,8 @@ Command motor angular velocity
           <upper>0.5</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1105,7 +1117,8 @@ Command motor angular velocity
           <upper>0.5</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1160,7 +1173,8 @@ Command motor angular velocity
           <upper>0.5</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1240,7 +1254,8 @@ Command motor angular velocity
           <upper>1.0e16</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1290,6 +1305,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1339,6 +1355,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1394,6 +1411,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1443,6 +1461,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1492,6 +1511,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1541,6 +1561,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1590,6 +1611,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1639,6 +1661,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1694,6 +1717,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1743,6 +1767,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1792,6 +1817,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1841,6 +1867,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1890,6 +1917,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1993,7 +2021,8 @@ Command motor angular velocity
           <upper>3.14</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -2043,6 +2072,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -2092,6 +2122,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint> -->
@@ -2146,7 +2177,8 @@ Command motor angular velocity
           <upper>3.14</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -2196,6 +2228,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -2294,6 +2327,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -2343,6 +2377,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
@@ -2392,6 +2427,7 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>

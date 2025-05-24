@@ -95,16 +95,15 @@ Command motor angular velocity
     <!-- <link name="v_guide_link">
       <pose relative_to="base_link" degrees="true">-0.06 0 0.1352 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
-      </inertial>
       <collision name="collision">
         <geometry>
           <sphere>
@@ -145,14 +144,14 @@ Command motor angular velocity
     <link name="x_guide_link">
       <pose relative_to="v_guide_link" degrees="true">0 0 0 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -195,14 +194,14 @@ Command motor angular velocity
     <link name="y_guide_link">
       <pose relative_to="x_guide_link" degrees="true">0 0 0 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -245,14 +244,14 @@ Command motor angular velocity
     <link name="z_guide_link">
       <pose relative_to="y_guide_link" degrees="true">0 0 0 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -295,14 +294,14 @@ Command motor angular velocity
     <link name="h_guide_link">
       <pose relative_to="z_guide_link" degrees="true">0 0 0 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -1026,14 +1025,14 @@ Command motor angular velocity
     <link name="swash_plate_up_part_ball_revz_link">
       <pose degrees="true">0 0 -0.0696 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.0335</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.34000E-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.34000E-06</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.34000E-06</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -1072,18 +1071,17 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
     <link name="swash_plate_up_part_ball_revx_link">
       <pose degrees="true">0 0 -0.0696 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.0335</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.34000E-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.34000E-06</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.34000E-06</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -1263,14 +1261,14 @@ Command motor angular velocity
     <link name="blade_coupling_1_ball_revx_link">
       <pose degrees="true">0 0.0349 0.000880 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -1309,18 +1307,17 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
     <link name="blade_coupling_1_ball_revy_link">
       <pose degrees="true">0 0.0349 0.000880 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -1419,14 +1416,14 @@ Command motor angular velocity
     <link name="blade_coupling_1_ball_rev1_link">
       <pose degrees="true">0 0.02252 -0.068 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -1465,18 +1462,17 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
     <link name="blade_coupling_1_ball_rev2_link">
       <pose degrees="true">0 0.02252 -0.068 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -1515,18 +1511,17 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
     <link name="blade_coupling_1_ball_rev3_link">
       <pose degrees="true">0 0.02252 -0.068 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -1569,14 +1564,14 @@ Command motor angular velocity
     <link name="blade_coupling_2_ball_revx_link">
       <pose degrees="true">0 -0.0349 0.000880 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -1615,18 +1610,17 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
     <link name="blade_coupling_2_ball_revy_link">
       <pose degrees="true">0 -0.0349 0.000880 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -1725,14 +1719,14 @@ Command motor angular velocity
     <link name="blade_coupling_2_ball_rev1_link">
       <pose degrees="true">0 -0.02252 -0.068 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -1771,18 +1765,17 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
     <link name="blade_coupling_2_ball_rev2_link">
       <pose degrees="true">0 -0.02252 -0.068 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -1821,18 +1814,17 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
     <link name="blade_coupling_2_ball_rev3_link">
       <pose degrees="true">0 -0.02252 -0.068 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -2186,14 +2178,14 @@ Command motor angular velocity
     <link name="lever_coupling_1_ball_rev1_link">
       <pose degrees="true">0.02251 0 -0.068 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -2232,18 +2224,17 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
     <link name="lever_coupling_1_ball_rev2_link">
       <pose degrees="true">0.02251 0 -0.068 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -2281,18 +2272,17 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
     <link name="lever_coupling_1_ball_rev3_link">
       <pose degrees="true">0.02251 0 -0.068 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -2335,14 +2325,14 @@ Command motor angular velocity
     <link name="lever_coupling_2_ball_rev1_link">
       <pose degrees="true">-0.02251 0 -0.068 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -2381,18 +2371,17 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
     <link name="lever_coupling_2_ball_rev2_link">
       <pose degrees="true">-0.02251 0 -0.068 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -2431,18 +2420,17 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
     <link name="lever_coupling_2_ball_rev3_link">
       <pose degrees="true">-0.02251 0 -0.068 0 0 0</pose>
       <inertial>
-        <mass>0.002</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>7.20000E-09</ixx>
+          <ixx>1.00000E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
+          <iyy>1.00000E-08</iyy>
           <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
+          <izz>1.00000E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">

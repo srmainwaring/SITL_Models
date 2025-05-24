@@ -2,8 +2,14 @@
 <sdf version="1.9">
   <world name="empty">
     <physics name="1ms" type="ignore">
-      <max_step_size>0.001</max_step_size>
+      <max_step_size>0.0005</max_step_size>
       <real_time_factor>-1.0</real_time_factor>
+      <dart>
+        <solver>
+          <!-- <solver_type>pgs</solver_type> -->
+          <solver_type>dantzig</solver_type> 
+        </solver>
+      </dart>
     </physics>
 
     <plugin filename="gz-sim-physics-system"

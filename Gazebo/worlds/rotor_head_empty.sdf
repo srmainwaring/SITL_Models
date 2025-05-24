@@ -75,10 +75,128 @@
       </link>
     </model>
 
+    <!-- ENU axes -->
+    <!-- <model name="axes">
+      <static>1</static>
+      <link name="link">
+        <visual name="r">
+          <pose>5 0 0.1 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>10 0.01 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+            <emissive>1 0 0 1</emissive>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <visual name="g">
+          <pose>0 5 0.1 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 10 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0 1 0 1</ambient>
+            <diffuse>0 1 0 1</diffuse>
+            <emissive>0 1 0 1</emissive>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <visual name="b">
+          <pose>0 0 5.1 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.01 10</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+            <emissive>0 0 1 1</emissive>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model> -->
+    
     <include>
       <uri>model://rotor_head</uri>
-      <pose degrees="true">0 0 0.226 0 0 0</pose>
+      <pose degrees="true">0 0 0.226 0 0 13</pose>
     </include>
 
+    <!-- swashplate guide -->
+    <model name="guide">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision_guide_right">
+          <pose degrees="true">-0.06 -0.0085 0.1 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.01 0.19</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="collision_guide_left">
+          <pose degrees="true">-0.06 0.0085 0.1 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.01 0.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="collision_guide_top">
+          <pose degrees="true">-0.06 0 0.195 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.027 0.01 </size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual_guide_right">
+          <pose degrees="true">-0.06 -0.0085 0.1 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.01 0.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2</ambient>
+            <diffuse>0.2 0.2 0.2</diffuse>
+            <specular>0.1 0.1 0.1</specular>
+          </material>
+        </visual>
+        <visual name="visual_guide_left">
+          <pose degrees="true">-0.06 0.0085 0.1 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.01 0.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2</ambient>
+            <diffuse>0.2 0.2 0.2</diffuse>
+            <specular>0.1 0.1 0.1</specular>
+          </material>
+        </visual>
+        <visual name="visual_guide_top">
+          <pose degrees="true">-0.06 0 0.195 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.027 0.01 </size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2</ambient>
+            <diffuse>0.2 0.2 0.2</diffuse>
+            <specular>0.1 0.1 0.1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
   </world>
 </sdf>

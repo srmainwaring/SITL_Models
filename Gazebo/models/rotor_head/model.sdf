@@ -28,14 +28,14 @@ Command motor angular velocity
       <pose degrees="true">0 0 -0.2 0 0 -13</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
-        <mass>10</mass>
+        <mass>100</mass>
         <inertia>
-          <ixx>0.004166667</ixx>
+          <ixx>0.04166667</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.004166667</iyy>
+          <iyy>0.04166667</iyy>
           <iyz>0</iyz>
-          <izz>0.004166667</izz>
+          <izz>0.04166667</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -340,6 +340,274 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint> -->
+
+    <!-- servos (prismatic) -->
+    <link name="servo_1_link">
+      <pose degrees="true">-0.045 -0.005 -0.135 0 90 -13</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.015</mass>
+        <inertia>
+          <ixx>8.35513E-07</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.48756E-06</iyy>
+          <iyz>0</iyz>
+          <izz>1.01205E-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.0258 0.012 0.0229</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.0258 0.012 0.0229</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.1 0.1</ambient>
+          <diffuse>0.8 0.1 0.1</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_1_joint" type="fixed">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>base_link</parent>
+      <child>servo_1_link</child>
+    </joint>
+    <link name="servo_arm_1_link">
+      <pose relative_to="servo_1_link" degrees="true">0.0 0.015 -0.005 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 1 0</ambient>
+          <diffuse>0 1 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_arm_1_joint" type="prismatic">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>servo_1_link</parent>
+      <child>servo_arm_1_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.02</lower>
+          <upper>0.02</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="servo_2_link">
+      <pose degrees="true">0.0145 -0.061 -0.135 0 90 -13</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.015</mass>
+        <inertia>
+          <ixx>8.35513E-07</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.48756E-06</iyy>
+          <iyz>0</iyz>
+          <izz>1.01205E-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.0258 0.012 0.0229</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.0258 0.012 0.0229</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.1 0.1</ambient>
+          <diffuse>0.8 0.1 0.1</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_2_joint" type="fixed">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>base_link</parent>
+      <child>servo_2_link</child>
+    </joint>
+    <link name="servo_arm_2_link">
+      <pose relative_to="servo_2_link" degrees="true">0.0 0.015 -0.005 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 1 0</ambient>
+          <diffuse>0 1 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_arm_2_joint" type="prismatic">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>servo_2_link</parent>
+      <child>servo_arm_2_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.02</lower>
+          <upper>0.02</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="servo_3_link">
+      <pose degrees="true">0.0335 0.0185 -0.135 0 90 -13</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.015</mass>
+        <inertia>
+          <ixx>8.35513E-07</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.48756E-06</iyy>
+          <iyz>0</iyz>
+          <izz>1.01205E-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.0258 0.012 0.0229</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.0258 0.012 0.0229</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.1 0.1</ambient>
+          <diffuse>0.8 0.1 0.1</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_3_joint" type="fixed">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>base_link</parent>
+      <child>servo_3_link</child>
+    </joint>
+    <link name="servo_arm_3_link">
+      <pose relative_to="servo_3_link" degrees="true">0.0 0.015 -0.005 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 1 0</ambient>
+          <diffuse>0 1 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_arm_3_joint" type="prismatic">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>servo_3_link</parent>
+      <child>servo_arm_3_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.02</lower>
+          <upper>0.02</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
 
     <!-- rotor head -->
     <link name="main_link">
@@ -662,7 +930,7 @@ Command motor angular velocity
         2. LL [-44.93 mm  -65.10 mm   13.43 mm]
         3. LR [ 34.09 mm  -65.10 mm   32.19 mm]
       -->
-      <visual name="visual_swashplate_servo_1">
+      <!-- <visual name="visual_swashplate_servo_1">
         <pose degrees="true">-0.045662 0.01084 -0.0651 0 0 0</pose>
         <geometry>
           <sphere>
@@ -700,14 +968,14 @@ Command motor angular velocity
           <diffuse>1 0 1</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
-      </visual>
+      </visual> -->
 
-      <visual name="visual_servo_linkage_1_link">
+      <!-- <visual name="visual_servo_rod_1_link">
         <pose degrees="true">-0.045662 0.01084 -0.0651 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/servo_link.dae</uri>
+            <uri>meshes/servo_rod.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -716,12 +984,12 @@ Command motor angular velocity
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
-      <visual name="visual_servo_linkage_2_link">
+      <visual name="visual_servo_rod_2_link">
         <pose degrees="true">0.01343 -0.04493 -0.0651 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/servo_link.dae</uri>
+            <uri>meshes/servo_rod.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -730,12 +998,12 @@ Command motor angular velocity
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
-      <visual name="visual_servo_linkage_3_link">
+      <visual name="visual_servo_rod_3_link">
         <pose degrees="true">0.03219 0.03409 -0.0651 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/servo_link.dae</uri>
+            <uri>meshes/servo_rod.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -743,7 +1011,8 @@ Command motor angular velocity
           <diffuse>0.5 0.5 0.5</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
-      </visual>
+      </visual> -->
+
     </link>
 
     <link name="blade_grip_1_link">
@@ -791,8 +1060,8 @@ Command motor angular velocity
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>-1.5</lower>
-          <upper>1.5</upper>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -846,8 +1115,8 @@ Command motor angular velocity
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>-1.5</lower>
-          <upper>1.5</upper>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -901,8 +1170,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-1.0</lower>
-          <upper>1.0</upper>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -956,8 +1225,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-1.0</lower>
-          <upper>1.0</upper>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1012,8 +1281,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-          <lower>-0.02</lower>
-          <upper>0.02</upper>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1062,8 +1331,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>0.5</upper>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1111,8 +1380,8 @@ Command motor angular velocity
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>0.5</upper>
+          <lower>-0.785398</lower>
+          <upper>0.785398</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1120,7 +1389,6 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
     <link name="swash_plate_up_part_link">
       <inertial>
         <pose degrees="true">0 0 -0.073 0 0 0</pose>
@@ -1167,8 +1435,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-0.5</lower>
-          <upper>0.5</upper>
+          <lower>-0.785398</lower>
+          <upper>0.785398</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1298,8 +1566,8 @@ Command motor angular velocity
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1347,8 +1615,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1356,7 +1624,6 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
     <link name="blade_coupling_1_link">
       <inertial>
         <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
@@ -1403,8 +1670,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1453,8 +1720,8 @@ Command motor angular velocity
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1502,8 +1769,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1551,8 +1818,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1601,8 +1868,8 @@ Command motor angular velocity
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1650,8 +1917,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1659,7 +1926,6 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
     <link name="blade_coupling_2_link">
       <inertial>
         <pose degrees="true">0 -0.02875 -0.03356 10.3 0 0</pose>
@@ -1706,8 +1972,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1756,8 +2022,8 @@ Command motor angular velocity
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1805,8 +2071,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1854,8 +2120,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1863,105 +2129,6 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
-    <!-- <link name="lever_coupling_1_ball_revy_link">
-      <pose degrees="true">0.02251 0 -0.036 0 0 0</pose>
-      <inertial>
-        <mass>0.002</mass>
-        <inertia>
-          <ixx>7.20000E-09</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
-          <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
-        </inertia>
-      </inertial>
-      <collision name="collision">
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-      </collision>
-      <visual name="visual">
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual>
-    </link>
-    <joint name="lever_coupling_1_ball_revy_joint" type="revolute">
-      <pose degrees="true">0 0 0 0 0 0</pose>
-      <parent>lever_1_link</parent>
-      <child>lever_coupling_1_ball_revy_link</child>
-      <axis>
-        <xyz>0 1 0</xyz>
-        <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
-        </limit>
-        <dynamics>
-          <damping>0.001</damping>
-          <friction>0</friction>
-        </dynamics>
-      </axis>
-    </joint>
-
-    <link name="lever_coupling_1_ball_revx_link">
-      <pose degrees="true">0.02251 0 -0.036 0 0 0</pose>
-      <inertial>
-        <mass>0.002</mass>
-        <inertia>
-          <ixx>7.20000E-09</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
-          <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
-        </inertia>
-      </inertial>
-      <collision name="collision">
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-      </collision>
-      <visual name="visual">
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual>
-    </link>
-    <joint name="lever_coupling_1_ball_revx_joint" type="revolute">
-      <pose degrees="true">0 0 0 0 0 0</pose>
-      <parent>lever_coupling_1_ball_revy_link</parent>
-      <child>lever_coupling_1_ball_revx_link</child>
-      <axis>
-        <xyz>1 0 0</xyz>
-        <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
-        </limit>
-        <dynamics>
-          <damping>0.001</damping>
-        </dynamics>
-      </axis>
-    </joint> -->
 
     <link name="lever_coupling_1_link">
       <inertial>
@@ -2009,8 +2176,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -2018,106 +2185,6 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-
-    <!-- <link name="lever_coupling_2_ball_revy_link">
-      <pose degrees="true">-0.02251 0 -0.036 0 0 180</pose>
-      <inertial>
-        <mass>0.002</mass>
-        <inertia>
-          <ixx>7.20000E-09</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
-          <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
-        </inertia>
-      </inertial>
-      <collision name="collision">
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-      </collision>
-      <visual name="visual">
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual>
-    </link>
-    <joint name="lever_coupling_2_ball_revy_joint" type="revolute">
-      <pose degrees="true">0 0 0 0 0 180</pose>
-      <parent>lever_2_link</parent>
-      <child>lever_coupling_2_ball_revy_link</child>
-      <axis>
-        <xyz>0 1 0</xyz>
-        <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
-        </limit>
-        <dynamics>
-          <damping>0.001</damping>
-          <friction>0</friction>
-        </dynamics>
-      </axis>
-    </joint>
-
-    <link name="lever_coupling_2_ball_revx_link">
-      <pose degrees="true">-0.02251 0 -0.036 0 0 180</pose>
-      <inertial>
-        <mass>0.002</mass>
-        <inertia>
-          <ixx>7.20000E-09</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>7.20000E-09</iyy>
-          <iyz>0</iyz>
-          <izz>7.20000E-09</izz>
-        </inertia>
-      </inertial>
-      <collision name="collision">
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-      </collision>
-      <visual name="visual">
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>1 0 0</ambient>
-          <diffuse>1 0 0</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual>
-    </link>
-    <joint name="lever_coupling_2_ball_revx_joint" type="revolute">
-      <pose degrees="true">0 0 0 0 0 180</pose>
-      <parent>lever_coupling_2_ball_revy_link</parent>
-      <child>lever_coupling_2_ball_revx_link</child>
-      <axis>
-        <xyz>1 0 0</xyz>
-        <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
-        </limit>
-        <dynamics>
-          <damping>0.001</damping>
-          <friction>0</friction>
-        </dynamics>
-      </axis>
-    </joint> -->
 
     <link name="lever_coupling_2_link">
       <inertial>
@@ -2165,8 +2232,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -2215,8 +2282,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -2264,8 +2331,8 @@ Command motor angular velocity
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -2313,8 +2380,8 @@ Command motor angular velocity
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -2363,8 +2430,8 @@ Command motor angular velocity
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -2412,8 +2479,8 @@ Command motor angular velocity
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -2461,22 +2528,928 @@ Command motor angular velocity
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-          <lower>-3.14</lower>
-          <upper>3.14</upper>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <!-- servo rods -->
+    <link name="servo_rod_1_ball_revx_link">
+      <pose degrees="true">-0.045662 0.01084 -0.0651 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_1_ball_revx_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 -13</pose>
+      <parent>swash_plate_down_part_link</parent>
+      <child>servo_rod_1_ball_revx_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="servo_rod_1_ball_revy_link">
+      <pose degrees="true">-0.045662 0.01084 -0.0651 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_1_ball_revy_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 -13</pose>
+      <parent>servo_rod_1_ball_revx_link</parent>
+      <child>servo_rod_1_ball_revy_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="servo_rod_1_link">
+      <pose degrees="true">-0.045662 0.01084 -0.0651 0 0 0</pose>
+      <inertial>
+        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <mass>0.010</mass>
+        <inertia>
+          <ixx>2.2575E-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>2.2575E-06</iyy>
+          <iyz>0</iyz>
+          <izz>0.00000018</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.051</length>
+            <radius>0.006</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/servo_rod.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5</ambient>
+          <diffuse>0.5 0.5 0.5</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_1_ball_revz_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 -13</pose>
+      <parent>servo_rod_1_ball_revy_link</parent>
+      <child>servo_rod_1_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <!-- no damping for ball joint, so unstable -->
+    <!-- <joint name="servo_rod_1_ball_joint" type="ball">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>swash_plate_down_part_link</parent>
+      <child>servo_rod_1_link</child>
+    </joint> -->
+    <link name="servo_rod_1_ball2_revz_link">
+      <pose degrees="true">-0.045662 0.01084 -0.135 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_1_ball2_revz_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 -13</pose>
+      <parent>servo_rod_1_link</parent>
+      <child>servo_rod_1_ball2_revz_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="servo_rod_1_ball2_revx_link">
+      <pose degrees="true">-0.045662 0.01084 -0.135 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_1_ball2_revx_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 -13</pose>
+      <parent>servo_rod_1_ball2_revz_link</parent>
+      <child>servo_rod_1_ball2_revx_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="servo_rod_1_ball2_revy_link">
+    <pose degrees="true">-0.045662 0.01084 -0.135 0 0 0</pose>
+    <inertial>
+      <mass>0.001</mass>
+      <inertia>
+        <ixx>1.00000E-08</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1.00000E-08</iyy>
+        <iyz>0</iyz>
+        <izz>1.00000E-08</izz>
+      </inertia>
+    </inertial>
+    <collision name="collision">
+      <geometry>
+        <sphere>
+          <radius>0.005</radius>
+        </sphere>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <sphere>
+          <radius>0.005</radius>
+        </sphere>
+      </geometry>
+      <material>
+        <ambient>1 0 0</ambient>
+        <diffuse>1 0 0</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+      </material>
+    </visual>
+    </link>
+    <joint name="servo_rod_1_ball2_revy_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 -13</pose>
+      <parent>servo_rod_1_ball2_revx_link</parent>
+      <child>servo_rod_1_ball2_revy_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="servo_rod_2_ball_revx_link">
+      <pose degrees="true">0.01343 -0.04493 -0.0651 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_2_ball_revx_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 -75</pose>
+      <parent>swash_plate_down_part_link</parent>
+      <child>servo_rod_2_ball_revx_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="servo_rod_2_ball_revy_link">
+      <pose degrees="true">0.01343 -0.04493 -0.0651 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_2_ball_revy_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 -75</pose>
+      <parent>servo_rod_2_ball_revx_link</parent>
+      <child>servo_rod_2_ball_revy_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="servo_rod_2_link">
+      <pose degrees="true">0.01343 -0.04493 -0.0651 0 0 0</pose>
+      <inertial>
+        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <mass>0.010</mass>
+        <inertia>
+          <ixx>2.2575E-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>2.2575E-06</iyy>
+          <iyz>0</iyz>
+          <izz>0.00000018</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.051</length>
+            <radius>0.006</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/servo_rod.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5</ambient>
+          <diffuse>0.5 0.5 0.5</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_2_ball_revz_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 -75</pose>
+      <parent>servo_rod_2_ball_revy_link</parent>
+      <child>servo_rod_2_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="servo_rod_2_ball2_revz_link">
+      <pose degrees="true">0.01343 -0.04493 -0.135 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_2_ball2_revz_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 -13</pose>
+      <parent>servo_rod_2_link</parent>
+      <child>servo_rod_2_ball2_revz_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="servo_rod_2_ball2_revx_link">
+      <pose degrees="true">0.01343 -0.04493 -0.135 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_2_ball2_revx_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 -13</pose>
+      <parent>servo_rod_2_ball2_revz_link</parent>
+      <child>servo_rod_2_ball2_revx_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="servo_rod_2_ball2_revy_link">
+      <pose degrees="true">0.01343 -0.04493 -0.135 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_2_ball2_revy_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 -13</pose>
+      <parent>servo_rod_2_ball2_revx_link</parent>
+      <child>servo_rod_2_ball2_revy_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="servo_rod_3_ball_revx_link">
+      <pose degrees="true">0.03219 0.03409 -0.0651 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_3_ball_revx_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 45</pose>
+      <parent>swash_plate_down_part_link</parent>
+      <child>servo_rod_3_ball_revx_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="servo_rod_3_ball_revy_link">
+      <pose degrees="true">0.03219 0.03409 -0.0651 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_3_ball_revy_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 45</pose>
+      <parent>servo_rod_3_ball_revx_link</parent>
+      <child>servo_rod_3_ball_revy_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="servo_rod_3_link">
+      <pose degrees="true">0.03219 0.03409 -0.0651 0 0 0</pose>
+      <inertial>
+        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <mass>0.010</mass>
+        <inertia>
+          <ixx>2.2575E-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>2.2575E-06</iyy>
+          <iyz>0</iyz>
+          <izz>0.00000018</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.051</length>
+            <radius>0.006</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/servo_rod.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5</ambient>
+          <diffuse>0.5 0.5 0.5</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_3_ball_revz_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 45</pose>
+      <parent>servo_rod_3_ball_revy_link</parent>
+      <child>servo_rod_3_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="servo_rod_3_ball2_revz_link">
+      <pose degrees="true">0.03219 0.03409 -0.135 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_3_ball2_revz_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 -13</pose>
+      <parent>servo_rod_3_link</parent>
+      <child>servo_rod_3_ball2_revz_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="servo_rod_3_ball2_revx_link">
+      <pose degrees="true">0.03219 0.03409 -0.135 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_3_ball2_revx_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 -13</pose>
+      <parent>servo_rod_3_ball2_revz_link</parent>
+      <child>servo_rod_3_ball2_revx_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.43633231</lower>
+          <upper>0.43633231</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="servo_rod_3_ball2_revy_link">
+      <pose degrees="true">0.03219 0.03409 -0.135 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="servo_rod_3_ball2_revy_joint" type="revolute">
+      <pose degrees="true">0 0 0 0 0 -13</pose>
+      <parent>servo_rod_3_ball2_revx_link</parent>
+      <child>servo_rod_3_ball2_revy_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14159265</lower>
+          <upper>3.14159265</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
 
     <!-- plugins -->
+
+    <!-- swashplate links -->
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>blade_coupling_1_link</parent_link>
       <child_link>blade_coupling_1_ball_rev3_link</child_link>
       <child_model>rotor_head</child_model>
-      <!-- <attach_topic>close_loop</attach_topic> -->
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
@@ -2496,6 +3469,27 @@ Command motor angular velocity
       <child_link>lever_coupling_2_ball_rev3_link</child_link>
       <child_model>rotor_head</child_model>
     </plugin>
+
+    <!-- servo links -->
+    <plugin name="gz::sim::systems::DetachableJoint"
+      filename="libgz-sim-detachable-joint-system.so">
+      <parent_link>servo_arm_1_link</parent_link>
+      <child_link>servo_rod_1_ball2_revy_link</child_link>
+      <child_model>rotor_head</child_model>
+    </plugin>
+    <plugin name="gz::sim::systems::DetachableJoint"
+      filename="libgz-sim-detachable-joint-system.so">
+      <parent_link>servo_arm_2_link</parent_link>
+      <child_link>servo_rod_2_ball2_revy_link</child_link>
+      <child_model>rotor_head</child_model>
+    </plugin>
+    <plugin name="gz::sim::systems::DetachableJoint"
+      filename="libgz-sim-detachable-joint-system.so">
+      <parent_link>servo_arm_3_link</parent_link>
+      <child_link>servo_rod_3_ball2_revy_link</child_link>
+      <child_model>rotor_head</child_model>
+    </plugin>
+
 
     <!-- connect the swashplate guide  -->
     <!-- <plugin name="gz::sim::systems::DetachableJoint"
@@ -2524,131 +3518,47 @@ Command motor angular velocity
       <cmd_min>-100</cmd_min>
     </plugin>
 
-    <!-- <plugin name="gz::sim::systems::JointPositionController"
-        filename="gz-sim-joint-position-controller-system">
-      <joint_name>blade_grip_1_joint</joint_name>
-      <topic>/model/rotor_head/joint/blade_grip_1_joint/0/cmd_pos</topic>
-      <initial_position>0.0</initial_position>
-      <p_gain>1.0</p_gain>
-      <i_gain>0</i_gain>
-      <d_gain>0.01</d_gain>
-      <i_max>1</i_max>
-      <i_min>-1</i_min>
-      <cmd_max>2.5</cmd_max>
-      <cmd_min>-2.5</cmd_min>
-    </plugin> -->
-
-    <!-- <plugin name="gz::sim::systems::JointPositionController"
-        filename="gz-sim-joint-position-controller-system">
-      <joint_name>blade_grip_2_joint</joint_name>
-      <topic>/model/rotor_head/joint/blade_grip_2_joint/0/cmd_pos</topic>
-      <initial_position>0.0</initial_position>
-      <p_gain>1.0</p_gain>
-      <i_gain>0</i_gain>
-      <d_gain>0.01</d_gain>
-      <i_max>1</i_max>
-      <i_min>-1</i_min>
-      <cmd_max>2.5</cmd_max>
-      <cmd_min>-2.5</cmd_min>
-    </plugin> -->
-
-    <!-- <plugin name="gz::sim::systems::JointPositionController"
-        filename="gz-sim-joint-position-controller-system">
-      <joint_name>lever_1_joint</joint_name>
-      <topic>/model/rotor_head/joint/lever_1_joint/0/cmd_pos</topic>
-      <initial_position>0.0</initial_position>
-      <p_gain>0.5</p_gain>
-      <i_gain>0</i_gain>
-      <d_gain>0.001</d_gain>
-      <i_max>1</i_max>
-      <i_min>-1</i_min>
-      <cmd_max>2.5</cmd_max>
-      <cmd_min>-2.5</cmd_min>
-    </plugin> -->
-
-    <!-- <plugin name="gz::sim::systems::JointPositionController"
-        filename="gz-sim-joint-position-controller-system">
-      <joint_name>lever_2_joint</joint_name>
-      <topic>/model/rotor_head/joint/lever_2_joint/0/cmd_pos</topic>
-      <initial_position>0.0</initial_position>
-      <p_gain>0.5</p_gain>
-      <i_gain>0</i_gain>
-      <d_gain>0.001</d_gain>
-      <i_max>1</i_max>
-      <i_min>-1</i_min>
-      <cmd_max>2.5</cmd_max>
-      <cmd_min>-2.5</cmd_min>
-    </plugin> -->
-
     <plugin name="gz::sim::systems::JointPositionController"
       filename="gz-sim-joint-position-controller-system">
-      <joint_name>swash_plate_bearing_joint</joint_name>
-      <topic>/model/rotor_head/joint/swash_plate_bearing_joint/0/cmd_pos</topic>
+      <joint_name>servo_arm_1_joint</joint_name>
+      <topic>/model/rotor_head/joint/servo_arm_1_joint/0/cmd_pos</topic>
       <initial_position>0.0</initial_position>
-      <p_gain>200.0</p_gain>
-      <i_gain>20</i_gain>
-      <d_gain>2</d_gain>
-      <i_max>100</i_max>
-      <i_min>-100</i_min>
-      <cmd_max>1000</cmd_max>
-      <cmd_min>-1000</cmd_min>
+      <p_gain>50000</p_gain>
+      <i_gain>5000</i_gain>
+      <d_gain>10</d_gain>
+      <i_max>10000</i_max>
+      <i_min>-10000</i_min>
+      <cmd_max>100000</cmd_max>
+      <cmd_min>-100000</cmd_min>
     </plugin>
 
     <plugin name="gz::sim::systems::JointPositionController"
       filename="gz-sim-joint-position-controller-system">
-      <joint_name>swash_plate_up_part_ball_revx_joint</joint_name>
-      <topic>/model/rotor_head/joint/swash_plate_up_part_ball_revx_joint/0/cmd_pos</topic>
+      <joint_name>servo_arm_2_joint</joint_name>
+      <topic>/model/rotor_head/joint/servo_arm_2_joint/0/cmd_pos</topic>
       <initial_position>0.0</initial_position>
-      <p_gain>10.0</p_gain>
-      <i_gain>1</i_gain>
-      <d_gain>0.1</d_gain>
-      <i_max>1</i_max>
-      <i_min>-1</i_min>
-      <cmd_max>1000</cmd_max>
-      <cmd_min>-1000</cmd_min>
+      <p_gain>50000</p_gain>
+      <i_gain>5000</i_gain>
+      <d_gain>10</d_gain>
+      <i_max>10000</i_max>
+      <i_min>-10000</i_min>
+      <cmd_max>100000</cmd_max>
+      <cmd_min>-100000</cmd_min>
     </plugin>
 
     <plugin name="gz::sim::systems::JointPositionController"
       filename="gz-sim-joint-position-controller-system">
-      <joint_name>swash_plate_up_part_ball_revy_joint</joint_name>
-      <topic>/model/rotor_head/joint/swash_plate_up_part_ball_revy_joint/0/cmd_pos</topic>
+      <joint_name>servo_arm_3_joint</joint_name>
+      <topic>/model/rotor_head/joint/servo_arm_3_joint/0/cmd_pos</topic>
       <initial_position>0.0</initial_position>
-      <p_gain>1.0</p_gain>
-      <i_gain>0.1</i_gain>
-      <d_gain>0.01</d_gain>
-      <i_max>1</i_max>
-      <i_min>-1</i_min>
-      <cmd_max>1000</cmd_max>
-      <cmd_min>-1000</cmd_min>
+      <p_gain>50000</p_gain>
+      <i_gain>5000</i_gain>
+      <d_gain>10</d_gain>
+      <i_max>10000</i_max>
+      <i_min>-10000</i_min>
+      <cmd_max>100000</cmd_max>
+      <cmd_min>-100000</cmd_min>
     </plugin>
-
-    <!-- <plugin name="gz::sim::systems::JointPositionController"
-      filename="gz-sim-joint-position-controller-system">
-      <joint_name>v_guide_joint</joint_name>
-      <topic>/model/rotor_head/joint/v_guide_joint/0/cmd_pos</topic>
-      <initial_position>0.0</initial_position>
-      <p_gain>200.0</p_gain>
-      <i_gain>20</i_gain>
-      <d_gain>2</d_gain>
-      <i_max>100</i_max>
-      <i_min>-100</i_min>
-      <cmd_max>1000</cmd_max>
-      <cmd_min>-1000</cmd_min>
-    </plugin>
-
-    <plugin name="gz::sim::systems::JointPositionController"
-      filename="gz-sim-joint-position-controller-system">
-      <joint_name>h_guide_joint</joint_name>
-      <topic>/model/rotor_head/joint/h_guide_joint/0/cmd_pos</topic>
-      <initial_position>0.0</initial_position>
-      <p_gain>200.0</p_gain>
-      <i_gain>20</i_gain>
-      <d_gain>2</d_gain>
-      <i_max>100</i_max>
-      <i_min>-100</i_min>
-      <cmd_max>1000</cmd_max>
-      <cmd_min>-1000</cmd_min>
-    </plugin> -->
 
   </model>
 </sdf>

@@ -627,8 +627,8 @@ https://github.com/oKermorgant/gz_attach_links
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-1.5</lower>
-          <upper>1.5</upper>
+          <lower>-1.0</lower>
+          <upper>1.0</upper>
         </limit>
         <dynamics>
           <damping>0.01</damping>
@@ -681,8 +681,8 @@ https://github.com/oKermorgant/gz_attach_links
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>-1.5</lower>
-          <upper>1.5</upper>
+          <lower>-1.0</lower>
+          <upper>1.0</upper>
         </limit>
         <dynamics>
           <damping>0.01</damping>

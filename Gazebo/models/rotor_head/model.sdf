@@ -85,7 +85,7 @@ Command motor angular velocity
           <upper>1.0e16</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.002</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
@@ -135,7 +135,7 @@ Command motor angular velocity
           <upper>0.2</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
@@ -185,7 +185,7 @@ Command motor angular velocity
           <upper>3.14</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
@@ -235,7 +235,7 @@ Command motor angular velocity
           <upper>3.14</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
@@ -285,7 +285,7 @@ Command motor angular velocity
           <upper>3.14</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
@@ -335,7 +335,7 @@ Command motor angular velocity
           <upper>0.2</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
@@ -423,9 +423,10 @@ Command motor angular velocity
         <limit>
           <lower>-0.02</lower>
           <upper>0.02</upper>
+          <effort>1.0e6</effort>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
@@ -512,9 +513,10 @@ Command motor angular velocity
         <limit>
           <lower>-0.02</lower>
           <upper>0.02</upper>
+          <effort>1.0e6</effort>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
@@ -601,9 +603,10 @@ Command motor angular velocity
         <limit>
           <lower>-0.02</lower>
           <upper>0.02</upper>
+          <effort>1.0e6</effort>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
@@ -1064,7 +1067,7 @@ Command motor angular velocity
           <upper>1.570796</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
@@ -1119,7 +1122,7 @@ Command motor angular velocity
           <upper>1.570796</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
@@ -1174,7 +1177,7 @@ Command motor angular velocity
           <upper>1.570796</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
@@ -1229,7 +1232,7 @@ Command motor angular velocity
           <upper>1.570796</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
@@ -1285,13 +1288,13 @@ Command motor angular velocity
           <upper>0.05</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
 
-    <link name="swash_plate_up_part_ball_revz_link">
+    <!-- <link name="swash_plate_up_part_ball_1z_link">
       <pose degrees="true">0 0 -0.0696 0 0 0</pose>
       <inertial>
         <mass>0.0335</mass>
@@ -1324,10 +1327,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="swash_plate_up_part_ball_revz_joint" type="revolute">
+    <joint name="swash_plate_up_part_ball_1z_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>swash_plate_bearing_link</parent>
-      <child>swash_plate_up_part_ball_revz_link</child>
+      <child>swash_plate_up_part_ball_1z_link</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -1335,12 +1338,12 @@ Command motor angular velocity
           <upper>1.570796</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
-    <link name="swash_plate_up_part_ball_revx_link">
+    <link name="swash_plate_up_part_ball_1x_link">
       <pose degrees="true">0 0 -0.0696 0 0 0</pose>
       <inertial>
         <mass>0.0335</mass>
@@ -1373,10 +1376,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="swash_plate_up_part_ball_revx_joint" type="revolute">
+    <joint name="swash_plate_up_part_ball_1x_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 0</pose>
-      <parent>swash_plate_up_part_ball_revz_link</parent>
-      <child>swash_plate_up_part_ball_revx_link</child>
+      <parent>swash_plate_up_part_ball_1z_link</parent>
+      <child>swash_plate_up_part_ball_1x_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -1384,11 +1387,11 @@ Command motor angular velocity
           <upper>0.785398</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
-    </joint>
+    </joint> -->
     <link name="swash_plate_up_part_link">
       <inertial>
         <pose degrees="true">0 0 -0.073 0 0 0</pose>
@@ -1428,9 +1431,9 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="swash_plate_up_part_ball_revy_joint" type="revolute">
+    <!-- <joint name="swash_plate_up_part_ball_1y_joint" type="revolute">
       <pose degrees="true">0 0 -0.0696 0 0 0</pose>
-      <parent>swash_plate_up_part_ball_revx_link</parent>
+      <parent>swash_plate_up_part_ball_1x_link</parent>
       <child>swash_plate_up_part_link</child>
       <axis>
         <xyz>0 1 0</xyz>
@@ -1439,10 +1442,15 @@ Command motor angular velocity
           <upper>0.785398</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
+    </joint> -->
+    <joint name="swash_plate_up_part_ball_joint" type="ball">
+      <pose degrees="true">0 0 -0.0696 0 0 0</pose>
+      <parent>swash_plate_bearing_link</parent>
+      <child>swash_plate_up_part_link</child>
     </joint>
 
     <link name="swash_plate_down_part_link">
@@ -1520,13 +1528,13 @@ Command motor angular velocity
           <upper>1.0e16</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
 
-    <link name="blade_coupling_1_ball_revx_link">
+    <!-- <link name="blade_coupling_1_ball_1x_link">
       <pose degrees="true">0 0.0349 0.000880 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -1559,10 +1567,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="blade_coupling_1_ball_revx_joint" type="revolute">
+    <joint name="blade_coupling_1_ball_1x_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>blade_grip_1_link</parent>
-      <child>blade_coupling_1_ball_revx_link</child>
+      <child>blade_coupling_1_ball_1x_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -1570,12 +1578,12 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
-    <link name="blade_coupling_1_ball_revy_link">
+    <link name="blade_coupling_1_ball_1y_link">
       <pose degrees="true">0 0.0349 0.000880 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -1608,10 +1616,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="blade_coupling_1_ball_revy_joint" type="revolute">
+    <joint name="blade_coupling_1_ball_1y_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 0</pose>
-      <parent>blade_coupling_1_ball_revx_link</parent>
-      <child>blade_coupling_1_ball_revy_link</child>
+      <parent>blade_coupling_1_ball_1x_link</parent>
+      <child>blade_coupling_1_ball_1y_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -1619,11 +1627,11 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
-    </joint>
+    </joint> -->
     <link name="blade_coupling_1_link">
       <inertial>
         <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
@@ -1663,9 +1671,9 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="blade_coupling_1_ball_revz_joint" type="revolute">
+    <!-- <joint name="blade_coupling_1_ball_1z_joint" type="revolute">
       <pose degrees="true">0 0.0349 0.000880 0 0 0</pose>
-      <parent>blade_coupling_1_ball_revy_link</parent>
+      <parent>blade_coupling_1_ball_1y_link</parent>
       <child>blade_coupling_1_link</child>
       <axis>
         <xyz>0 0 1</xyz>
@@ -1674,13 +1682,18 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
+    </joint> -->
+    <joint name="blade_coupling_1_ball_1_joint" type="ball">
+      <pose degrees="true">0 0.0349 0.000880 0 0 0</pose>
+      <parent>blade_grip_1_link</parent>
+      <child>blade_coupling_1_link</child>
     </joint>
 
-    <link name="blade_coupling_1_ball_rev1_link">
+    <!-- <link name="blade_coupling_1_ball_1x_link">
       <pose degrees="true">0 0.02252 -0.068 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -1713,10 +1726,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="blade_coupling_1_ball_rev1_joint" type="revolute">
+    <joint name="blade_coupling_1_ball_1x_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>swash_plate_up_part_link</parent>
-      <child>blade_coupling_1_ball_rev1_link</child>
+      <child>blade_coupling_1_ball_1x_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -1724,12 +1737,12 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
-    <link name="blade_coupling_1_ball_rev2_link">
+    <link name="blade_coupling_1_ball_1y_link">
       <pose degrees="true">0 0.02252 -0.068 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -1762,10 +1775,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="blade_coupling_1_ball_rev2_joint" type="revolute">
+    <joint name="blade_coupling_1_ball_1y_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 0</pose>
-      <parent>blade_coupling_1_ball_rev1_link</parent>
-      <child>blade_coupling_1_ball_rev2_link</child>
+      <parent>blade_coupling_1_ball_1x_link</parent>
+      <child>blade_coupling_1_ball_1y_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -1773,12 +1786,12 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
-    </joint>
-    <link name="blade_coupling_1_ball_rev3_link">
+    </joint> -->
+    <link name="blade_coupling_1_ball_1z_link">
       <pose degrees="true">0 0.02252 -0.068 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -1811,10 +1824,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="blade_coupling_1_ball_rev3_joint" type="revolute">
+    <!-- <joint name="blade_coupling_1_ball_1z_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 0</pose>
-      <parent>blade_coupling_1_ball_rev2_link</parent>
-      <child>blade_coupling_1_ball_rev3_link</child>
+      <parent>blade_coupling_1_ball_1y_link</parent>
+      <child>blade_coupling_1_ball_1z_link</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -1822,13 +1835,18 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
+    </joint> -->
+    <joint name="blade_coupling_1_ball_2_joint" type="ball">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>swash_plate_up_part_link</parent>
+      <child>blade_coupling_1_ball_1z_link</child>
     </joint>
 
-    <link name="blade_coupling_2_ball_revx_link">
+    <!-- <link name="blade_coupling_2_ball_1x_link">
       <pose degrees="true">0 -0.0349 0.000880 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -1861,10 +1879,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="blade_coupling_2_ball_revx_joint" type="revolute">
+    <joint name="blade_coupling_2_ball_1x_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 180</pose>
       <parent>blade_grip_2_link</parent>
-      <child>blade_coupling_2_ball_revx_link</child>
+      <child>blade_coupling_2_ball_1x_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -1872,12 +1890,12 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
-    <link name="blade_coupling_2_ball_revy_link">
+    <link name="blade_coupling_2_ball_1y_link">
       <pose degrees="true">0 -0.0349 0.000880 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -1910,10 +1928,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="blade_coupling_2_ball_revy_joint" type="revolute">
+    <joint name="blade_coupling_2_ball_1y_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 180</pose>
-      <parent>blade_coupling_2_ball_revx_link</parent>
-      <child>blade_coupling_2_ball_revy_link</child>
+      <parent>blade_coupling_2_ball_1x_link</parent>
+      <child>blade_coupling_2_ball_1y_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -1921,11 +1939,11 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
-    </joint>
+    </joint> -->
     <link name="blade_coupling_2_link">
       <inertial>
         <pose degrees="true">0 -0.02875 -0.03356 10.3 0 0</pose>
@@ -1965,9 +1983,9 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="blade_coupling_2_ball_revz_joint" type="revolute">
+    <!-- <joint name="blade_coupling_2_ball_1z_joint" type="revolute">
       <pose degrees="true">0 -0.0349 0.000880 0 0 180</pose>
-      <parent>blade_coupling_2_ball_revy_link</parent>
+      <parent>blade_coupling_2_ball_1y_link</parent>
       <child>blade_coupling_2_link</child>
       <axis>
         <xyz>0 1 0</xyz>
@@ -1976,13 +1994,18 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
+    </joint> -->
+    <joint name="blade_coupling_2_ball_1_joint" type="ball">
+      <pose degrees="true">0 -0.0349 0.000880 0 0 180</pose>
+      <parent>blade_grip_2_link</parent>
+      <child>blade_coupling_2_link</child>
     </joint>
 
-    <link name="blade_coupling_2_ball_rev1_link">
+    <!-- <link name="blade_coupling_2_ball_1x_link">
       <pose degrees="true">0 -0.02252 -0.068 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -2015,10 +2038,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="blade_coupling_2_ball_rev1_joint" type="revolute">
+    <joint name="blade_coupling_2_ball_1x_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 180</pose>
       <parent>swash_plate_up_part_link</parent>
-      <child>blade_coupling_2_ball_rev1_link</child>
+      <child>blade_coupling_2_ball_1x_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -2026,12 +2049,12 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
-    <link name="blade_coupling_2_ball_rev2_link">
+    <link name="blade_coupling_2_ball_1y_link">
       <pose degrees="true">0 -0.02252 -0.068 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -2064,10 +2087,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="blade_coupling_2_ball_rev2_joint" type="revolute">
+    <joint name="blade_coupling_2_ball_1y_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 180</pose>
-      <parent>blade_coupling_2_ball_rev1_link</parent>
-      <child>blade_coupling_2_ball_rev2_link</child>
+      <parent>blade_coupling_2_ball_1x_link</parent>
+      <child>blade_coupling_2_ball_1y_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -2075,12 +2098,12 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
-    </joint>
-    <link name="blade_coupling_2_ball_rev3_link">
+    </joint> -->
+    <link name="blade_coupling_2_ball_1z_link">
       <pose degrees="true">0 -0.02252 -0.068 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -2113,10 +2136,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="blade_coupling_2_ball_rev3_joint" type="revolute">
+    <!-- <joint name="blade_coupling_2_ball_1z_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 180</pose>
-      <parent>blade_coupling_2_ball_rev2_link</parent>
-      <child>blade_coupling_2_ball_rev3_link</child>
+      <parent>blade_coupling_2_ball_1y_link</parent>
+      <child>blade_coupling_2_ball_1z_link</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -2124,10 +2147,15 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
+    </joint> -->
+    <joint name="blade_coupling_2_ball_2_joint" type="ball">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>swash_plate_up_part_link</parent>
+      <child>blade_coupling_2_ball_1z_link</child>
     </joint>
 
     <link name="lever_coupling_1_link">
@@ -2180,7 +2208,7 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
@@ -2236,13 +2264,13 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
 
-    <link name="lever_coupling_1_ball_rev1_link">
+    <!-- <link name="lever_coupling_1_ball_1x_link">
       <pose degrees="true">0.02251 0 -0.068 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -2275,10 +2303,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="lever_coupling_1_ball_rev1_joint" type="revolute">
+    <joint name="lever_coupling_1_ball_1x_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>swash_plate_up_part_link</parent>
-      <child>lever_coupling_1_ball_rev1_link</child>
+      <child>lever_coupling_1_ball_1x_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -2286,12 +2314,12 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
-    <link name="lever_coupling_1_ball_rev2_link">
+    <link name="lever_coupling_1_ball_1y_link">
       <pose degrees="true">0.02251 0 -0.068 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -2324,10 +2352,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="lever_coupling_1_ball_rev2_joint" type="revolute">
+    <joint name="lever_coupling_1_ball_1y_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 0</pose>
-      <parent>lever_coupling_1_ball_rev1_link</parent>
-      <child>lever_coupling_1_ball_rev2_link</child>
+      <parent>lever_coupling_1_ball_1x_link</parent>
+      <child>lever_coupling_1_ball_1y_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -2335,12 +2363,12 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
-    </joint>
-    <link name="lever_coupling_1_ball_rev3_link">
+    </joint> -->
+    <link name="lever_coupling_1_ball_1z_link">
       <pose degrees="true">0.02251 0 -0.068 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -2373,10 +2401,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="lever_coupling_1_ball_rev3_joint" type="revolute">
+    <!-- <joint name="lever_coupling_1_ball_1z_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 0</pose>
-      <parent>lever_coupling_1_ball_rev2_link</parent>
-      <child>lever_coupling_1_ball_rev3_link</child>
+      <parent>lever_coupling_1_ball_1y_link</parent>
+      <child>lever_coupling_1_ball_1z_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -2384,13 +2412,18 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
+    </joint> -->
+    <joint name="lever_coupling_1_ball_2_joint" type="ball">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>swash_plate_up_part_link</parent>
+      <child>lever_coupling_1_ball_1z_link</child>
     </joint>
 
-    <link name="lever_coupling_2_ball_rev1_link">
+    <!-- <link name="lever_coupling_2_ball_1x_link">
       <pose degrees="true">-0.02251 0 -0.068 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -2423,10 +2456,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="lever_coupling_2_ball_rev1_joint" type="revolute">
+    <joint name="lever_coupling_2_ball_1x_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>swash_plate_up_part_link</parent>
-      <child>lever_coupling_2_ball_rev1_link</child>
+      <child>lever_coupling_2_ball_1x_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -2434,12 +2467,12 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
-    <link name="lever_coupling_2_ball_rev2_link">
+    <link name="lever_coupling_2_ball_1y_link">
       <pose degrees="true">-0.02251 0 -0.068 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -2472,10 +2505,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="lever_coupling_2_ball_rev2_joint" type="revolute">
+    <joint name="lever_coupling_2_ball_1y_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 0</pose>
-      <parent>lever_coupling_2_ball_rev1_link</parent>
-      <child>lever_coupling_2_ball_rev2_link</child>
+      <parent>lever_coupling_2_ball_1x_link</parent>
+      <child>lever_coupling_2_ball_1y_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -2483,12 +2516,12 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
-    </joint>
-    <link name="lever_coupling_2_ball_rev3_link">
+    </joint> -->
+    <link name="lever_coupling_2_ball_1z_link">
       <pose degrees="true">-0.02251 0 -0.068 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -2521,10 +2554,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="lever_coupling_2_ball_rev3_joint" type="revolute">
+    <!-- <joint name="lever_coupling_2_ball_1z_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 0</pose>
-      <parent>lever_coupling_2_ball_rev2_link</parent>
-      <child>lever_coupling_2_ball_rev3_link</child>
+      <parent>lever_coupling_2_ball_1y_link</parent>
+      <child>lever_coupling_2_ball_1z_link</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -2532,14 +2565,19 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
+    </joint> -->
+    <joint name="lever_coupling_2_ball_2_joint" type="ball">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>swash_plate_up_part_link</parent>
+      <child>lever_coupling_2_ball_1z_link</child>
     </joint>
 
     <!-- servo rods -->
-    <link name="servo_rod_1_ball_revx_link">
+    <!-- <link name="servo_rod_1_ball_1x_link">
       <pose degrees="true">-0.045662 0.01084 -0.0651 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -2572,10 +2610,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_1_ball_revx_joint" type="revolute">
+    <joint name="servo_rod_1_ball_1x_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 -13</pose>
       <parent>swash_plate_down_part_link</parent>
-      <child>servo_rod_1_ball_revx_link</child>
+      <child>servo_rod_1_ball_1x_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -2583,12 +2621,12 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
-    <link name="servo_rod_1_ball_revy_link">
+    <link name="servo_rod_1_ball_1y_link">
       <pose degrees="true">-0.045662 0.01084 -0.0651 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -2621,10 +2659,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_1_ball_revy_joint" type="revolute">
+    <joint name="servo_rod_1_ball_1y_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 -13</pose>
-      <parent>servo_rod_1_ball_revx_link</parent>
-      <child>servo_rod_1_ball_revy_link</child>
+      <parent>servo_rod_1_ball_1x_link</parent>
+      <child>servo_rod_1_ball_1y_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -2632,11 +2670,11 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
-    </joint>
+    </joint> -->
     <link name="servo_rod_1_link">
       <pose degrees="true">-0.045662 0.01084 -0.0651 0 0 0</pose>
       <inertial>
@@ -2674,9 +2712,9 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_1_ball_revz_joint" type="revolute">
+    <!-- <joint name="servo_rod_1_ball_1z_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 -13</pose>
-      <parent>servo_rod_1_ball_revy_link</parent>
+      <parent>servo_rod_1_ball_1y_link</parent>
       <child>servo_rod_1_link</child>
       <axis>
         <xyz>0 0 1</xyz>
@@ -2685,18 +2723,17 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
-    </joint>
-    <!-- no damping for ball joint, so unstable -->
-    <!-- <joint name="servo_rod_1_ball_joint" type="ball">
+    </joint> -->
+    <joint name="servo_rod_1_ball_1_joint" type="ball">
       <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>swash_plate_down_part_link</parent>
       <child>servo_rod_1_link</child>
-    </joint> -->
-    <link name="servo_rod_1_ball2_revz_link">
+    </joint>
+    <!-- <link name="servo_rod_1_ball_2z_link">
       <pose degrees="true">-0.045662 0.01084 -0.135 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -2729,10 +2766,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_1_ball2_revz_joint" type="revolute">
+    <joint name="servo_rod_1_ball_2z_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 -13</pose>
       <parent>servo_rod_1_link</parent>
-      <child>servo_rod_1_ball2_revz_link</child>
+      <child>servo_rod_1_ball_2z_link</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -2740,12 +2777,12 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
-    <link name="servo_rod_1_ball2_revx_link">
+    <link name="servo_rod_1_ball_2x_link">
       <pose degrees="true">-0.045662 0.01084 -0.135 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -2778,10 +2815,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_1_ball2_revx_joint" type="revolute">
+    <joint name="servo_rod_1_ball_2x_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 -13</pose>
-      <parent>servo_rod_1_ball2_revz_link</parent>
-      <child>servo_rod_1_ball2_revx_link</child>
+      <parent>servo_rod_1_ball_2z_link</parent>
+      <child>servo_rod_1_ball_2x_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -2789,12 +2826,12 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
-    </joint>
-    <link name="servo_rod_1_ball2_revy_link">
+    </joint> -->
+    <link name="servo_rod_1_ball_2y_link">
     <pose degrees="true">-0.045662 0.01084 -0.135 0 0 0</pose>
     <inertial>
       <mass>0.001</mass>
@@ -2827,10 +2864,10 @@ Command motor angular velocity
       </material>
     </visual>
     </link>
-    <joint name="servo_rod_1_ball2_revy_joint" type="revolute">
+    <!-- <joint name="servo_rod_1_ball_2y_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 -13</pose>
-      <parent>servo_rod_1_ball2_revx_link</parent>
-      <child>servo_rod_1_ball2_revy_link</child>
+      <parent>servo_rod_1_ball_2x_link</parent>
+      <child>servo_rod_1_ball_2y_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -2838,13 +2875,18 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
+    </joint> -->
+    <joint name="servo_rod_1_ball_2_joint" type="ball">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>servo_rod_1_link</parent>
+      <child>servo_rod_1_ball_2y_link</child>
     </joint>
 
-    <link name="servo_rod_2_ball_revx_link">
+    <!-- <link name="servo_rod_2_ball_1x_link">
       <pose degrees="true">0.01343 -0.04493 -0.0651 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -2877,10 +2919,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_2_ball_revx_joint" type="revolute">
+    <joint name="servo_rod_2_ball_1x_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 -75</pose>
       <parent>swash_plate_down_part_link</parent>
-      <child>servo_rod_2_ball_revx_link</child>
+      <child>servo_rod_2_ball_1x_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -2888,12 +2930,12 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
-    <link name="servo_rod_2_ball_revy_link">
+    <link name="servo_rod_2_ball_1y_link">
       <pose degrees="true">0.01343 -0.04493 -0.0651 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -2926,10 +2968,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_2_ball_revy_joint" type="revolute">
+    <joint name="servo_rod_2_ball_1y_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 -75</pose>
-      <parent>servo_rod_2_ball_revx_link</parent>
-      <child>servo_rod_2_ball_revy_link</child>
+      <parent>servo_rod_2_ball_1x_link</parent>
+      <child>servo_rod_2_ball_1y_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -2937,11 +2979,11 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
-    </joint>
+    </joint> -->
     <link name="servo_rod_2_link">
       <pose degrees="true">0.01343 -0.04493 -0.0651 0 0 0</pose>
       <inertial>
@@ -2979,9 +3021,9 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_2_ball_revz_joint" type="revolute">
+    <!-- <joint name="servo_rod_2_ball_1z_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 -75</pose>
-      <parent>servo_rod_2_ball_revy_link</parent>
+      <parent>servo_rod_2_ball_1y_link</parent>
       <child>servo_rod_2_link</child>
       <axis>
         <xyz>0 0 1</xyz>
@@ -2990,12 +3032,17 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
+    </joint> -->
+    <joint name="servo_rod_2_ball_1_joint" type="ball">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>swash_plate_down_part_link</parent>
+      <child>servo_rod_2_link</child>
     </joint>
-    <link name="servo_rod_2_ball2_revz_link">
+    <!-- <link name="servo_rod_2_ball_2z_link">
       <pose degrees="true">0.01343 -0.04493 -0.135 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -3028,10 +3075,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_2_ball2_revz_joint" type="revolute">
+    <joint name="servo_rod_2_ball_2z_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 -13</pose>
       <parent>servo_rod_2_link</parent>
-      <child>servo_rod_2_ball2_revz_link</child>
+      <child>servo_rod_2_ball_2z_link</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -3039,12 +3086,12 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
-    <link name="servo_rod_2_ball2_revx_link">
+    <link name="servo_rod_2_ball_2x_link">
       <pose degrees="true">0.01343 -0.04493 -0.135 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -3077,10 +3124,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_2_ball2_revx_joint" type="revolute">
+    <joint name="servo_rod_2_ball_2x_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 -13</pose>
-      <parent>servo_rod_2_ball2_revz_link</parent>
-      <child>servo_rod_2_ball2_revx_link</child>
+      <parent>servo_rod_2_ball_2z_link</parent>
+      <child>servo_rod_2_ball_2x_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -3088,12 +3135,12 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
-    </joint>
-    <link name="servo_rod_2_ball2_revy_link">
+    </joint> -->
+    <link name="servo_rod_2_ball_2y_link">
       <pose degrees="true">0.01343 -0.04493 -0.135 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -3126,10 +3173,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_2_ball2_revy_joint" type="revolute">
+    <!-- <joint name="servo_rod_2_ball_2y_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 -13</pose>
-      <parent>servo_rod_2_ball2_revx_link</parent>
-      <child>servo_rod_2_ball2_revy_link</child>
+      <parent>servo_rod_2_ball_2x_link</parent>
+      <child>servo_rod_2_ball_2y_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -3137,13 +3184,18 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
+    </joint> -->
+    <joint name="servo_rod_2_ball_2_joint" type="ball">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>servo_rod_2_link</parent>
+      <child>servo_rod_2_ball_2y_link</child>
     </joint>
 
-    <link name="servo_rod_3_ball_revx_link">
+    <!-- <link name="servo_rod_3_ball_1x_link">
       <pose degrees="true">0.03219 0.03409 -0.0651 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -3176,10 +3228,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_3_ball_revx_joint" type="revolute">
+    <joint name="servo_rod_3_ball_1x_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 45</pose>
       <parent>swash_plate_down_part_link</parent>
-      <child>servo_rod_3_ball_revx_link</child>
+      <child>servo_rod_3_ball_1x_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -3187,12 +3239,12 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
-    <link name="servo_rod_3_ball_revy_link">
+    <link name="servo_rod_3_ball_1y_link">
       <pose degrees="true">0.03219 0.03409 -0.0651 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -3225,10 +3277,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_3_ball_revy_joint" type="revolute">
+    <joint name="servo_rod_3_ball_1y_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 45</pose>
-      <parent>servo_rod_3_ball_revx_link</parent>
-      <child>servo_rod_3_ball_revy_link</child>
+      <parent>servo_rod_3_ball_1x_link</parent>
+      <child>servo_rod_3_ball_1y_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -3236,11 +3288,11 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
-    </joint>
+    </joint> -->
     <link name="servo_rod_3_link">
       <pose degrees="true">0.03219 0.03409 -0.0651 0 0 0</pose>
       <inertial>
@@ -3278,9 +3330,9 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_3_ball_revz_joint" type="revolute">
+    <!-- <joint name="servo_rod_3_ball_1z_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 45</pose>
-      <parent>servo_rod_3_ball_revy_link</parent>
+      <parent>servo_rod_3_ball_1y_link</parent>
       <child>servo_rod_3_link</child>
       <axis>
         <xyz>0 0 1</xyz>
@@ -3289,12 +3341,17 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
+    </joint> -->
+    <joint name="servo_rod_3_ball_1_joint" type="ball">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>swash_plate_down_part_link</parent>
+      <child>servo_rod_3_link</child>
     </joint>
-    <link name="servo_rod_3_ball2_revz_link">
+    <!-- <link name="servo_rod_3_ball_2z_link">
       <pose degrees="true">0.03219 0.03409 -0.135 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -3327,10 +3384,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_3_ball2_revz_joint" type="revolute">
+    <joint name="servo_rod_3_ball_2z_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 -13</pose>
       <parent>servo_rod_3_link</parent>
-      <child>servo_rod_3_ball2_revz_link</child>
+      <child>servo_rod_3_ball_2z_link</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -3338,12 +3395,12 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
     </joint>
-    <link name="servo_rod_3_ball2_revx_link">
+    <link name="servo_rod_3_ball_2x_link">
       <pose degrees="true">0.03219 0.03409 -0.135 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -3376,10 +3433,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_3_ball2_revx_joint" type="revolute">
+    <joint name="servo_rod_3_ball_2x_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 -13</pose>
-      <parent>servo_rod_3_ball2_revz_link</parent>
-      <child>servo_rod_3_ball2_revx_link</child>
+      <parent>servo_rod_3_ball_2z_link</parent>
+      <child>servo_rod_3_ball_2x_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
@@ -3387,12 +3444,12 @@ Command motor angular velocity
           <upper>0.43633231</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
-    </joint>
-    <link name="servo_rod_3_ball2_revy_link">
+    </joint> -->
+    <link name="servo_rod_3_ball_2y_link">
       <pose degrees="true">0.03219 0.03409 -0.135 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
@@ -3425,10 +3482,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_3_ball2_revy_joint" type="revolute">
+    <!-- <joint name="servo_rod_3_ball_2y_joint" type="revolute">
       <pose degrees="true">0 0 0 0 0 -13</pose>
-      <parent>servo_rod_3_ball2_revx_link</parent>
-      <child>servo_rod_3_ball2_revy_link</child>
+      <parent>servo_rod_3_ball_2x_link</parent>
+      <child>servo_rod_3_ball_2y_link</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -3436,10 +3493,15 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
+          <damping>0.1</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
+    </joint> -->
+    <joint name="servo_rod_3_ball_2_joint" type="ball">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>servo_rod_3_link</parent>
+      <child>servo_rod_3_ball_2y_link</child>
     </joint>
 
     <!-- plugins -->
@@ -3448,46 +3510,58 @@ Command motor angular velocity
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>blade_coupling_1_link</parent_link>
-      <child_link>blade_coupling_1_ball_rev3_link</child_link>
+      <child_link>blade_coupling_1_ball_1z_link</child_link>
       <child_model>rotor_head</child_model>
+      <joint_type>fixed</joint_type>
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>blade_coupling_2_link</parent_link>
-      <child_link>blade_coupling_2_ball_rev3_link</child_link>
+      <child_link>blade_coupling_2_ball_1z_link</child_link>
       <child_model>rotor_head</child_model>
+      <joint_type>fixed</joint_type>
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>lever_coupling_1_link</parent_link>
-      <child_link>lever_coupling_1_ball_rev3_link</child_link>
+      <child_link>lever_coupling_1_ball_1z_link</child_link>
       <child_model>rotor_head</child_model>
+      <joint_type>fixed</joint_type>
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>lever_coupling_2_link</parent_link>
-      <child_link>lever_coupling_2_ball_rev3_link</child_link>
+      <child_link>lever_coupling_2_ball_1z_link</child_link>
       <child_model>rotor_head</child_model>
+      <joint_type>fixed</joint_type>
     </plugin>
 
     <!-- servo links -->
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>servo_arm_1_link</parent_link>
-      <child_link>servo_rod_1_ball2_revy_link</child_link>
+      <child_link>servo_rod_1_ball_2y_link</child_link>
       <child_model>rotor_head</child_model>
+      <joint_type>fixed</joint_type>
+      <!--
+      <child_link>servo_rod_1_link</child_link>
+      <joint_type>ball</joint_type>
+      <pose degrees="true">0 0 0.05 0 0 0</pose>
+      -->
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>servo_arm_2_link</parent_link>
-      <child_link>servo_rod_2_ball2_revy_link</child_link>
+      <child_link>servo_rod_2_ball_2y_link</child_link>
       <child_model>rotor_head</child_model>
+      <joint_type>fixed</joint_type>
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>servo_arm_3_link</parent_link>
-      <child_link>servo_rod_3_ball2_revy_link</child_link>
+      <child_link>servo_rod_3_ball_2y_link</child_link>
       <child_model>rotor_head</child_model>
+      <joint_type>fixed</joint_type>
     </plugin>
 
 
@@ -3508,7 +3582,7 @@ Command motor angular velocity
       filename="gz-sim-joint-controller-system">
       <joint_name>main_joint</joint_name>
       <initial_velocity>0.0</initial_velocity>
-      <use_force_commands>true</use_force_commands>
+      <use_velocity_commands>0</use_velocity_commands>
       <p_gain>0.3</p_gain>
       <i_gain>0.0</i_gain>
       <d_gain>0.0</d_gain>
@@ -3523,13 +3597,14 @@ Command motor angular velocity
       <joint_name>servo_arm_1_joint</joint_name>
       <topic>/model/rotor_head/joint/servo_arm_1_joint/0/cmd_pos</topic>
       <initial_position>0.0</initial_position>
-      <p_gain>50000</p_gain>
-      <i_gain>5000</i_gain>
-      <d_gain>10</d_gain>
-      <i_max>10000</i_max>
-      <i_min>-10000</i_min>
-      <cmd_max>100000</cmd_max>
-      <cmd_min>-100000</cmd_min>
+      <use_velocity_commands>0</use_velocity_commands>
+      <p_gain>1000</p_gain>
+      <i_gain>100</i_gain>
+      <d_gain>0.01</d_gain>
+      <i_max>1000</i_max>
+      <i_min>-1000</i_min>
+      <cmd_max>1e6</cmd_max>
+      <cmd_min>-1e6</cmd_min>
     </plugin>
 
     <plugin name="gz::sim::systems::JointPositionController"
@@ -3537,13 +3612,14 @@ Command motor angular velocity
       <joint_name>servo_arm_2_joint</joint_name>
       <topic>/model/rotor_head/joint/servo_arm_2_joint/0/cmd_pos</topic>
       <initial_position>0.0</initial_position>
-      <p_gain>50000</p_gain>
-      <i_gain>5000</i_gain>
-      <d_gain>10</d_gain>
-      <i_max>10000</i_max>
-      <i_min>-10000</i_min>
-      <cmd_max>100000</cmd_max>
-      <cmd_min>-100000</cmd_min>
+      <use_velocity_commands>0</use_velocity_commands>
+      <p_gain>1000</p_gain>
+      <i_gain>100</i_gain>
+      <d_gain>0.01</d_gain>
+      <i_max>1000</i_max>
+      <i_min>-1000</i_min>
+      <cmd_max>1e6</cmd_max>
+      <cmd_min>-1e6</cmd_min>
     </plugin>
 
     <plugin name="gz::sim::systems::JointPositionController"
@@ -3551,13 +3627,14 @@ Command motor angular velocity
       <joint_name>servo_arm_3_joint</joint_name>
       <topic>/model/rotor_head/joint/servo_arm_3_joint/0/cmd_pos</topic>
       <initial_position>0.0</initial_position>
-      <p_gain>50000</p_gain>
-      <i_gain>5000</i_gain>
-      <d_gain>10</d_gain>
-      <i_max>10000</i_max>
-      <i_min>-10000</i_min>
-      <cmd_max>100000</cmd_max>
-      <cmd_min>-100000</cmd_min>
+      <use_velocity_commands>0</use_velocity_commands>
+      <p_gain>1000</p_gain>
+      <i_gain>100</i_gain>
+      <d_gain>0.01</d_gain>
+      <i_max>1000</i_max>
+      <i_min>-1000</i_min>
+      <cmd_max>1e6</cmd_max>
+      <cmd_min>-1e6</cmd_min>
     </plugin>
 
   </model>

@@ -58,21 +58,6 @@ Command motor angular velocity
         </material>
       </visual>
       
-      <!-- servo links 0.226 - 0.0651 + 0.025 (+adjust) -->
-      <!-- <visual name="visual_servo_1">
-        <pose degrees="true">-0.06 0 0.1352 0 0 0</pose>
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>0 1 0</ambient>
-          <diffuse>0 1 0</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
     </link>
     <joint name="main_joint" type="revolute">
       <pose degrees="true">0 0 0 0 180 0</pose>
@@ -93,7 +78,7 @@ Command motor angular velocity
 
     <!-- guide (prismatic) -->
     <link name="guide_h_link">
-      <pose relative_to="servo_rod_1a_link" degrees="true">-0.01 0.003 0 0 0 0</pose>
+      <pose relative_to="servo_rod_3a_link" degrees="true">-0.01 0.003 0 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
         <inertia>
@@ -230,7 +215,7 @@ Command motor angular velocity
     </joint>
 
     <!-- servos (prismatic) -->
-    <link name="servo_1_link">
+    <link name="servo_3_link">
       <pose degrees="true">-0.045 -0.01 -0.135 0 90 -13</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
@@ -264,13 +249,13 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_1_joint" type="fixed">
+    <joint name="servo_3_joint" type="fixed">
       <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>base_link</parent>
-      <child>servo_1_link</child>
+      <child>servo_3_link</child>
     </joint>
-    <link name="servo_arm_1_link">
-      <pose relative_to="servo_1_link" degrees="true">0.0 0.02 -0.005 0 0 0</pose>
+    <link name="servo_arm_3_link">
+      <pose relative_to="servo_3_link" degrees="true">0.0 0.02 -0.005 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
         <inertia>
@@ -302,16 +287,16 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_arm_1_joint" type="prismatic">
+    <joint name="servo_arm_3_joint" type="prismatic">
       <pose degrees="true">0 0 0 0 0 180</pose>
-      <parent>servo_1_link</parent>
-      <child>servo_arm_1_link</child>
+      <parent>servo_3_link</parent>
+      <child>servo_arm_3_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>0.0</lower>
+          <lower>-0.02</lower>
           <upper>0.02</upper>
-          <effort>1.0e6</effort>
+          <effort>1.0e7</effort>
         </limit>
         <dynamics>
           <damping>0.01</damping>
@@ -319,7 +304,7 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-    <link name="servo_rod_1b_link">
+    <link name="servo_rod_3b_link">
       <pose degrees="true">-0.045662 0.01084 -0.0651 0 0 0</pose>
       <inertial>
         <pose degrees="true">0 0 -0.03356 0 0 0</pose>
@@ -356,10 +341,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_1b_joint" type="ball">
-      <pose relative_to="servo_arm_1_joint" degrees="true">0 0 0 0 0 0</pose>
-      <parent>servo_arm_1_link</parent>
-      <child>servo_rod_1b_link</child>
+    <joint name="servo_rod_3b_joint" type="ball">
+      <pose relative_to="servo_arm_3_joint" degrees="true">0 0 0 0 0 0</pose>
+      <parent>servo_arm_3_link</parent>
+      <child>servo_rod_3b_link</child>
     </joint>
 
     <link name="servo_2_link">
@@ -441,9 +426,9 @@ Command motor angular velocity
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>0.0</lower>
+          <lower>-0.02</lower>
           <upper>0.02</upper>
-          <effort>1.0e6</effort>
+          <effort>1.0e7</effort>
         </limit>
         <dynamics>
           <damping>0.01</damping>
@@ -494,7 +479,7 @@ Command motor angular velocity
       <child>servo_rod_2b_link</child>
     </joint>
 
-    <link name="servo_3_link">
+    <link name="servo_1_link">
       <pose degrees="true">0.0335 0.0135 -0.135 0 90 -13</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
@@ -528,13 +513,13 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_3_joint" type="fixed">
+    <joint name="servo_1_joint" type="fixed">
       <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>base_link</parent>
-      <child>servo_3_link</child>
+      <child>servo_1_link</child>
     </joint>
-    <link name="servo_arm_3_link">
-      <pose relative_to="servo_3_link" degrees="true">0.0 0.02 -0.005 0 0 0</pose>
+    <link name="servo_arm_1_link">
+      <pose relative_to="servo_1_link" degrees="true">0.0 0.02 -0.005 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
         <inertia>
@@ -566,16 +551,16 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_arm_3_joint" type="prismatic">
+    <joint name="servo_arm_1_joint" type="prismatic">
       <pose degrees="true">0 0 0 0 0 180</pose>
-      <parent>servo_3_link</parent>
-      <child>servo_arm_3_link</child>
+      <parent>servo_1_link</parent>
+      <child>servo_arm_1_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>0.0</lower>
+          <lower>-0.02</lower>
           <upper>0.02</upper>
-          <effort>1.0e6</effort>
+          <effort>1.0e7</effort>
         </limit>
         <dynamics>
           <damping>0.01</damping>
@@ -583,7 +568,7 @@ Command motor angular velocity
         </dynamics>
       </axis>
     </joint>
-    <link name="servo_rod_3b_link">
+    <link name="servo_rod_1b_link">
       <pose degrees="true">0.03219 0.03409 -0.0651 0 0 0</pose>
       <inertial>
         <pose degrees="true">0 0 -0.03356 0 0 0</pose>
@@ -620,10 +605,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_3b_joint" type="ball">
-      <pose relative_to="servo_arm_3_joint" degrees="true">0 0 0 0 0 0</pose>
-      <parent>servo_arm_3_link</parent>
-      <child>servo_rod_3b_link</child>
+    <joint name="servo_rod_1b_joint" type="ball">
+      <pose relative_to="servo_arm_1_joint" degrees="true">0 0 0 0 0 0</pose>
+      <parent>servo_arm_1_link</parent>
+      <child>servo_rod_1b_link</child>
     </joint>
 
     <!-- rotor head -->
@@ -947,7 +932,7 @@ Command motor angular velocity
         2. LL [-44.93 mm  -65.10 mm   13.43 mm]
         3. LR [ 34.09 mm  -65.10 mm   32.19 mm]
       -->
-      <!-- <visual name="visual_swashplate_servo_1">
+      <!-- <visual name="visual_swashplate_servo_3">
         <pose degrees="true">-0.045662 0.01084 -0.0651 0 0 0</pose>
         <geometry>
           <sphere>
@@ -973,7 +958,7 @@ Command motor angular velocity
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
-      <visual name="visual_swashplate_servo_3">
+      <visual name="visual_swashplate_servo_1">
         <pose degrees="true">0.03219 0.03409 -0.0651 0 0 0</pose>
         <geometry>
           <sphere>
@@ -1015,7 +1000,7 @@ Command motor angular velocity
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
-      <visual name="visual_servo_rod_3_link">
+      <visual name="visual_servo_rod_1_link">
         <pose degrees="true">0.03219 0.03409 -0.0651 0 0 0</pose>
         <geometry>
           <mesh>
@@ -1817,7 +1802,7 @@ Command motor angular velocity
     </joint>
 
     <!-- servo rods -->
-    <link name="servo_rod_1a_link">
+    <link name="servo_rod_3a_link">
       <pose degrees="true">-0.045662 0.01084 -0.0651 0 0 0</pose>
       <inertial>
         <pose degrees="true">0 0 -0.03356 0 0 0</pose>
@@ -1854,10 +1839,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_1a_joint" type="ball">
+    <joint name="servo_rod_3a_joint" type="ball">
       <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>swash_plate_down_part_link</parent>
-      <child>servo_rod_1a_link</child>
+      <child>servo_rod_3a_link</child>
     </joint>
 
     <link name="servo_rod_2a_link">
@@ -1903,7 +1888,7 @@ Command motor angular velocity
       <child>servo_rod_2a_link</child>
     </joint>
 
-    <link name="servo_rod_3a_link">
+    <link name="servo_rod_1a_link">
       <pose degrees="true">0.03219 0.03409 -0.0651 0 0 0</pose>
       <inertial>
         <pose degrees="true">0 0 -0.03356 0 0 0</pose>
@@ -1940,10 +1925,10 @@ Command motor angular velocity
         </material>
       </visual>
     </link>
-    <joint name="servo_rod_3a_joint" type="ball">
+    <joint name="servo_rod_1a_joint" type="ball">
       <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>swash_plate_down_part_link</parent>
-      <child>servo_rod_3a_link</child>
+      <child>servo_rod_1a_link</child>
     </joint>
 
     <!-- rotor blades -->
@@ -2059,8 +2044,8 @@ Command motor angular velocity
     <!-- servo links -->
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
-      <parent_link>servo_rod_1a_link</parent_link>
-      <child_link>servo_rod_1b_link</child_link>
+      <parent_link>servo_rod_3a_link</parent_link>
+      <child_link>servo_rod_3b_link</child_link>
       <child_model>rotor_head</child_model>
       <joint_type>fixed</joint_type>
     </plugin>
@@ -2073,8 +2058,8 @@ Command motor angular velocity
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
-      <parent_link>servo_rod_3a_link</parent_link>
-      <child_link>servo_rod_3b_link</child_link>
+      <parent_link>servo_rod_1a_link</parent_link>
+      <child_link>servo_rod_1b_link</child_link>
       <child_model>rotor_head</child_model>
       <joint_type>fixed</joint_type>
     </plugin>

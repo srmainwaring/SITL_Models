@@ -75,7 +75,7 @@ Command motor angular velocity
 
     </link>
     <joint name="main_joint" type="revolute">
-      <pose degrees="true">0 0 0 0 0 0</pose>
+      <pose degrees="true">0 0 0 0 180 0</pose>
       <parent>base_link</parent>
       <child>main_link</child>
       <axis>
@@ -303,13 +303,13 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="servo_arm_1_joint" type="prismatic">
-      <pose degrees="true">0 0 0 0 0 0</pose>
+      <pose degrees="true">0 0 0 0 0 180</pose>
       <parent>servo_1_link</parent>
       <child>servo_arm_1_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>-0.02</lower>
+          <lower>0.0</lower>
           <upper>0.02</upper>
           <effort>1.0e6</effort>
         </limit>
@@ -350,8 +350,8 @@ Command motor angular velocity
           </mesh>
         </geometry>
         <material>
-          <ambient>0.5 0.5 0.5</ambient>
-          <diffuse>0.5 0.5 0.5</diffuse>
+          <ambient>0.5 0.1 0.1</ambient>
+          <diffuse>0.5 0.1 0.1</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -435,13 +435,13 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="servo_arm_2_joint" type="prismatic">
-      <pose degrees="true">0 0 0 0 0 0</pose>
+      <pose degrees="true">0 0 0 0 0 180</pose>
       <parent>servo_2_link</parent>
       <child>servo_arm_2_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>-0.02</lower>
+          <lower>0.0</lower>
           <upper>0.02</upper>
           <effort>1.0e6</effort>
         </limit>
@@ -482,8 +482,8 @@ Command motor angular velocity
           </mesh>
         </geometry>
         <material>
-          <ambient>0.5 0.5 0.5</ambient>
-          <diffuse>0.5 0.5 0.5</diffuse>
+          <ambient>0.5 0.1 0.1</ambient>
+          <diffuse>0.5 0.1 0.1</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -567,13 +567,13 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="servo_arm_3_joint" type="prismatic">
-      <pose degrees="true">0 0 0 0 0 0</pose>
+      <pose degrees="true">0 0 0 0 0 180</pose>
       <parent>servo_3_link</parent>
       <child>servo_arm_3_link</child>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>-0.02</lower>
+          <lower>0.0</lower>
           <upper>0.02</upper>
           <effort>1.0e6</effort>
         </limit>
@@ -614,8 +614,8 @@ Command motor angular velocity
           </mesh>
         </geometry>
         <material>
-          <ambient>0.5 0.5 0.5</ambient>
-          <diffuse>0.5 0.5 0.5</diffuse>
+          <ambient>0.5 0.1 0.1</ambient>
+          <diffuse>0.5 0.1 0.1</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -1848,8 +1848,8 @@ Command motor angular velocity
           </mesh>
         </geometry>
         <material>
-          <ambient>0.5 0.5 0.5</ambient>
-          <diffuse>0.5 0.5 0.5</diffuse>
+          <ambient>0.1 0.1 0.5</ambient>
+          <diffuse>0.1 0.1 0.5</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -1891,8 +1891,8 @@ Command motor angular velocity
           </mesh>
         </geometry>
         <material>
-          <ambient>0.5 0.5 0.5</ambient>
-          <diffuse>0.5 0.5 0.5</diffuse>
+          <ambient>0.1 0.1 0.5</ambient>
+          <diffuse>0.1 0.1 0.5</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -1934,8 +1934,8 @@ Command motor angular velocity
           </mesh>
         </geometry>
         <material>
-          <ambient>0.5 0.5 0.5</ambient>
-          <diffuse>0.5 0.5 0.5</diffuse>
+          <ambient>0.1 0.1 0.5</ambient>
+          <diffuse>0.1 0.1 0.5</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -1944,6 +1944,84 @@ Command motor angular velocity
       <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>swash_plate_down_part_link</parent>
       <child>servo_rod_3a_link</child>
+    </joint>
+
+    <!-- rotor blades -->
+    <link name="blade_1_link">
+      <pose relative_to="blade_grip_1_link" degrees="true">-0.225 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.045</mass>
+        <inertia>
+          <ixx>4.04378E-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.000396177</iyy>
+          <iyz>0</iyz>
+          <izz>0.000400055</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.325 0.0325 0.0047</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.325 0.0325 0.0047</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="blade_1_joint" type="fixed">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>blade_grip_1_link</parent>
+      <child>blade_1_link</child>
+    </joint>
+    <link name="blade_2_link">
+      <pose relative_to="blade_grip_2_link" degrees="true">0.225 0 0 0 0 180</pose>
+      <inertial>
+        <mass>0.045</mass>
+        <inertia>
+          <ixx>4.04378E-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.000396177</iyy>
+          <iyz>0</iyz>
+          <izz>0.000400055</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.325 0.0325 0.0047</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.325 0.0325 0.0047</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="blade_2_joint" type="fixed">
+      <pose degrees="true">0 0 0 0 0 0</pose>
+      <parent>blade_grip_2_link</parent>
+      <child>blade_2_link</child>
     </joint>
 
     <!-- plugins -->
@@ -2034,13 +2112,13 @@ Command motor angular velocity
       <topic>/model/rotor_head/joint/servo_arm_1_joint/0/cmd_pos</topic>
       <initial_position>0.0</initial_position>
       <use_velocity_commands>0</use_velocity_commands>
-      <p_gain>1000</p_gain>
-      <i_gain>100</i_gain>
-      <d_gain>0.01</d_gain>
-      <i_max>1000</i_max>
-      <i_min>-1000</i_min>
-      <cmd_max>1e6</cmd_max>
-      <cmd_min>-1e6</cmd_min>
+      <p_gain>1.0e5</p_gain>
+      <i_gain>1.0e5</i_gain>
+      <d_gain>1</d_gain>
+      <i_max>1.0e6</i_max>
+      <i_min>-1.0e6</i_min>
+      <cmd_max>1e8</cmd_max>
+      <cmd_min>-1e8</cmd_min>
     </plugin>
 
     <plugin name="gz::sim::systems::JointPositionController"
@@ -2049,13 +2127,13 @@ Command motor angular velocity
       <topic>/model/rotor_head/joint/servo_arm_2_joint/0/cmd_pos</topic>
       <initial_position>0.0</initial_position>
       <use_velocity_commands>0</use_velocity_commands>
-      <p_gain>1000</p_gain>
-      <i_gain>100</i_gain>
-      <d_gain>0.01</d_gain>
-      <i_max>1000</i_max>
-      <i_min>-1000</i_min>
-      <cmd_max>1e6</cmd_max>
-      <cmd_min>-1e6</cmd_min>
+      <p_gain>1.0e5</p_gain>
+      <i_gain>1.0e5</i_gain>
+      <d_gain>1</d_gain>
+      <i_max>1.0e6</i_max>
+      <i_min>-1.0e6</i_min>
+      <cmd_max>1e8</cmd_max>
+      <cmd_min>-1e8</cmd_min>
     </plugin>
 
     <plugin name="gz::sim::systems::JointPositionController"
@@ -2064,13 +2142,50 @@ Command motor angular velocity
       <topic>/model/rotor_head/joint/servo_arm_3_joint/0/cmd_pos</topic>
       <initial_position>0.0</initial_position>
       <use_velocity_commands>0</use_velocity_commands>
-      <p_gain>1000</p_gain>
-      <i_gain>100</i_gain>
-      <d_gain>0.01</d_gain>
-      <i_max>1000</i_max>
-      <i_min>-1000</i_min>
-      <cmd_max>1e6</cmd_max>
-      <cmd_min>-1e6</cmd_min>
+      <p_gain>1.0e5</p_gain>
+      <i_gain>1.0e5</i_gain>
+      <d_gain>1</d_gain>
+      <i_max>1.0e6</i_max>
+      <i_min>-1.0e6</i_min>
+      <cmd_max>1e8</cmd_max>
+      <cmd_min>-1e8</cmd_min>
+    </plugin>
+
+    <!-- rotor lift -->
+    <plugin name="gz::sim::systems::LiftDrag"
+      filename="gz-sim-lift-drag-system">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.0</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>0 0 0</cp>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>blade_1_link</link_name>
+    </plugin>
+
+    <plugin name="gz::sim::systems::LiftDrag"
+      filename="gz-sim-lift-drag-system">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.0</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>0 0 0</cp>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>blade_2_link</link_name>
     </plugin>
 
   </model>

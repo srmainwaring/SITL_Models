@@ -231,7 +231,7 @@ Command motor angular velocity
 
     <!-- servos (prismatic) -->
     <link name="servo_1_link">
-      <pose degrees="true">-0.045 -0.005 -0.135 0 90 -13</pose>
+      <pose degrees="true">-0.045 -0.01 -0.135 0 90 -13</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.015</mass>
@@ -247,14 +247,14 @@ Command motor angular velocity
       <collision name="collision">
         <geometry>
           <box>
-            <size>0.0258 0.012 0.0229</size>
+            <size>0.012 0.0229 0.0258</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <box>
-            <size>0.0258 0.012 0.0229</size>
+            <size>0.012 0.0229 0.0258</size>
           </box>
         </geometry>
         <material>
@@ -270,7 +270,7 @@ Command motor angular velocity
       <child>servo_1_link</child>
     </joint>
     <link name="servo_arm_1_link">
-      <pose relative_to="servo_1_link" degrees="true">0.0 0.015 -0.005 0 0 0</pose>
+      <pose relative_to="servo_1_link" degrees="true">0.0 0.02 -0.005 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
         <inertia>
@@ -363,7 +363,7 @@ Command motor angular velocity
     </joint>
 
     <link name="servo_2_link">
-      <pose degrees="true">0.0145 -0.061 -0.135 0 90 -13</pose>
+      <pose degrees="true">0.0145 -0.066 -0.135 0 90 -13</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.015</mass>
@@ -379,14 +379,14 @@ Command motor angular velocity
       <collision name="collision">
         <geometry>
           <box>
-            <size>0.0258 0.012 0.0229</size>
+            <size>0.012 0.0229 0.0258</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <box>
-            <size>0.0258 0.012 0.0229</size>
+            <size>0.012 0.0229 0.0258</size>
           </box>
         </geometry>
         <material>
@@ -402,7 +402,7 @@ Command motor angular velocity
       <child>servo_2_link</child>
     </joint>
     <link name="servo_arm_2_link">
-      <pose relative_to="servo_2_link" degrees="true">0.0 0.015 -0.005 0 0 0</pose>
+      <pose relative_to="servo_2_link" degrees="true">0.0 0.020 -0.005 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
         <inertia>
@@ -495,7 +495,7 @@ Command motor angular velocity
     </joint>
 
     <link name="servo_3_link">
-      <pose degrees="true">0.0335 0.0185 -0.135 0 90 -13</pose>
+      <pose degrees="true">0.0335 0.0135 -0.135 0 90 -13</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.015</mass>
@@ -511,14 +511,14 @@ Command motor angular velocity
       <collision name="collision">
         <geometry>
           <box>
-            <size>0.0258 0.012 0.0229</size>
+            <size>0.012 0.0229 0.0258</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <box>
-            <size>0.0258 0.012 0.0229</size>
+            <size>0.012 0.0229 0.0258</size>
           </box>
         </geometry>
         <material>
@@ -534,7 +534,7 @@ Command motor angular velocity
       <child>servo_3_link</child>
     </joint>
     <link name="servo_arm_3_link">
-      <pose relative_to="servo_3_link" degrees="true">0.0 0.015 -0.005 0 0 0</pose>
+      <pose relative_to="servo_3_link" degrees="true">0.0 0.02 -0.005 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
         <inertia>

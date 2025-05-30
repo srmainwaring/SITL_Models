@@ -28,14 +28,14 @@ Command motor angular velocity
       <pose degrees="true">0 0 -0.2 0 0 -13</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
-        <mass>10</mass>
+        <mass>100</mass>
         <inertia>
-          <ixx>0.004166667</ixx>
+          <ixx>0.04166667</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.004166667</iyy>
+          <iyy>0.04166667</iyy>
           <iyz>0</iyz>
-          <izz>0.004166667</izz>
+          <izz>0.04166667</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -86,6 +86,144 @@ Command motor angular velocity
         </limit>
         <dynamics>
           <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <!-- guide (prismatic) -->
+    <link name="guide_h_link">
+      <pose relative_to="servo_rod_1a_link" degrees="true">-0.01 0.003 0 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1.00000E-08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-08</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-08</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 1</ambient>
+          <diffuse>1 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="guide_h_joint" type="prismatic">
+      <pose degrees="true">0 0 0 0 0 -13</pose>
+      <parent>swash_plate_down_part_link</parent>
+      <child>guide_h_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="guide_b_link">
+      <pose relative_to="guide_h_link" degrees="true">0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>1.00000E-07</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-07</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 1 1</ambient>
+          <diffuse>0 1 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="guide_b_joint" type="ball">
+      <pose degrees="true">0 0 0 0 0 -13</pose>
+      <parent>guide_h_link</parent>
+      <child>guide_b_link</child>
+    </joint>
+    <link name="guide_v_link">
+      <pose relative_to="guide_b_link" degrees="true">0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>1.00000E-07</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.00000E-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.00000E-07</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 1 0</ambient>
+          <diffuse>1 1 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="guide_v_joint" type="prismatic">
+      <pose degrees="true">0 0 0 0 0 -13</pose>
+      <parent>guide_b_link</parent>
+      <child>guide_v_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
           <friction>0</friction>
         </dynamics>
       </axis>
@@ -1859,6 +1997,15 @@ Command motor angular velocity
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>servo_rod_3a_link</parent_link>
       <child_link>servo_rod_3b_link</child_link>
+      <child_model>rotor_head</child_model>
+      <joint_type>fixed</joint_type>
+    </plugin>
+
+    <!-- guide link (weld joint at child origin -->
+    <plugin name="gz::sim::systems::DetachableJoint"
+      filename="libgz-sim-detachable-joint-system.so">
+      <parent_link>base_link</parent_link>
+      <child_link>guide_v_link</child_link>
       <child_model>rotor_head</child_model>
       <joint_type>fixed</joint_type>
     </plugin>

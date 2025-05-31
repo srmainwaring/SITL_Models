@@ -203,7 +203,7 @@
       <pose degrees="true">0 0 0.06 0 0 0</pose>
       <link name="base_link">
         <inertial>
-          <pose degrees="true">0.15 0 0 0 0 0</pose>
+          <pose degrees="true">0.16 0 0 0 0 0</pose>
           <mass>0.5</mass>
           <inertia>
             <ixx>0.001670833</ixx>

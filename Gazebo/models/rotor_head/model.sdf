@@ -2139,7 +2139,8 @@ Command motor angular velocity
     <!-- rotor lift -->
     <plugin name="gz::sim::systems::LiftDrag"
       filename="gz-sim-lift-drag-system">
-      <a0>0.3</a0>
+      <!-- <a0>0.3</a0> -->
+      <a0>0.0</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
       <cda>0.10</cda>
@@ -2147,7 +2148,7 @@ Command motor angular velocity
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
       <cma_stall>0.0</cma_stall>
-      <area>0.002</area>
+      <area>0.01</area>
       <air_density>1.2041</air_density>
       <cp>0 0 0</cp>
       <forward>0 1 0</forward>
@@ -2157,7 +2158,8 @@ Command motor angular velocity
 
     <plugin name="gz::sim::systems::LiftDrag"
       filename="gz-sim-lift-drag-system">
-      <a0>0.3</a0>
+      <!-- <a0>0.3</a0> -->
+      <a0>0.0</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
       <cda>0.10</cda>
@@ -2165,7 +2167,7 @@ Command motor angular velocity
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
       <cma_stall>0.0</cma_stall>
-      <area>0.002</area>
+      <area>0.01</area>
       <air_density>1.2041</air_density>
       <cp>0 0 0</cp>
       <forward>0 1 0</forward>

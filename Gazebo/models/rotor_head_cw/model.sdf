@@ -637,7 +637,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>main_body</name>
             </submesh>
@@ -654,7 +654,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_grip_1</name>
             </submesh>
@@ -671,7 +671,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_grip_2</name>
             </submesh>
@@ -688,7 +688,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>swash_plate_up_part</name>
             </submesh>
@@ -705,7 +705,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>swash_plate_down_part</name>
             </submesh>
@@ -722,7 +722,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>swash_plate_bearing</name>
             </submesh>
@@ -739,7 +739,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_1</name>
             </submesh>
@@ -756,7 +756,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_2</name>
             </submesh>
@@ -773,7 +773,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_coupling_1</name>
             </submesh>
@@ -790,7 +790,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_coupling_2</name>
             </submesh>
@@ -807,7 +807,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_coupling_1</name>
             </submesh>
@@ -824,7 +824,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_coupling_2</name>
             </submesh>
@@ -1042,7 +1042,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_grip_1</name>
             </submesh>
@@ -1097,7 +1097,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_grip_2</name>
             </submesh>
@@ -1152,7 +1152,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_1</name>
             </submesh>
@@ -1207,7 +1207,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_2</name>
             </submesh>
@@ -1263,7 +1263,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>swash_plate_bearing</name>
             </submesh>
@@ -1319,7 +1319,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>swash_plate_up_part</name>
             </submesh>
@@ -1389,7 +1389,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>swash_plate_down_part</name>
             </submesh>
@@ -1445,7 +1445,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_coupling_1</name>
             </submesh>
@@ -1490,7 +1490,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_coupling_1</name>
             </submesh>
@@ -1535,7 +1535,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_coupling_2</name>
             </submesh>
@@ -1580,7 +1580,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_coupling_2</name>
             </submesh>
@@ -1625,7 +1625,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_coupling_1</name>
             </submesh>
@@ -1681,7 +1681,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_coupling_2</name>
             </submesh>
@@ -1737,7 +1737,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_coupling_1</name>
             </submesh>
@@ -1782,7 +1782,7 @@ Command motor angular velocity
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_coupling_2</name>
             </submesh>

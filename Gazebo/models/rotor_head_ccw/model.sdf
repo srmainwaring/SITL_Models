@@ -44,7 +44,7 @@ limitations in the DetachableJoint plugin.
       
     </link>
     <joint name="main_joint" type="revolute">
-      <pose degrees="true">0 0 0 0 180 0</pose>
+      <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>base_link</parent>
       <child>main_link</child>
       <axis>
@@ -57,6 +57,13 @@ limitations in the DetachableJoint plugin.
           <damping>0.001</damping>
           <friction>0</friction>
         </dynamics>
+        <!-- dartsim does not support mimic constraints
+        <mimic joint="rotor_head_cw::main_joint" axis="axis">
+          <multiplier>-1.0</multiplier>
+          <offset>1.570796326</offset>
+          <reference>0.0</reference>
+        </mimic>
+        -->
       </axis>
     </joint>
 
@@ -1551,7 +1558,7 @@ limitations in the DetachableJoint plugin.
 
     <!-- rotor blades -->
     <link name="blade_1_link">
-      <pose relative_to="blade_grip_1_link" degrees="true">-0.225 0 0 0 0 0</pose>
+      <pose relative_to="blade_grip_1_link" degrees="true">-0.225 0 0 0 0 180</pose>
       <inertial>
         <mass>0.045</mass>
         <inertia>
@@ -1589,7 +1596,7 @@ limitations in the DetachableJoint plugin.
       <child>blade_1_link</child>
     </joint>
     <link name="blade_2_link">
-      <pose relative_to="blade_grip_2_link" degrees="true">0.225 0 0 0 0 180</pose>
+      <pose relative_to="blade_grip_2_link" degrees="true">0.225 0 0 0 0 0</pose>
       <inertial>
         <mass>0.045</mass>
         <inertia>

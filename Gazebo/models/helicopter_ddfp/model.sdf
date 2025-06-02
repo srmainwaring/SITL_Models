@@ -86,14 +86,14 @@
     </link>
 
     <include>
-      <uri>model://rotor_head</uri>
-      <name>rotor_head</name>
+      <uri>model://rotor_head_cw</uri>
+      <name>rotor_head_cw</name>
       <pose degrees="true">0.15 0 0.23 0 0 13</pose>
     </include>
     <joint name="rotor_head_joint" type="fixed">
       <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>base_link</parent>
-      <child>rotor_head::base_link</child>
+      <child>rotor_head_cw::base_link</child>
     </joint>
 
     <link name="tail_motor_link">
@@ -456,13 +456,13 @@
         SERVO8_FUNCTION 31 (HeliRSC)
       -->
       <control channel="7">
-        <jointName>rotor_head::main_joint</jointName>
+        <jointName>rotor_head_cw::main_joint</jointName>
         <multiplier>500</multiplier>
         <offset>0</offset>
         <servo_min>1000</servo_min>
         <servo_max>2000</servo_max>
         <type>COMMAND</type>
-        <cmd_topic>/model/rotor_head/joint/main_joint/cmd_vel</cmd_topic>
+        <cmd_topic>/model/rotor_head_cw/joint/main_joint/cmd_vel</cmd_topic>
       </control>
 
       <!--
@@ -482,39 +482,39 @@
         SERVO1_FUNCTION 33 (Motor1)
       -->
       <control channel="0">
-        <jointName>rotor_head::servo_arm_1_joint</jointName>
+        <jointName>rotor_head_cw::servo_arm_1_joint</jointName>
         <multiplier>0.04</multiplier>
         <offset>-0.5</offset>
         <servo_max>2000</servo_max>
         <servo_min>1000</servo_min>
         <type>COMMAND</type>
-        <cmd_topic>/model/rotor_head/joint/servo_arm_1_joint/0/cmd_pos</cmd_topic>
+        <cmd_topic>/model/rotor_head_cw/joint/servo_arm_1_joint/0/cmd_pos</cmd_topic>
       </control>
 
       <!--
         SERVO2_FUNCTION 34 (Motor2)
       -->
       <control channel="1">
-        <jointName>rotor_head::servo_arm_2_joint</jointName>
+        <jointName>rotor_head_cw::servo_arm_2_joint</jointName>
         <multiplier>0.04</multiplier>
         <offset>-0.5</offset>
         <servo_max>2000</servo_max>
         <servo_min>1000</servo_min>
         <type>COMMAND</type>
-        <cmd_topic>/model/rotor_head/joint/servo_arm_2_joint/0/cmd_pos</cmd_topic>
+        <cmd_topic>/model/rotor_head_cw/joint/servo_arm_2_joint/0/cmd_pos</cmd_topic>
       </control>
 
       <!--
         SERVO3_FUNCTION 35 (Motor3)
       -->
       <control channel="2">
-        <jointName>rotor_head::servo_arm_3_joint</jointName>
+        <jointName>rotor_head_cw::servo_arm_3_joint</jointName>
         <multiplier>0.04</multiplier>
         <offset>-0.5</offset>
         <servo_max>2000</servo_max>
         <servo_min>1000</servo_min>
         <type>COMMAND</type>
-        <cmd_topic>/model/rotor_head/joint/servo_arm_3_joint/0/cmd_pos</cmd_topic>
+        <cmd_topic>/model/rotor_head_cw/joint/servo_arm_3_joint/0/cmd_pos</cmd_topic>
       </control>
 
     </plugin>

@@ -18,11 +18,11 @@ Closed kinematic chains in gz-sim
 https://github.com/oKermorgant/gz_attach_links
 
 Command motor angular velocity
-  gz topic -t "/model/rotor_head/joint/main_joint/cmd_vel" -m gz.msgs.Double -p "data: 10.0"
+  gz topic -t "/model/rotor_head_cw/joint/main_joint/cmd_vel" -m gz.msgs.Double -p "data: 10.0"
 
 -->
 <sdf version="1.9">
-  <model name="rotor_head">
+  <model name="rotor_head_cw">
     <!-- base included for testing -->
     <link name="base_link">
       <pose degrees="true">0 0 -0.2 0 0 -13</pose>
@@ -2016,28 +2016,28 @@ Command motor angular velocity
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>blade_rod_1a_link</parent_link>
       <child_link>blade_rod_1b_link</child_link>
-      <child_model>rotor_head</child_model>
+      <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>blade_rod_2a_link</parent_link>
       <child_link>blade_rod_2b_link</child_link>
-      <child_model>rotor_head</child_model>
+      <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>lever_rod_1a_link</parent_link>
       <child_link>lever_rod_1b_link</child_link>
-      <child_model>rotor_head</child_model>
+      <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>lever_rod_2a_link</parent_link>
       <child_link>lever_rod_2b_link</child_link>
-      <child_model>rotor_head</child_model>
+      <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
     </plugin>
 
@@ -2046,21 +2046,21 @@ Command motor angular velocity
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>servo_rod_3a_link</parent_link>
       <child_link>servo_rod_3b_link</child_link>
-      <child_model>rotor_head</child_model>
+      <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>servo_rod_2a_link</parent_link>
       <child_link>servo_rod_2b_link</child_link>
-      <child_model>rotor_head</child_model>
+      <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>servo_rod_1a_link</parent_link>
       <child_link>servo_rod_1b_link</child_link>
-      <child_model>rotor_head</child_model>
+      <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
     </plugin>
 
@@ -2069,7 +2069,7 @@ Command motor angular velocity
       filename="libgz-sim-detachable-joint-system.so">
       <parent_link>base_link</parent_link>
       <child_link>guide_v_link</child_link>
-      <child_model>rotor_head</child_model>
+      <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
     </plugin>
 
@@ -2094,7 +2094,7 @@ Command motor angular velocity
     <plugin name="gz::sim::systems::JointPositionController"
       filename="gz-sim-joint-position-controller-system">
       <joint_name>servo_arm_1_joint</joint_name>
-      <topic>/model/rotor_head/joint/servo_arm_1_joint/0/cmd_pos</topic>
+      <topic>/model/rotor_head_cw/joint/servo_arm_1_joint/0/cmd_pos</topic>
       <initial_position>0.0</initial_position>
       <use_velocity_commands>0</use_velocity_commands>
       <p_gain>1.0e5</p_gain>
@@ -2109,7 +2109,7 @@ Command motor angular velocity
     <plugin name="gz::sim::systems::JointPositionController"
       filename="gz-sim-joint-position-controller-system">
       <joint_name>servo_arm_2_joint</joint_name>
-      <topic>/model/rotor_head/joint/servo_arm_2_joint/0/cmd_pos</topic>
+      <topic>/model/rotor_head_cw/joint/servo_arm_2_joint/0/cmd_pos</topic>
       <initial_position>0.0</initial_position>
       <use_velocity_commands>0</use_velocity_commands>
       <p_gain>1.0e5</p_gain>
@@ -2124,7 +2124,7 @@ Command motor angular velocity
     <plugin name="gz::sim::systems::JointPositionController"
       filename="gz-sim-joint-position-controller-system">
       <joint_name>servo_arm_3_joint</joint_name>
-      <topic>/model/rotor_head/joint/servo_arm_3_joint/0/cmd_pos</topic>
+      <topic>/model/rotor_head_cw/joint/servo_arm_3_joint/0/cmd_pos</topic>
       <initial_position>0.0</initial_position>
       <use_velocity_commands>0</use_velocity_commands>
       <p_gain>1.0e5</p_gain>

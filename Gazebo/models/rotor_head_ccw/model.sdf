@@ -5,7 +5,7 @@ See rotor_head_cw for details.
 This model is a copy of rotor_head_cw to work around current
 limitations in the DetachableJoint plugin.
 -->
-<sdf version="1.9">
+<sdf version="1.11">
   <model name="rotor_head_ccw">
     <!-- base included for testing -->
     <link name="base_link">

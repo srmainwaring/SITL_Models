@@ -21,7 +21,7 @@ Command motor angular velocity
   gz topic -t "/model/rotor_head_cw/joint/main_joint/cmd_vel" -m gz.msgs.Double -p "data: 10.0"
 
 -->
-<sdf version="1.9">
+<sdf version="1.11">
   <model name="rotor_head_cw">
     <!-- base included for testing -->
     <link name="base_link">

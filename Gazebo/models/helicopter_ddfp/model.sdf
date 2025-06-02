@@ -126,7 +126,7 @@
         </geometry>
       </collision>
       <collision name="collision_blade_2">
-        <pose degrees="true">-0.0375 0 0.015 0 0 0</pose>
+        <pose degrees="true">-0.0375 0 0.015 0 0 180</pose>
         <geometry>
           <box>
             <size>0.075 0.02 0.004</size>
@@ -160,7 +160,7 @@
         </material>
       </visual>
       <visual name="visual_blade_2">
-        <pose degrees="true">-0.0375 0 0.015 0 0 0</pose>
+        <pose degrees="true">-0.0375 0 0.015 0 0 180</pose>
         <geometry>
           <box>
             <size>0.075 0.02 0.004</size>

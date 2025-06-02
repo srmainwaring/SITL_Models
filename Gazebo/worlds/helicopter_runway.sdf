@@ -195,7 +195,7 @@
     </model> -->
     
     <!-- <include>
-      <uri>model://rotor_head</uri>
+      <uri>model://rotor_head_cw</uri>
       <pose degrees="true">0 0 0.226 0 0 13</pose>
     </include> -->
 

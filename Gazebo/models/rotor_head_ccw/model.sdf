@@ -322,7 +322,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/servo_rod.dae</uri>
+            <uri>meshes/servo_rod.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -454,7 +454,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/servo_rod.dae</uri>
+            <uri>meshes/servo_rod.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -586,7 +586,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/servo_rod.dae</uri>
+            <uri>meshes/servo_rod.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -628,7 +628,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_ccw.dae</uri>
             <submesh>
               <name>main_body</name>
             </submesh>
@@ -667,7 +667,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_ccw.dae</uri>
             <submesh>
               <name>blade_grip_1</name>
             </submesh>
@@ -722,7 +722,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_ccw.dae</uri>
             <submesh>
               <name>blade_grip_2</name>
             </submesh>
@@ -777,7 +777,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_ccw.dae</uri>
             <submesh>
               <name>lever_1</name>
             </submesh>
@@ -832,7 +832,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_ccw.dae</uri>
             <submesh>
               <name>lever_2</name>
             </submesh>
@@ -888,7 +888,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_ccw.dae</uri>
             <submesh>
               <name>swash_plate_bearing</name>
             </submesh>
@@ -944,7 +944,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_ccw.dae</uri>
             <submesh>
               <name>swash_plate_up_part</name>
             </submesh>
@@ -1014,7 +1014,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_ccw.dae</uri>
             <submesh>
               <name>swash_plate_down_part</name>
             </submesh>
@@ -1044,99 +1044,9 @@ limitations in the DetachableJoint plugin.
       </axis>
     </joint>
 
-    <link name="blade_rod_1a_link">
-      <inertial>
-        <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
-        <mass>0.010</mass>
-        <inertia>
-          <ixx>2.2575E-06</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>2.2575E-06</iyy>
-          <iyz>0</iyz>
-          <izz>0.00000018</izz>
-        </inertia>
-      </inertial>
-      <collision name="collision">
-        <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
-        <geometry>
-          <cylinder>
-            <length>0.051</length>
-            <radius>0.006</radius>
-          </cylinder>
-        </geometry>
-      </collision>
-      <visual name="visual">
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
-            <submesh>
-              <name>blade_coupling_1</name>
-            </submesh>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2</ambient>
-          <diffuse>0.2 0.2 0.2</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual>
-    </link>
-    <joint name="blade_rod_1a_joint" type="ball">
-      <pose degrees="true">0 0.0349 0.000880 0 0 0</pose>
-      <parent>blade_grip_1_link</parent>
-      <child>blade_rod_1a_link</child>
-    </joint>
-
-    <link name="blade_rod_1b_link">
-      <inertial>
-        <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
-        <mass>0.010</mass>
-        <inertia>
-          <ixx>2.2575E-06</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>2.2575E-06</iyy>
-          <iyz>0</iyz>
-          <izz>0.00000018</izz>
-        </inertia>
-      </inertial>
-      <collision name="collision">
-        <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
-        <geometry>
-          <cylinder>
-            <length>0.051</length>
-            <radius>0.006</radius>
-          </cylinder>
-        </geometry>
-      </collision>
-      <visual name="visual">
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
-            <submesh>
-              <name>blade_coupling_1</name>
-            </submesh>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2</ambient>
-          <diffuse>0.2 0.2 0.2</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual>
-    </link>
-    <joint name="blade_rod_1b_joint" type="ball">
-      <pose degrees="true">0 0.02252 -0.068 0 0 0</pose>
-      <parent>swash_plate_up_part_link</parent>
-      <child>blade_rod_1b_link</child>
-    </joint>
-
     <link name="blade_rod_2a_link">
       <inertial>
-        <pose degrees="true">0 -0.02875 -0.03356 10.3 0 0</pose>
+        <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
         <mass>0.010</mass>
         <inertia>
           <ixx>2.2575E-06</ixx>
@@ -1148,7 +1058,7 @@ limitations in the DetachableJoint plugin.
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 -0.02875 -0.03356 10.3 0 0</pose>
+        <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
         <geometry>
           <cylinder>
             <length>0.051</length>
@@ -1160,9 +1070,9 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_ccw.dae</uri>
             <submesh>
-              <name>blade_coupling_2</name>
+              <name>blade_coupling_1</name>
             </submesh>
           </mesh>
         </geometry>
@@ -1174,12 +1084,57 @@ limitations in the DetachableJoint plugin.
       </visual>
     </link>
     <joint name="blade_rod_2a_joint" type="ball">
-      <pose degrees="true">0 -0.0349 0.000880 0 0 180</pose>
+      <pose degrees="true">0 0.0349 0.000880 0 0 0</pose>
       <parent>blade_grip_2_link</parent>
       <child>blade_rod_2a_link</child>
     </joint>
 
     <link name="blade_rod_2b_link">
+      <inertial>
+        <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
+        <mass>0.010</mass>
+        <inertia>
+          <ixx>2.2575E-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>2.2575E-06</iyy>
+          <iyz>0</iyz>
+          <izz>0.00000018</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.051</length>
+            <radius>0.006</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_ccw.dae</uri>
+            <submesh>
+              <name>blade_coupling_1</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="blade_rod_2b_joint" type="ball">
+      <pose degrees="true">0 0.02252 -0.068 0 0 0</pose>
+      <parent>swash_plate_up_part_link</parent>
+      <child>blade_rod_2b_link</child>
+    </joint>
+
+    <link name="blade_rod_1a_link">
       <inertial>
         <pose degrees="true">0 -0.02875 -0.03356 10.3 0 0</pose>
         <mass>0.010</mass>
@@ -1205,7 +1160,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_ccw.dae</uri>
             <submesh>
               <name>blade_coupling_2</name>
             </submesh>
@@ -1218,10 +1173,55 @@ limitations in the DetachableJoint plugin.
         </material>
       </visual>
     </link>
-    <joint name="blade_rod_2b_joint" type="ball">
+    <joint name="blade_rod_1a_joint" type="ball">
+      <pose degrees="true">0 -0.0349 0.000880 0 0 180</pose>
+      <parent>blade_grip_1_link</parent>
+      <child>blade_rod_1a_link</child>
+    </joint>
+
+    <link name="blade_rod_1b_link">
+      <inertial>
+        <pose degrees="true">0 -0.02875 -0.03356 10.3 0 0</pose>
+        <mass>0.010</mass>
+        <inertia>
+          <ixx>2.2575E-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>2.2575E-06</iyy>
+          <iyz>0</iyz>
+          <izz>0.00000018</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose degrees="true">0 -0.02875 -0.03356 10.3 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.051</length>
+            <radius>0.006</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/rotor_head_ccw.dae</uri>
+            <submesh>
+              <name>blade_coupling_2</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="blade_rod_1b_joint" type="ball">
       <pose degrees="true">0 -0.02252 -0.068 0 0 0</pose>
       <parent>swash_plate_up_part_link</parent>
-      <child>blade_rod_2b_link</child>
+      <child>blade_rod_1b_link</child>
     </joint>
 
     <link name="lever_rod_1a_link">
@@ -1250,7 +1250,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_ccw.dae</uri>
             <submesh>
               <name>lever_coupling_1</name>
             </submesh>
@@ -1306,7 +1306,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_ccw.dae</uri>
             <submesh>
               <name>lever_coupling_2</name>
             </submesh>
@@ -1362,7 +1362,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_ccw.dae</uri>
             <submesh>
               <name>lever_coupling_1</name>
             </submesh>
@@ -1407,7 +1407,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/rotor_head_v2.dae</uri>
+            <uri>meshes/rotor_head_ccw.dae</uri>
             <submesh>
               <name>lever_coupling_2</name>
             </submesh>
@@ -1454,7 +1454,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/servo_rod.dae</uri>
+            <uri>meshes/servo_rod.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -1497,7 +1497,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/servo_rod.dae</uri>
+            <uri>meshes/servo_rod.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -1540,7 +1540,7 @@ limitations in the DetachableJoint plugin.
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://rotor_head_cw/meshes/servo_rod.dae</uri>
+            <uri>meshes/servo_rod.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -1639,15 +1639,15 @@ limitations in the DetachableJoint plugin.
     <!-- swashplate links -->
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
-      <parent_link>blade_rod_1a_link</parent_link>
-      <child_link>blade_rod_1b_link</child_link>
+      <parent_link>blade_rod_2a_link</parent_link>
+      <child_link>blade_rod_2b_link</child_link>
       <child_model>rotor_head_ccw</child_model>
       <joint_type>fixed</joint_type>
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
-      <parent_link>blade_rod_2a_link</parent_link>
-      <child_link>blade_rod_2b_link</child_link>
+      <parent_link>blade_rod_1a_link</parent_link>
+      <child_link>blade_rod_1b_link</child_link>
       <child_model>rotor_head_ccw</child_model>
       <joint_type>fixed</joint_type>
     </plugin>

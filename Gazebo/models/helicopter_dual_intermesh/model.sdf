@@ -316,7 +316,7 @@
       <imuName>base_link::imu_sensor</imuName>
 
       <!--
-        FRAME_CLASS      6 (Heli)
+        FRAME_CLASS      11 (Dual Heli)
         FRAME_TYPE       1 (X)
       -->
 
@@ -392,11 +392,11 @@
         <servo_max>2000</servo_max>
         <servo_min>1000</servo_min>
         <type>COMMAND</type>
-        <cmd_topic>/model/rotor_head_cw/joint/servo_arm_2_joint/0/cmd_pos</cmd_topic>
+        <cmd_topic>/model/rotor_head_cw/joint/servo_arm_1_joint/0/cmd_pos</cmd_topic>
       </control>
 
       <!--
-        SERVO4_FUNCTION 37 (Motor5)
+        SERVO5_FUNCTION 37 (Motor5)
       -->
       <control channel="4">
         <jointName>rotor_head_cw::servo_arm_2_joint</jointName>
@@ -409,7 +409,7 @@
       </control>
 
       <!--
-        SERVO4_FUNCTION 38 (Motor6)
+        SERVO6_FUNCTION 38 (Motor6)
       -->
       <control channel="5">
         <jointName>rotor_head_cw::servo_arm_3_joint</jointName>

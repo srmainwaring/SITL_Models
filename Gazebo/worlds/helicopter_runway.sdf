@@ -206,7 +206,9 @@
 
     <include>
       <pose degrees="true">0 0 0.06 0 0 90</pose>
-      <uri>model://helicopter_ddfp</uri>
+      <!-- <uri>model://helicopter_ddfp</uri> -->
+      <!-- <uri>model://helicopter_ddfp_ccw</uri> -->
+      <uri>model://helicopter_dual_intermesh</uri>
     </include>
 
   </world>

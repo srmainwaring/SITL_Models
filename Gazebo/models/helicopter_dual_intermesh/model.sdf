@@ -6,14 +6,15 @@
     <link name="base_link">
       <inertial>
         <pose degrees="true">0 0 0 0 0 0</pose>
-        <mass>0.5</mass>
+        <!-- <mass>0.5</mass> -->
+        <mass>1.0</mass>
         <inertia>
-          <ixx>0.001670833</ixx>
+          <ixx>0.003341667</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.017608333</iyy>
+          <iyy>0.035216667</iyy>
           <iyz>0</iyz>
-          <izz>0.019270833</izz>
+          <izz>0.038541667</izz>
         </inertia>
       </inertial>
       <collision name="collision">
@@ -88,7 +89,8 @@
     <include>
       <uri>model://rotor_head_cw</uri>
       <name>rotor_head_cw</name>
-      <pose degrees="true">0 -0.15 0.23 20 -5 13</pose>
+      <!-- <pose degrees="true">0 -0.15 0.23 20 -5 13</pose> -->
+      <pose degrees="true">0 -0.4 0.23 0 0 13</pose>
     </include>
     <joint name="rotor_head_cw_joint" type="fixed">
       <pose degrees="true">0 0 0 0 0 0</pose>
@@ -99,7 +101,8 @@
     <include>
       <uri>model://rotor_head_ccw</uri>
       <name>rotor_head_ccw</name>
-      <pose degrees="true">0 0.15 0.23 -20 5 13</pose>
+      <!-- <pose degrees="true">0 0.15 0.23 -20 5 13</pose> -->
+      <pose degrees="true">0 0.4 0.23 0 0 13</pose>
     </include>
     <joint name="rotor_head_ccw_joint" type="fixed">
       <pose degrees="true">0 0 0 0 0 0</pose>

@@ -379,18 +379,24 @@
     </joint>
 
     <!-- plugins -->
+    <plugin name="gz::sim::systems::JointStatePublisher"
+        filename="gz-sim-joint-state-publisher-system">
+    </plugin>
+
     <plugin name="gz::sim::systems::JointController"
       filename="gz-sim-joint-controller-system">
       <joint_name>tail_motor_joint</joint_name>
       <initial_velocity>0.0</initial_velocity>
-      <use_velocity_commands>0</use_velocity_commands>
-      <p_gain>0.3</p_gain>
-      <i_gain>0.0</i_gain>
+      <use_force_commands>1</use_force_commands>
+      <use_actuator_msg>0</use_actuator_msg>
+      <p_gain>0.02</p_gain>
+      <i_gain>0.01</i_gain>
       <d_gain>0.0</d_gain>
       <i_max>1</i_max>
       <i_min>-1</i_min>
-      <cmd_max>100</cmd_max>
-      <cmd_min>-100</cmd_min>
+      <cmd_max>5</cmd_max>
+      <cmd_min>-5</cmd_min>
+      <cmd_offset>0</cmd_offset>
     </plugin>
 
     <!-- tail rotor lift -->

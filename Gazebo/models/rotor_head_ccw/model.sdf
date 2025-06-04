@@ -1706,14 +1706,16 @@ limitations in the DetachableJoint plugin.
       filename="gz-sim-joint-controller-system">
       <joint_name>main_joint</joint_name>
       <initial_velocity>0.0</initial_velocity>
-      <use_velocity_commands>0</use_velocity_commands>
-      <p_gain>0.3</p_gain>
-      <i_gain>0.0</i_gain>
-      <d_gain>0.0</d_gain>
+      <use_force_commands>1</use_force_commands>
+      <use_actuator_msg>0</use_actuator_msg>
+      <p_gain>0.2</p_gain>
+      <i_gain>0.1</i_gain>
+      <d_gain>0.0001</d_gain>
       <i_max>1</i_max>
       <i_min>-1</i_min>
-      <cmd_max>100</cmd_max>
-      <cmd_min>-100</cmd_min>
+      <cmd_max>10.0</cmd_max>
+      <cmd_min>-10.0</cmd_min>
+      <cmd_offset>0</cmd_offset>
     </plugin>
 
     <plugin name="gz::sim::systems::JointPositionController"
@@ -1722,13 +1724,13 @@ limitations in the DetachableJoint plugin.
       <topic>/model/rotor_head_ccw/joint/servo_arm_1_joint/0/cmd_pos</topic>
       <initial_position>0.0</initial_position>
       <use_velocity_commands>0</use_velocity_commands>
-      <p_gain>1.0e5</p_gain>
-      <i_gain>1.0e5</i_gain>
+      <p_gain>1e4</p_gain>
+      <i_gain>1e3</i_gain>
       <d_gain>1</d_gain>
-      <i_max>1.0e6</i_max>
-      <i_min>-1.0e6</i_min>
-      <cmd_max>1e8</cmd_max>
-      <cmd_min>-1e8</cmd_min>
+      <i_max>1e4</i_max>
+      <i_min>-1e4</i_min>
+      <cmd_max>1e5</cmd_max>
+      <cmd_min>-1e5</cmd_min>
     </plugin>
 
     <plugin name="gz::sim::systems::JointPositionController"
@@ -1737,13 +1739,13 @@ limitations in the DetachableJoint plugin.
       <topic>/model/rotor_head_ccw/joint/servo_arm_2_joint/0/cmd_pos</topic>
       <initial_position>0.0</initial_position>
       <use_velocity_commands>0</use_velocity_commands>
-      <p_gain>1.0e5</p_gain>
-      <i_gain>1.0e5</i_gain>
+      <p_gain>1e4</p_gain>
+      <i_gain>1e3</i_gain>
       <d_gain>1</d_gain>
-      <i_max>1.0e6</i_max>
-      <i_min>-1.0e6</i_min>
-      <cmd_max>1e8</cmd_max>
-      <cmd_min>-1e8</cmd_min>
+      <i_max>1e4</i_max>
+      <i_min>-1e4</i_min>
+      <cmd_max>1e5</cmd_max>
+      <cmd_min>-1e5</cmd_min>
     </plugin>
 
     <plugin name="gz::sim::systems::JointPositionController"
@@ -1752,13 +1754,13 @@ limitations in the DetachableJoint plugin.
       <topic>/model/rotor_head_ccw/joint/servo_arm_3_joint/0/cmd_pos</topic>
       <initial_position>0.0</initial_position>
       <use_velocity_commands>0</use_velocity_commands>
-      <p_gain>1.0e5</p_gain>
-      <i_gain>1.0e5</i_gain>
+      <p_gain>1e4</p_gain>
+      <i_gain>1e3</i_gain>
       <d_gain>1</d_gain>
-      <i_max>1.0e6</i_max>
-      <i_min>-1.0e6</i_min>
-      <cmd_max>1e8</cmd_max>
-      <cmd_min>-1e8</cmd_min>
+      <i_max>1e4</i_max>
+      <i_min>-1e4</i_min>
+      <cmd_max>1e5</cmd_max>
+      <cmd_min>-1e5</cmd_min>
     </plugin>
 
     <!-- rotor lift -->

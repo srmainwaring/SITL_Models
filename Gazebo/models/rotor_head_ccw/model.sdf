@@ -52,6 +52,10 @@ limitations in the DetachableJoint plugin.
         <limit>
           <lower>-1.0e16</lower>
           <upper>1.0e16</upper>
+          <!-- fix blade for setting H_CYC_MAX
+          <lower>1.3439035240356338</lower>
+          <upper>1.3439035240356338</upper>
+          -->
         </limit>
         <dynamics>
           <damping>0.001</damping>
@@ -1763,18 +1767,18 @@ limitations in the DetachableJoint plugin.
       <cmd_min>-1e5</cmd_min>
     </plugin>
 
-    <!-- rotor lift -->
+    <!-- rotor lift NACA 0012 -->
     <plugin name="gz::sim::systems::LiftDrag"
       filename="gz-sim-lift-drag-system">
       <a0>0.0</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.2500</cla>
-      <cda>0.10</cda>
+      <alpha_stall>0.2</alpha_stall>
+      <cla>6.1</cla>
+      <cda>0.18</cda>
       <cma>0.0</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
+      <cla_stall>-5.0</cla_stall>
+      <cda_stall>1.1</cda_stall>
       <cma_stall>0.0</cma_stall>
-      <area>0.01</area>
+      <area>0.011</area>
       <air_density>1.2041</air_density>
       <cp>0 0 0</cp>
       <forward>0 1 0</forward>
@@ -1785,14 +1789,14 @@ limitations in the DetachableJoint plugin.
     <plugin name="gz::sim::systems::LiftDrag"
       filename="gz-sim-lift-drag-system">
       <a0>0.0</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.2500</cla>
-      <cda>0.10</cda>
+      <alpha_stall>0.2</alpha_stall>
+      <cla>6.1</cla>
+      <cda>0.18</cda>
       <cma>0.0</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
+      <cla_stall>-5.0</cla_stall>
+      <cda_stall>1.1</cda_stall>
       <cma_stall>0.0</cma_stall>
-      <area>0.01</area>
+      <area>0.011</area>
       <air_density>1.2041</air_density>
       <cp>0 0 0</cp>
       <forward>0 1 0</forward>

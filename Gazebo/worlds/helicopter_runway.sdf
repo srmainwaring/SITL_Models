@@ -211,5 +211,169 @@
       <uri>model://helicopter_dual_intermesh</uri>
     </include>
 
+    <!-- <model name="gimbal">
+      <pose degrees="true">0 0 0.26 0 0 0</pose>
+      <link name="base_link">
+        <pose degrees="true">0 0 0 0 0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>2.50000E-03</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.50000E-03</iyy>
+            <iyz>0</iyz>
+            <izz>2.50000E-03</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3</ambient>
+            <diffuse>0.3 0.3 0.3</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+      <joint name="base_joint" type="fixed">
+        <pose degrees="true">0 0 0 0 0 0</pose>
+        <parent>world</parent>
+        <child>base_link</child>
+      </joint>
+      <link name="roll_link">
+        <pose degrees="true">0 0 0 0 0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>2.50000E-03</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.50000E-03</iyy>
+            <iyz>0</iyz>
+            <izz>2.50000E-03</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3</ambient>
+            <diffuse>0.3 0.3 0.3</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+      <joint name="roll_joint" type="revolute">
+        <pose degrees="true">0 0 0 0 0 0</pose>
+        <parent>base_link</parent>
+        <child>roll_link</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>0</upper>
+          </limit>
+          <dynamics>
+            <damping>0.01</damping>
+            <friction>0.01</friction>
+            <spring_reference>0.0</spring_reference>
+            <spring_stiffness>15.0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name="pitch_link">
+        <pose degrees="true">0 0 0 0 0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>2.50000E-03</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.50000E-03</iyy>
+            <iyz>0</iyz>
+            <izz>2.50000E-03</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3</ambient>
+            <diffuse>0.3 0.3 0.3</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+      <joint name="pitch_joint" type="revolute">
+        <pose degrees="true">0 0 0 0 0 0</pose>
+        <parent>roll_link</parent>
+        <child>pitch_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>0</upper>
+          </limit>
+          <dynamics>
+            <damping>0.01</damping>
+            <friction>0.01</friction>
+            <spring_reference>0.0</spring_reference>
+            <spring_stiffness>15.0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <include>
+        <pose degrees="true">-0.005 0.004 0.26 0 0 90</pose>
+        <uri>model://helicopter_dual_intermesh</uri>
+      </include>
+      <joint name="yaw_joint" type="revolute">
+        <pose degrees="true">0 0 0 0 0 0</pose>
+        <parent>pitch_link</parent>
+        <child>helicopter_dual_intermesh::base_link</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1.0e16</lower>
+            <upper>1.0e16</upper>
+          </limit>
+          <dynamics>
+            <damping>0.01</damping>
+            <friction>0.01</friction>
+          </dynamics>
+        </axis>
+      </joint>
+    </model> -->
+
   </world>
 </sdf>

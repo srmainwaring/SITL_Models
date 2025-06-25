@@ -78,6 +78,10 @@ Command motor angular velocity
           <friction>0</friction>
         </dynamics>
       </axis>
+      <!-- <sensor name="force_torque" type="force_torque">
+        <update_rate>1000</update_rate>
+        <frame>parent</frame>
+      </sensor> -->
     </joint>
 
     <!-- guide (prismatic) -->
@@ -1968,11 +1972,34 @@ Command motor angular velocity
           <specular>0.01 0.01 0.01 1</specular>
         </material>
       </visual>
+      <visual name="cp_visual">
+        <pose>-0.0625 0 0 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.01</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
     </link>
-    <joint name="blade_1_joint" type="fixed">
-      <pose degrees="true">0 0 0 0 0 0</pose>
+    <joint name="blade_1_joint" type="revolute">
+      <pose degrees="true">0.1625 0 0 0 0 0</pose>
       <parent>blade_grip_1_link</parent>
       <child>blade_1_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower degrees="true">-0.13962634</lower>
+          <upper degrees="true">0.13962634</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
     <link name="blade_2_link">
       <pose relative_to="blade_grip_2_link" degrees="true">0.225 0 0 0 0 180</pose>
@@ -2006,11 +2033,35 @@ Command motor angular velocity
           <specular>0.01 0.01 0.01 1</specular>
         </material>
       </visual>
+      <visual name="cp_visual">
+        <pose>-0.0625 0 0 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.01</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0</ambient>
+          <diffuse>1 0 0</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
     </link>
-    <joint name="blade_2_joint" type="fixed">
-      <pose degrees="true">0 0 0 0 0 0</pose>
+
+    <joint name="blade_2_joint" type="revolute">
+      <pose degrees="true">0.1625 0 0 0 0 0</pose>
       <parent>blade_grip_2_link</parent>
       <child>blade_2_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower degrees="true">-0.13962634</lower>
+          <upper degrees="true">0.13962634</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <!-- plugins -->
@@ -2104,12 +2155,12 @@ Command motor angular velocity
       <initial_position>0.0</initial_position>
       <use_velocity_commands>0</use_velocity_commands>
       <p_gain>1e4</p_gain>
-      <i_gain>1e3</i_gain>
+      <i_gain>2e3</i_gain>
       <d_gain>1</d_gain>
       <i_max>1e4</i_max>
       <i_min>-1e4</i_min>
-      <cmd_max>1e5</cmd_max>
-      <cmd_min>-1e5</cmd_min>
+      <cmd_max>1e4</cmd_max>
+      <cmd_min>-1e4</cmd_min>
     </plugin>
 
     <plugin name="gz::sim::systems::JointPositionController"
@@ -2119,12 +2170,12 @@ Command motor angular velocity
       <initial_position>0.0</initial_position>
       <use_velocity_commands>0</use_velocity_commands>
       <p_gain>1e4</p_gain>
-      <i_gain>1e3</i_gain>
+      <i_gain>2e3</i_gain>
       <d_gain>1</d_gain>
       <i_max>1e4</i_max>
       <i_min>-1e4</i_min>
-      <cmd_max>1e5</cmd_max>
-      <cmd_min>-1e5</cmd_min>
+      <cmd_max>1e4</cmd_max>
+      <cmd_min>-1e4</cmd_min>
     </plugin>
 
     <plugin name="gz::sim::systems::JointPositionController"
@@ -2134,12 +2185,12 @@ Command motor angular velocity
       <initial_position>0.0</initial_position>
       <use_velocity_commands>0</use_velocity_commands>
       <p_gain>1e4</p_gain>
-      <i_gain>1e3</i_gain>
+      <i_gain>2e3</i_gain>
       <d_gain>1</d_gain>
       <i_max>1e4</i_max>
       <i_min>-1e4</i_min>
-      <cmd_max>1e5</cmd_max>
-      <cmd_min>-1e5</cmd_min>
+      <cmd_max>1e4</cmd_max>
+      <cmd_min>-1e4</cmd_min>
     </plugin>
 
     <!-- rotor lift NACA 0012 -->
@@ -2155,10 +2206,15 @@ Command motor angular velocity
       <cma_stall>0.0</cma_stall>
       <area>0.011</area>
       <air_density>1.2041</air_density>
-      <cp>0 0 0</cp>
+      <cp>-0.0625 0 0</cp>
       <forward>0 1 0</forward>
       <upward>0 0 1</upward>
       <link_name>blade_1_link</link_name>
+      <visualize_forces>
+        <visualize>1</visualize>
+        <!-- <update_rate>1000</update_rate>
+        <topic>/model/rotor_head_cw/link/blade_1_link/forces/lift_drag</topic> -->
+      </visualize_forces>
     </plugin>
 
     <plugin name="gz::sim::systems::LiftDrag"
@@ -2173,10 +2229,15 @@ Command motor angular velocity
       <cma_stall>0.0</cma_stall>
       <area>0.011</area>
       <air_density>1.2041</air_density>
-      <cp>0 0 0</cp>
+      <cp>-0.0625 0 0</cp>
       <forward>0 1 0</forward>
       <upward>0 0 1</upward>
       <link_name>blade_2_link</link_name>
+      <visualize_forces>
+        <visualize>1</visualize>
+        <!-- <update_rate>1000</update_rate>
+        <topic>/model/rotor_head_cw/link/blade_2_link/forces/lift_drag</topic> -->
+      </visualize_forces>
     </plugin>
 
   </model>

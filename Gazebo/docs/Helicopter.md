@@ -4,7 +4,7 @@ A model for a traditional Helicopter.
 
 _TODO: Add image here_
 
-## Usage
+- ## Usage
 
 Gazebo and the plugins should be installed as per the [ArduPilot Gazebo Plugin](https://github.com/ArduPilot/ardupilot_gazebo) instructions.
 
@@ -16,7 +16,7 @@ $HOME/SITL_Models/Gazebo/models:\
 $HOME/SITL_Models/Gazebo/worlds
 ```
 
-#### Run Gazebo
+### Run Gazebo
 
 ```bash
 gz sim -v4 -r helicopter_runway.sdf

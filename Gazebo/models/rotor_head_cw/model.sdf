@@ -1999,7 +1999,7 @@ Command motor angular velocity
         <dynamics>
           <damping>0.1</damping>
           <spring_reference>0</spring_reference>
-          <spring_stiffness>2.0</spring_stiffness>
+          <spring_stiffness>1.0</spring_stiffness>
         </dynamics>
       </axis>
     </joint>
@@ -2063,7 +2063,7 @@ Command motor angular velocity
         <dynamics>
           <damping>0.1</damping>
           <spring_reference>0</spring_reference>
-          <spring_stiffness>2.0</spring_stiffness>
+          <spring_stiffness>1.0</spring_stiffness>
         </dynamics>
       </axis>
     </joint>

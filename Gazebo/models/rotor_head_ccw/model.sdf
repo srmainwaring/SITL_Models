@@ -1624,7 +1624,7 @@ limitations in the DetachableJoint plugin.
         <dynamics>
           <damping>0.1</damping>
           <spring_reference>0</spring_reference>
-          <spring_stiffness>2.0</spring_stiffness>
+          <spring_stiffness>1.0</spring_stiffness>
         </dynamics>
       </axis>
     </joint>
@@ -1687,7 +1687,7 @@ limitations in the DetachableJoint plugin.
         <dynamics>
           <damping>0.1</damping>
           <spring_reference>0</spring_reference>
-          <spring_stiffness>2.0</spring_stiffness>
+          <spring_stiffness>1.0</spring_stiffness>
         </dynamics>
       </axis>
     </joint>

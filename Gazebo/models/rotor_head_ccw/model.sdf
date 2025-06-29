@@ -162,6 +162,11 @@ limitations in the DetachableJoint plugin.
       <pose degrees="true">0 0 0 0 0 -13</pose>
       <parent>guide_h_link</parent>
       <child>guide_b_link</child>
+      <axis>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
     <link name="guide_v_link">
       <pose relative_to="guide_b_link" degrees="true">0 0 0 0 0 0</pose>
@@ -344,6 +349,11 @@ limitations in the DetachableJoint plugin.
       <pose relative_to="servo_arm_3_joint" degrees="true">0 0 0 0 0 0</pose>
       <parent>servo_arm_3_link</parent>
       <child>servo_rod_3b_link</child>
+      <axis>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <link name="servo_2_link">
@@ -476,6 +486,11 @@ limitations in the DetachableJoint plugin.
       <pose relative_to="servo_arm_2_joint" degrees="true">0 0 0 0 0 0</pose>
       <parent>servo_arm_2_link</parent>
       <child>servo_rod_2b_link</child>
+      <axis>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <link name="servo_1_link">
@@ -608,6 +623,11 @@ limitations in the DetachableJoint plugin.
       <pose relative_to="servo_arm_1_joint" degrees="true">0 0 0 0 0 0</pose>
       <parent>servo_arm_1_link</parent>
       <child>servo_rod_1b_link</child>
+      <axis>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <!-- rotor head -->
@@ -969,6 +989,11 @@ limitations in the DetachableJoint plugin.
       <pose degrees="true">0 0 -0.068 0 0 0</pose>
       <parent>swash_plate_bearing_link</parent>
       <child>swash_plate_up_part_link</child>
+      <axis>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <link name="swash_plate_down_part_link">
@@ -1095,6 +1120,11 @@ limitations in the DetachableJoint plugin.
       <pose degrees="true">0 0.0349 0.000880 0 0 0</pose>
       <parent>blade_grip_2_link</parent>
       <child>blade_rod_2a_link</child>
+      <axis>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <link name="blade_rod_2b_link">
@@ -1140,6 +1170,11 @@ limitations in the DetachableJoint plugin.
       <pose degrees="true">0 0.02252 -0.068 0 0 0</pose>
       <parent>swash_plate_up_part_link</parent>
       <child>blade_rod_2b_link</child>
+      <axis>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <link name="blade_rod_1a_link">
@@ -1185,6 +1220,11 @@ limitations in the DetachableJoint plugin.
       <pose degrees="true">0 -0.0349 0.000880 0 0 180</pose>
       <parent>blade_grip_1_link</parent>
       <child>blade_rod_1a_link</child>
+      <axis>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <link name="blade_rod_1b_link">
@@ -1230,6 +1270,11 @@ limitations in the DetachableJoint plugin.
       <pose degrees="true">0 -0.02252 -0.068 0 0 0</pose>
       <parent>swash_plate_up_part_link</parent>
       <child>blade_rod_1b_link</child>
+      <axis>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <link name="lever_rod_1a_link">
@@ -1387,6 +1432,11 @@ limitations in the DetachableJoint plugin.
       <pose degrees="true">0.02251 0 -0.068 0 0 0</pose>
       <parent>swash_plate_up_part_link</parent>
       <child>lever_rod_1b_link</child>
+      <axis>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <link name="lever_rod_2b_link">
@@ -1432,6 +1482,11 @@ limitations in the DetachableJoint plugin.
       <pose degrees="true">-0.02251 0 -0.068 0 0 0</pose>
       <parent>swash_plate_up_part_link</parent>
       <child>lever_rod_2b_link</child>
+      <axis>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <!-- servo rods -->
@@ -1476,6 +1531,11 @@ limitations in the DetachableJoint plugin.
       <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>swash_plate_down_part_link</parent>
       <child>servo_rod_3a_link</child>
+      <axis>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <link name="servo_rod_2a_link">
@@ -1519,6 +1579,11 @@ limitations in the DetachableJoint plugin.
       <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>swash_plate_down_part_link</parent>
       <child>servo_rod_2a_link</child>
+      <axis>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <link name="servo_rod_1a_link">
@@ -1562,6 +1627,11 @@ limitations in the DetachableJoint plugin.
       <pose degrees="true">0 0 0 0 0 0</pose>
       <parent>swash_plate_down_part_link</parent>
       <child>servo_rod_1a_link</child>
+      <axis>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
     </joint>
 
     <!-- rotor blades -->

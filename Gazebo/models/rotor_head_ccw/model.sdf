@@ -1682,7 +1682,7 @@ limitations in the DetachableJoint plugin.
       </visual>
     </link>
     <joint name="blade_1_joint" type="revolute">
-      <pose degrees="true">-0.1625 0 0 0 0 0</pose>
+      <pose degrees="true">-0.2 0 0 0 0 0</pose>
       <parent>blade_grip_1_link</parent>
       <child>blade_1_link</child>
       <axis>
@@ -1745,7 +1745,7 @@ limitations in the DetachableJoint plugin.
       </visual>
     </link>
     <joint name="blade_2_joint" type="revolute">
-      <pose degrees="true">-0.1625 0 0 0 0 0</pose>
+      <pose degrees="true">-0.2 0 0 0 0 0</pose>
       <parent>blade_grip_2_link</parent>
       <child>blade_2_link</child>
       <axis>

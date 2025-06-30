@@ -2147,6 +2147,10 @@ Command motor angular velocity
       <child_link>blade_rod_1b_link</child_link>
       <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
+      <physics>
+        <cfm>1.0e-6</cfm>
+        <erp>0.8</erp>
+      </physics>
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
@@ -2154,6 +2158,10 @@ Command motor angular velocity
       <child_link>blade_rod_2b_link</child_link>
       <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
+      <physics>
+        <cfm>1.0e-6</cfm>
+        <erp>0.8</erp>
+      </physics>
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
@@ -2161,6 +2169,10 @@ Command motor angular velocity
       <child_link>lever_rod_1b_link</child_link>
       <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
+      <physics>
+        <cfm>1.0e-6</cfm>
+        <erp>0.8</erp>
+      </physics>
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
@@ -2168,6 +2180,10 @@ Command motor angular velocity
       <child_link>lever_rod_2b_link</child_link>
       <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
+      <physics>
+        <cfm>1.0e-6</cfm>
+        <erp>0.8</erp>
+      </physics>
     </plugin>
 
     <!-- servo links -->
@@ -2177,6 +2193,10 @@ Command motor angular velocity
       <child_link>servo_rod_3b_link</child_link>
       <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
+      <physics>
+        <cfm>1.0e-6</cfm>
+        <erp>0.8</erp>
+      </physics>
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
@@ -2184,6 +2204,10 @@ Command motor angular velocity
       <child_link>servo_rod_2b_link</child_link>
       <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
+      <physics>
+        <cfm>1.0e-6</cfm>
+        <erp>0.8</erp>
+      </physics>
     </plugin>
     <plugin name="gz::sim::systems::DetachableJoint"
       filename="libgz-sim-detachable-joint-system.so">
@@ -2191,6 +2215,10 @@ Command motor angular velocity
       <child_link>servo_rod_1b_link</child_link>
       <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
+      <physics>
+        <cfm>1.0e-6</cfm>
+        <erp>0.8</erp>
+      </physics>
     </plugin>
 
     <!-- guide link (weld joint at child origin -->
@@ -2200,6 +2228,10 @@ Command motor angular velocity
       <child_link>guide_v_link</child_link>
       <child_model>rotor_head_cw</child_model>
       <joint_type>fixed</joint_type>
+      <physics>
+        <cfm>1.0e-6</cfm>
+        <erp>0.8</erp>
+      </physics>
     </plugin>
 
     <plugin name="gz::sim::systems::JointStatePublisher"

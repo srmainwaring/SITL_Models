@@ -120,7 +120,7 @@
     </include>
 
     <include>
-      <pose degrees="true">0 0 0.15 0 0 90</pose>
+      <pose degrees="true">0 0 0.12 0 0 90</pose>
       <uri>model://helicopter</uri>
     </include>
 
@@ -134,7 +134,8 @@
       <uri>model://helicopter_dual_intermesh</uri>
     </include> -->
 
-    <!-- <model name="gimbal">
+    <!-- Fix helicoper to gimbal to test CoM and control response
+    <model name="gimbal">
       <pose degrees="true">0 0 0.26 0 0 0</pose>
       <link name="base_link">
         <pose degrees="true">0 0 0 0 0 0</pose>
@@ -218,10 +219,9 @@
             <upper>0</upper>
           </limit>
           <dynamics>
-            <damping>0.01</damping>
-            <friction>0.01</friction>
+            <damping>0.1</damping>
             <spring_reference>0.0</spring_reference>
-            <spring_stiffness>15.0</spring_stiffness>
+            <spring_stiffness>10.0</spring_stiffness>
           </dynamics>
         </axis>
       </joint>
@@ -269,31 +269,44 @@
             <upper>0</upper>
           </limit>
           <dynamics>
-            <damping>0.05</damping>
+            <damping>0.1</damping>
             <spring_reference>0.0</spring_reference>
-            <spring_stiffness>1.0</spring_stiffness>
+            <spring_stiffness>10.0</spring_stiffness>
           </dynamics>
         </axis>
       </joint>
       <include>
-        <pose degrees="true">-0.005 0.004 0.26 0 0 90</pose>
-        <uri>model://helicopter_dual_transverse</uri>
+        <pose degrees="true">0 -0.2 0.35 0 0 90</pose>
+        <uri>model://helicopter</uri>
       </include>
       <joint name="yaw_joint" type="revolute">
         <pose degrees="true">0 0 0 0 0 0</pose>
         <parent>pitch_link</parent>
-        <child>helicopter_dual_transverse::base_link</child>
+        <child>helicopter::base_link</child>
         <axis>
           <xyz>0 0 1</xyz>
           <limit>
-            <lower>-0e16</lower>
-            <upper>0e16</upper>
+            <lower>0</lower>
+            <upper>0</upper>
           </limit>
           <dynamics>
-            <damping>0.01</damping>
-            <friction>0.01</friction>
+            <damping>0.1</damping>
+            <spring_reference>0.0</spring_reference>
+            <spring_stiffness>10.0</spring_stiffness>
           </dynamics>
         </axis>
+      </joint>
+    </model> -->
+
+    <!-- Fix helicopter to world for rotor analysis -->
+    <!-- <model name="stand">
+      <include>
+        <pose degrees="true">0 0 0.12 0 0 90</pose>
+        <uri>model://helicopter</uri>
+      </include>
+      <joint name="base_joint" type="fixed">
+        <parent>world</parent>
+        <child>helicopter::base_link</child>
       </joint>
     </model> -->
 

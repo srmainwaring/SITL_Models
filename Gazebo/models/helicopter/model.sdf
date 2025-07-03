@@ -243,7 +243,7 @@
         <servo_min>1000</servo_min>
         <servo_max>2000</servo_max>
         <type>COMMAND</type>
-        <cmd_topic>/model/helicopter_ddfp/joint/tail_motor_joint/cmd_vel</cmd_topic>
+        <cmd_topic>/model/helicopter/joint/tail_motor_joint/cmd_vel</cmd_topic>
       </control>
       
       <!--

@@ -61,8 +61,8 @@ limitations in the DetachableJoint plugin.
           <friction>0</friction>
         </dynamics>
       </axis>
-      <!-- Disabled - impacts performance at high rate needed for analysis
-      <sensor name="force_torque" type="force_torque">
+      <!-- Disabled - impacts performance at high rate needed for analysis -->
+      <!-- <sensor name="force_torque" type="force_torque">
         <update_rate>1000</update_rate>
         <frame>parent</frame>
       </sensor> -->
@@ -1935,8 +1935,8 @@ limitations in the DetachableJoint plugin.
       <link_name>blade_1_link</link_name>
       <visualize_forces>
         <visualize>1</visualize>
-        <!-- Disabled - impacts performance at high rate needed for analysis
-        <update_rate>1000</update_rate>
+        <!-- Disabled - impacts performance at high rate needed for analysis -->
+        <!-- <update_rate>1000</update_rate>
         <topic>/model/rotor_head_ccw/link/blade_1_link/forces/lift_drag</topic> -->
       </visualize_forces>
     </plugin>
@@ -1959,8 +1959,8 @@ limitations in the DetachableJoint plugin.
       <link_name>blade_2_link</link_name>
       <visualize_forces>
         <visualize>1</visualize>
-        <!-- Disabled - impacts performance at high rate needed for analysis
-        <update_rate>1000</update_rate>
+        <!-- Disabled - impacts performance at high rate needed for analysis -->
+        <!-- <update_rate>1000</update_rate>
         <topic>/model/rotor_head_ccw/link/blade_2_link/forces/lift_drag</topic> -->
       </visualize_forces>
     </plugin>

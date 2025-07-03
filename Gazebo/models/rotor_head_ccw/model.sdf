@@ -7,7 +7,6 @@ limitations in the DetachableJoint plugin.
 -->
 <sdf version="1.11">
   <model name="rotor_head_ccw">
-    <!-- base included for testing -->
     <link name="base_link">
       <pose degrees="true">0 0 -0.2 0 0 -13</pose>
       <inertial>
@@ -61,15 +60,9 @@ limitations in the DetachableJoint plugin.
           <damping>0.001</damping>
           <friction>0</friction>
         </dynamics>
-        <!-- dartsim does not support mimic constraints
-        <mimic joint="rotor_head_cw::main_joint" axis="axis">
-          <multiplier>-1.0</multiplier>
-          <offset>1.570796326</offset>
-          <reference>0.0</reference>
-        </mimic>
-        -->
       </axis>
-      <!-- <sensor name="force_torque" type="force_torque">
+      <!-- Disabled - impacts performance at high rate needed for analysis
+      <sensor name="force_torque" type="force_torque">
         <update_rate>1000</update_rate>
         <frame>parent</frame>
       </sensor> -->
@@ -103,8 +96,8 @@ limitations in the DetachableJoint plugin.
           </sphere>
         </geometry>
         <material>
-          <ambient>1 0 1</ambient>
-          <diffuse>1 0 1</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -152,8 +145,8 @@ limitations in the DetachableJoint plugin.
           </sphere>
         </geometry>
         <material>
-          <ambient>0 1 1</ambient>
-          <diffuse>0 1 1</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -195,8 +188,8 @@ limitations in the DetachableJoint plugin.
           </sphere>
         </geometry>
         <material>
-          <ambient>1 1 0</ambient>
-          <diffuse>1 1 0</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -247,9 +240,9 @@ limitations in the DetachableJoint plugin.
           </box>
         </geometry>
         <material>
-          <ambient>0.8 0.1 0.1</ambient>
-          <diffuse>0.8 0.1 0.1</diffuse>
-          <specular>0.1 0.1 0.1</specular>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
         </material>
       </visual>
     </link>
@@ -285,8 +278,8 @@ limitations in the DetachableJoint plugin.
           </sphere>
         </geometry>
         <material>
-          <ambient>0 1 0</ambient>
-          <diffuse>0 1 0</diffuse>
+          <ambient>0.9 0.9 0.9</ambient>
+          <diffuse>0.9 0.9 0.9</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -359,7 +352,7 @@ limitations in the DetachableJoint plugin.
     <link name="servo_2_link">
       <pose degrees="true">0.0145 -0.066 -0.135 0 90 -13</pose>
       <inertial>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0.04 0 0 0 0</pose>
         <mass>0.015</mass>
         <inertia>
           <ixx>8.35513E-07</ixx>
@@ -371,6 +364,7 @@ limitations in the DetachableJoint plugin.
         </inertia>
       </inertial>
       <collision name="collision">
+        <pose degrees="true">0 0.04 0 0 0 0</pose>
         <geometry>
           <box>
             <size>0.012 0.0229 0.0258</size>
@@ -378,15 +372,16 @@ limitations in the DetachableJoint plugin.
         </geometry>
       </collision>
       <visual name="visual">
+        <pose degrees="true">0 0.04 0 0 0 0</pose>
         <geometry>
           <box>
             <size>0.012 0.0229 0.0258</size>
           </box>
         </geometry>
         <material>
-          <ambient>0.8 0.1 0.1</ambient>
-          <diffuse>0.8 0.1 0.1</diffuse>
-          <specular>0.1 0.1 0.1</specular>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
         </material>
       </visual>
     </link>
@@ -422,8 +417,8 @@ limitations in the DetachableJoint plugin.
           </sphere>
         </geometry>
         <material>
-          <ambient>0 1 0</ambient>
-          <diffuse>0 1 0</diffuse>
+          <ambient>0.9 0.9 0.9</ambient>
+          <diffuse>0.9 0.9 0.9</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -476,8 +471,8 @@ limitations in the DetachableJoint plugin.
           </mesh>
         </geometry>
         <material>
-          <ambient>0.5 0.1 0.1</ambient>
-          <diffuse>0.5 0.1 0.1</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -521,9 +516,9 @@ limitations in the DetachableJoint plugin.
           </box>
         </geometry>
         <material>
-          <ambient>0.8 0.1 0.1</ambient>
-          <diffuse>0.8 0.1 0.1</diffuse>
-          <specular>0.1 0.1 0.1</specular>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
         </material>
       </visual>
     </link>
@@ -559,8 +554,8 @@ limitations in the DetachableJoint plugin.
           </sphere>
         </geometry>
         <material>
-          <ambient>0 1 0</ambient>
-          <diffuse>0 1 0</diffuse>
+          <ambient>0.9 0.9 0.9</ambient>
+          <diffuse>0.9 0.9 0.9</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -613,8 +608,8 @@ limitations in the DetachableJoint plugin.
           </mesh>
         </geometry>
         <material>
-          <ambient>0.5 0.1 0.1</ambient>
-          <diffuse>0.5 0.1 0.1</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -1521,8 +1516,8 @@ limitations in the DetachableJoint plugin.
           </mesh>
         </geometry>
         <material>
-          <ambient>0.1 0.1 0.5</ambient>
-          <diffuse>0.1 0.1 0.5</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -1569,8 +1564,8 @@ limitations in the DetachableJoint plugin.
           </mesh>
         </geometry>
         <material>
-          <ambient>0.1 0.1 0.5</ambient>
-          <diffuse>0.1 0.1 0.5</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -1617,8 +1612,8 @@ limitations in the DetachableJoint plugin.
           </mesh>
         </geometry>
         <material>
-          <ambient>0.1 0.1 0.5</ambient>
-          <diffuse>0.1 0.1 0.5</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -1656,17 +1651,15 @@ limitations in the DetachableJoint plugin.
         </geometry>
       </collision>
       <visual name="visual">
+        <pose degrees="true">-0.13 0 0 0 180 0</pose>
         <geometry>
-          <box>
-            <size>0.325 0.0325 0.0047</size>
-          </box>
+          <mesh>
+            <scale>1.75 1.75 1.75</scale>
+            <uri>meshes/rotor_blade.dae</uri>
+          </mesh>
         </geometry>
-        <material>
-          <ambient>0.01 0.01 0.01</ambient>
-          <diffuse>0.01 0.01 0.01</diffuse>
-          <specular>0.01 0.01 0.01 1</specular>
-        </material>
       </visual>
+      <!-- Leave marker for debugging lift-drag plugin
       <visual name="cp_visual">
         <pose>0.0625 0 0 0 0 0</pose>
         <geometry>
@@ -1680,6 +1673,7 @@ limitations in the DetachableJoint plugin.
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
+      -->
     </link>
     <joint name="blade_1_joint" type="revolute">
       <pose degrees="true">-0.2 0 0 0 0 0</pose>
@@ -1719,17 +1713,15 @@ limitations in the DetachableJoint plugin.
         </geometry>
       </collision>
       <visual name="visual">
+        <pose degrees="true">-0.13 0 0 0 180 0</pose>
         <geometry>
-          <box>
-            <size>0.325 0.0325 0.0047</size>
-          </box>
+          <mesh>
+            <scale>1.75 1.75 1.75</scale>
+            <uri>meshes/rotor_blade.dae</uri>
+          </mesh>
         </geometry>
-        <material>
-          <ambient>0.01 0.01 0.01</ambient>
-          <diffuse>0.01 0.01 0.01</diffuse>
-          <specular>0.01 0.01 0.01 1</specular>
-        </material>
       </visual>
+      <!-- Leave marker for debugging lift-drag plugin
       <visual name="cp_visual">
         <pose>0.0625 0 0 0 0 0</pose>
         <geometry>
@@ -1743,6 +1735,7 @@ limitations in the DetachableJoint plugin.
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
+      -->
     </link>
     <joint name="blade_2_joint" type="revolute">
       <pose degrees="true">-0.2 0 0 0 0 0</pose>
@@ -1942,7 +1935,8 @@ limitations in the DetachableJoint plugin.
       <link_name>blade_1_link</link_name>
       <visualize_forces>
         <visualize>1</visualize>
-        <!-- <update_rate>1000</update_rate>
+        <!-- Disabled - impacts performance at high rate needed for analysis
+        <update_rate>1000</update_rate>
         <topic>/model/rotor_head_ccw/link/blade_1_link/forces/lift_drag</topic> -->
       </visualize_forces>
     </plugin>
@@ -1965,7 +1959,8 @@ limitations in the DetachableJoint plugin.
       <link_name>blade_2_link</link_name>
       <visualize_forces>
         <visualize>1</visualize>
-        <!-- <update_rate>1000</update_rate>
+        <!-- Disabled - impacts performance at high rate needed for analysis
+        <update_rate>1000</update_rate>
         <topic>/model/rotor_head_ccw/link/blade_2_link/forces/lift_drag</topic> -->
       </visualize_forces>
     </plugin>

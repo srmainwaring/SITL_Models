@@ -2,7 +2,6 @@
 <!--
 Blender > Export > Collada > Forward axis: +Z, Up axis: +X
 
-
 FreeCAD positions of swashplate joints
 
 blade grip couplings
@@ -23,7 +22,6 @@ Command motor angular velocity
 -->
 <sdf version="1.11">
   <model name="rotor_head_cw">
-    <!-- base included for testing -->
     <link name="base_link">
       <pose degrees="true">0 0 -0.2 0 0 -13</pose>
       <inertial>
@@ -78,7 +76,8 @@ Command motor angular velocity
           <friction>0</friction>
         </dynamics>
       </axis>
-      <!-- <sensor name="force_torque" type="force_torque">
+      <!-- Disabled - impacts performance at high rate needed for analysis
+      <sensor name="force_torque" type="force_torque">
         <update_rate>1000</update_rate>
         <frame>parent</frame>
       </sensor> -->
@@ -112,8 +111,8 @@ Command motor angular velocity
           </sphere>
         </geometry>
         <material>
-          <ambient>1 0 1</ambient>
-          <diffuse>1 0 1</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -161,8 +160,8 @@ Command motor angular velocity
           </sphere>
         </geometry>
         <material>
-          <ambient>0 1 1</ambient>
-          <diffuse>0 1 1</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -204,8 +203,8 @@ Command motor angular velocity
           </sphere>
         </geometry>
         <material>
-          <ambient>1 1 0</ambient>
-          <diffuse>1 1 0</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -256,9 +255,9 @@ Command motor angular velocity
           </box>
         </geometry>
         <material>
-          <ambient>0.8 0.1 0.1</ambient>
-          <diffuse>0.8 0.1 0.1</diffuse>
-          <specular>0.1 0.1 0.1</specular>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
         </material>
       </visual>
     </link>
@@ -294,8 +293,8 @@ Command motor angular velocity
           </sphere>
         </geometry>
         <material>
-          <ambient>0 1 0</ambient>
-          <diffuse>0 1 0</diffuse>
+          <ambient>0.9 0.9 0.9</ambient>
+          <diffuse>0.9 0.9 0.9</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -348,8 +347,8 @@ Command motor angular velocity
           </mesh>
         </geometry>
         <material>
-          <ambient>0.5 0.1 0.1</ambient>
-          <diffuse>0.5 0.1 0.1</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -368,7 +367,7 @@ Command motor angular velocity
     <link name="servo_2_link">
       <pose degrees="true">0.0145 -0.066 -0.135 0 90 -13</pose>
       <inertial>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0.04 0 0 0 0</pose>
         <mass>0.015</mass>
         <inertia>
           <ixx>8.35513E-07</ixx>
@@ -380,6 +379,7 @@ Command motor angular velocity
         </inertia>
       </inertial>
       <collision name="collision">
+        <pose degrees="true">0 0.04 0 0 0 0</pose>
         <geometry>
           <box>
             <size>0.012 0.0229 0.0258</size>
@@ -387,15 +387,16 @@ Command motor angular velocity
         </geometry>
       </collision>
       <visual name="visual">
+        <pose degrees="true">0 0.04 0 0 0 0</pose>
         <geometry>
           <box>
             <size>0.012 0.0229 0.0258</size>
           </box>
         </geometry>
         <material>
-          <ambient>0.8 0.1 0.1</ambient>
-          <diffuse>0.8 0.1 0.1</diffuse>
-          <specular>0.1 0.1 0.1</specular>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
         </material>
       </visual>
     </link>
@@ -431,8 +432,8 @@ Command motor angular velocity
           </sphere>
         </geometry>
         <material>
-          <ambient>0 1 0</ambient>
-          <diffuse>0 1 0</diffuse>
+          <ambient>0.9 0.9 0.9</ambient>
+          <diffuse>0.9 0.9 0.9</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -485,8 +486,8 @@ Command motor angular velocity
           </mesh>
         </geometry>
         <material>
-          <ambient>0.5 0.1 0.1</ambient>
-          <diffuse>0.5 0.1 0.1</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -530,9 +531,9 @@ Command motor angular velocity
           </box>
         </geometry>
         <material>
-          <ambient>0.8 0.1 0.1</ambient>
-          <diffuse>0.8 0.1 0.1</diffuse>
-          <specular>0.1 0.1 0.1</specular>
+          <ambient>0.01 0.01 0.01</ambient>
+          <diffuse>0.01 0.01 0.01</diffuse>
+          <specular>0.01 0.01 0.01</specular>
         </material>
       </visual>
     </link>
@@ -568,8 +569,8 @@ Command motor angular velocity
           </sphere>
         </geometry>
         <material>
-          <ambient>0 1 0</ambient>
-          <diffuse>0 1 0</diffuse>
+          <ambient>0.9 0.9 0.9</ambient>
+          <diffuse>0.9 0.9 0.9</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -622,8 +623,8 @@ Command motor angular velocity
           </mesh>
         </geometry>
         <material>
-          <ambient>0.5 0.1 0.1</ambient>
-          <diffuse>0.5 0.1 0.1</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -677,372 +678,6 @@ Command motor angular velocity
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
-
-      <!-- <visual name="visual_blade_grip_1">
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_cw.dae</uri>
-            <submesh>
-              <name>blade_grip_1</name>
-            </submesh>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2</ambient>
-          <diffuse>0.2 0.2 0.2</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
-      <!-- <visual name="visual_blade_grip_2">
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_cw.dae</uri>
-            <submesh>
-              <name>blade_grip_2</name>
-            </submesh>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2</ambient>
-          <diffuse>0.2 0.2 0.2</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
-      <!-- <visual name="visual_swash_plate_up_part">
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_cw.dae</uri>
-            <submesh>
-              <name>swash_plate_up_part</name>
-            </submesh>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2</ambient>
-          <diffuse>0.2 0.2 0.2</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
-      <!-- <visual name="visual_swash_plate_down_part">
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_cw.dae</uri>
-            <submesh>
-              <name>swash_plate_down_part</name>
-            </submesh>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2</ambient>
-          <diffuse>0.2 0.2 0.2</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
-      <!-- <visual name="visual_swash_plate_bearing">
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_cw.dae</uri>
-            <submesh>
-              <name>swash_plate_bearing</name>
-            </submesh>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2</ambient>
-          <diffuse>0.2 0.2 0.2</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
-      <!-- <visual name="visual_lever_1">
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_cw.dae</uri>
-            <submesh>
-              <name>lever_1</name>
-            </submesh>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2</ambient>
-          <diffuse>0.2 0.2 0.2</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
-      <!-- <visual name="visual_lever_2">
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_cw.dae</uri>
-            <submesh>
-              <name>lever_2</name>
-            </submesh>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2</ambient>
-          <diffuse>0.2 0.2 0.2</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
-      <!-- <visual name="visual_lever_rod_1">
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_cw.dae</uri>
-            <submesh>
-              <name>lever_coupling_1</name>
-            </submesh>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2</ambient>
-          <diffuse>0.2 0.2 0.2</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-      
-      <!-- <visual name="visual_lever_rod_2">
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_cw.dae</uri>
-            <submesh>
-              <name>lever_coupling_2</name>
-            </submesh>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2</ambient>
-          <diffuse>0.2 0.2 0.2</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
-      <!-- <visual name="visual_blade_rod_1">
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_cw.dae</uri>
-            <submesh>
-              <name>blade_coupling_1</name>
-            </submesh>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2</ambient>
-          <diffuse>0.2 0.2 0.2</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-      
-      <!-- <visual name="visual_blade_rod_2">
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/rotor_head_cw.dae</uri>
-            <submesh>
-              <name>blade_coupling_2</name>
-            </submesh>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2</ambient>
-          <diffuse>0.2 0.2 0.2</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
-      <!-- markers to locate the coupling to swashplate
-      [22.52 mm  -68.00 mm  -0.40 mm]
-      [-22.52 mm  -68.00 mm  0.40 mm]
-      -->
-      <!-- <visual name="visual_blade_rod_ball_1">
-        <pose degrees="true">0 0.02252 -0.068 0 0 0</pose>
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>1 0 1</ambient>
-          <diffuse>1 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
-      <!-- <visual name="visual_blade_rod_ball_2">
-        <pose degrees="true">0 -0.02252 -0.068 0 0 0</pose>
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>1 0 1</ambient>
-          <diffuse>1 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
-      <!--
-        upper [-0.40 mm  -36.00 mm  -22.51 mm]
-        lower [-0.40 mm  -68.00 mm  -22.52 mm]
-      -->
-      <!-- <visual name="visual_lever_rod_upper_1">
-        <pose degrees="true">0.02251 0 -0.036 0 0 0</pose>
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>1 0 1</ambient>
-          <diffuse>1 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual>
-      <visual name="visual_lever_rod_lower_1">
-        <pose degrees="true">0.02251 0 -0.068 0 0 0</pose>
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>1 0 1</ambient>
-          <diffuse>1 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
-      <!-- <visual name="visual_lever_rod_upper_2">
-        <pose degrees="true">-0.02251 0 -0.036 0 0 0</pose>
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>1 0 1</ambient>
-          <diffuse>1 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual>
-      <visual name="visual_lever_rod_lower_2">
-        <pose degrees="true">-0.02251 0 -0.068 0 0 0</pose>
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>1 0 1</ambient>
-          <diffuse>1 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
-      <!--
-        1. TR [ 10.84 mm  -65.10 mm  -45.62 mm]
-        2. LL [-44.93 mm  -65.10 mm   13.43 mm]
-        3. LR [ 34.09 mm  -65.10 mm   32.19 mm]
-      -->
-      <!-- <visual name="visual_swashplate_servo_3">
-        <pose degrees="true">-0.045662 0.01084 -0.0651 0 0 0</pose>
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>1 0 1</ambient>
-          <diffuse>1 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual>
-      <visual name="visual_swashplate_servo_2">
-        <pose degrees="true">0.01343 -0.04493 -0.0651 0 0 0</pose>
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>1 0 1</ambient>
-          <diffuse>1 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual>
-      <visual name="visual_swashplate_servo_1">
-        <pose degrees="true">0.03219 0.03409 -0.0651 0 0 0</pose>
-        <geometry>
-          <sphere>
-            <radius>0.005</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>1 0 1</ambient>
-          <diffuse>1 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
-      <!-- <visual name="visual_servo_rod_1_link">
-        <pose degrees="true">-0.045662 0.01084 -0.0651 0 0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/servo_rod.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.5 0.5 0.5</ambient>
-          <diffuse>0.5 0.5 0.5</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual>
-      <visual name="visual_servo_rod_2_link">
-        <pose degrees="true">0.01343 -0.04493 -0.0651 0 0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/servo_rod.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.5 0.5 0.5</ambient>
-          <diffuse>0.5 0.5 0.5</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual>
-      <visual name="visual_servo_rod_1_link">
-        <pose degrees="true">0.03219 0.03409 -0.0651 0 0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>meshes/servo_rod.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.5 0.5 0.5</ambient>
-          <diffuse>0.5 0.5 0.5</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual> -->
-
     </link>
 
     <link name="blade_grip_1_link">
@@ -1896,8 +1531,8 @@ Command motor angular velocity
           </mesh>
         </geometry>
         <material>
-          <ambient>0.1 0.1 0.5</ambient>
-          <diffuse>0.1 0.1 0.5</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -1944,8 +1579,8 @@ Command motor angular velocity
           </mesh>
         </geometry>
         <material>
-          <ambient>0.1 0.1 0.5</ambient>
-          <diffuse>0.1 0.1 0.5</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -1992,8 +1627,8 @@ Command motor angular velocity
           </mesh>
         </geometry>
         <material>
-          <ambient>0.1 0.1 0.5</ambient>
-          <diffuse>0.1 0.1 0.5</diffuse>
+          <ambient>0.2 0.2 0.2</ambient>
+          <diffuse>0.2 0.2 0.2</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
@@ -2031,17 +1666,15 @@ Command motor angular velocity
         </geometry>
       </collision>
       <visual name="visual">
+        <pose degrees="true">0.13 0 0 0 0 0</pose>
         <geometry>
-          <box>
-            <size>0.325 0.0325 0.0047</size>
-          </box>
+          <mesh>
+            <scale>1.75 1.75 1.75</scale>
+            <uri>meshes/rotor_blade.dae</uri>
+          </mesh>
         </geometry>
-        <material>
-          <ambient>0.01 0.01 0.01</ambient>
-          <diffuse>0.01 0.01 0.01</diffuse>
-          <specular>0.01 0.01 0.01 1</specular>
-        </material>
       </visual>
+      <!-- Leave marker for debugging lift-drag plugin
       <visual name="cp_visual">
         <pose>-0.0625 0 0 0 0 0</pose>
         <geometry>
@@ -2054,7 +1687,7 @@ Command motor angular velocity
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
-      </visual>
+      </visual> -->
     </link>
     <joint name="blade_1_joint" type="revolute">
       <pose degrees="true">0.2 0 0 0 0 0</pose>
@@ -2094,17 +1727,15 @@ Command motor angular velocity
         </geometry>
       </collision>
       <visual name="visual">
+        <pose degrees="true">0.13 0 0 0 0 0</pose>
         <geometry>
-          <box>
-            <size>0.325 0.0325 0.0047</size>
-          </box>
+          <mesh>
+            <scale>1.75 1.75 1.75</scale>
+            <uri>meshes/rotor_blade.dae</uri>
+          </mesh>
         </geometry>
-        <material>
-          <ambient>0.01 0.01 0.01</ambient>
-          <diffuse>0.01 0.01 0.01</diffuse>
-          <specular>0.01 0.01 0.01 1</specular>
-        </material>
       </visual>
+      <!-- Leave marker for debugging lift-drag plugin
       <visual name="cp_visual">
         <pose>-0.0625 0 0 0 0 0</pose>
         <geometry>
@@ -2117,7 +1748,7 @@ Command motor angular velocity
           <diffuse>1 0 0</diffuse>
           <specular>0.1 0.1 0.1 1</specular>
         </material>
-      </visual>
+      </visual> -->
     </link>
     <joint name="blade_2_joint" type="revolute">
       <pose degrees="true">0.2 0 0 0 0 0</pose>
@@ -2317,7 +1948,8 @@ Command motor angular velocity
       <link_name>blade_1_link</link_name>
       <visualize_forces>
         <visualize>1</visualize>
-        <!-- <update_rate>1000</update_rate>
+        <!-- Disabled - impacts performance at high rate needed for analysis
+        <update_rate>1000</update_rate>
         <topic>/model/rotor_head_cw/link/blade_1_link/forces/lift_drag</topic> -->
       </visualize_forces>
     </plugin>
@@ -2340,7 +1972,8 @@ Command motor angular velocity
       <link_name>blade_2_link</link_name>
       <visualize_forces>
         <visualize>1</visualize>
-        <!-- <update_rate>1000</update_rate>
+        <!-- Disabled - impacts performance at high rate needed for analysis
+        <update_rate>1000</update_rate>
         <topic>/model/rotor_head_cw/link/blade_2_link/forces/lift_drag</topic> -->
       </visualize_forces>
     </plugin>

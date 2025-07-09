@@ -41,10 +41,41 @@
           </mesh>
         </geometry>
       </visual>
+
+      <!-- Sensors -->
       <sensor name="imu_sensor" type="imu">
         <pose degrees="true">0.15 0 0 180 0 0</pose>
         <always_on>1</always_on>
         <update_rate>1000.0</update_rate>
+      </sensor>
+
+      <sensor name="range" type="gpu_lidar">
+        <pose degrees="true">0.325 0 -0.03 0 90 0</pose>
+        <always_on>1</always_on>
+        <update_rate>20</update_rate>
+        <visualize>1</visualize>
+        <topic>range</topic>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>5</samples>
+              <resolution>1</resolution>
+              <min_angle>-0.14835</min_angle>
+              <max_angle>0.14835</max_angle>
+            </horizontal>
+            <vertical>
+              <samples>5</samples>
+              <resolution>1</resolution>
+              <min_angle>-0.14835</min_angle>
+              <max_angle>0.14835</max_angle>
+            </vertical>
+          </scan>
+          <range>
+            <min>0.01</min>
+            <max>10</max>
+            <resolution>0.02</resolution>
+          </range>
+        </ray>
       </sensor>
     </link>
 
@@ -357,6 +388,47 @@
         <type>COMMAND</type>
         <cmd_topic>/model/rotor_head_cw/joint/servo_arm_3_joint/0/cmd_pos</cmd_topic>
       </control>
+
+      <!-- Range sensor -->
+      <!-- 
+        Types
+        =====
+        May use the same type identifier as used in the sensor SDF element:
+        http://sdformat.org/spec?ver=1.7&elem=sensor. We use `range` below as
+        it is a standard topic name used in ROS for range sensors.
+
+        Topics
+        ======
+        If a <topic> is specified in the <sensor> element, it is used.
+        Otherwise the default topic will be prefixed with the world, model,
+        and link names:
+
+        /world/{world_name}/model/{model_name}/link/{link_name}/sensor/scan
+
+        e.g. /world/empty/model/helicopter/link/base_link/sensor/range/scan
+
+        Index
+        =====
+        The <sensor><type> and <sensor><index> elements are used
+        to associate the sensor with the ArduPilot parameter group that
+        defines the sensor properties such as its position and orientation
+        in the frame.
+      -->
+      <!-- 
+        RNGFND1_TYPE = 100 (SITL)
+        RNGFND1_FUNCTION = 0 (LINEAR)
+        RNGFND1_MIN = 0.1 (m)
+        RNGFND1_MAX = 10.0 (m)
+        RNGFND1_POS_X = 0.325
+        RNGFND1_POS_Y = 0.0
+        RNGFND1_POS_Z = -0.325
+        RNGFND1_ORIENT = 25 (Down)
+      -->
+      <sensor>
+        <type>range</type>
+        <index>1</index>
+        <topic>range</topic>
+      </sensor>
 
     </plugin>
   </model>

@@ -80,46 +80,12 @@
           </cylinder>
         </geometry>
       </collision>
-      <collision name="collision_blade_1">
-        <pose degrees="true">0.0375 0 0.035 0 0 0</pose>
-        <geometry>
-          <box>
-            <size>0.075 0.02 0.004</size>
-          </box>
-        </geometry>
-      </collision>
-      <collision name="collision_blade_2">
-        <pose degrees="true">-0.0375 0 0.035 0 0 180</pose>
-        <geometry>
-          <box>
-            <size>0.075 0.02 0.004</size>
-          </box>
-        </geometry>
-      </collision>
       <visual name="visual_rotor_head">
         <pose degrees="true">0 0 -0.007 0 0 -60</pose>
         <geometry>
           <mesh>
             <scale>1.75 1.75 1.75</scale>
             <uri>meshes/trex450_tail_rotor_head.dae</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name="visual_blade_1">
-        <pose degrees="true">0.03 0 0.052 90 30 -90</pose>
-        <geometry>
-          <mesh>
-            <scale>1.75 1.75 1.75</scale>
-            <uri>meshes/trex450_tail_blade.dae</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name="visual_blade_2">
-        <pose degrees="true">-0.03 0 0.052 90 30 90</pose>
-        <geometry>
-          <mesh>
-            <scale>1.75 1.75 1.75</scale>
-            <uri>meshes/trex450_tail_blade.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -133,6 +99,99 @@
         <limit>
           <lower>-1.0e16</lower>
           <upper>1.0e16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="tail_blade_1_link">
+      <pose relative_to="tail_blade_1_joint" degrees="true">0.067 0 0 0 180 0</pose>
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>3.46667E-07</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>4.70083E-06</iyy>
+          <iyz>0</iyz>
+          <izz>5.02083E-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.075 0.02 0.004</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <pose degrees="true">0.035 0 0 -90 0 -90</pose>
+        <geometry>
+          <mesh>
+            <scale>1.75 1.75 1.75</scale>
+            <uri>meshes/trex450_tail_blade.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="tail_blade_1_joint" type="revolute">
+      <pose relative_to="tail_motor_link" degrees="true">0 0 0.05225 0 0 0</pose>
+      <parent>tail_motor_link</parent>
+      <child>tail_blade_1_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>0.10471975</lower>
+          <upper>0.10471975</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="tail_blade_2_link">
+      <pose relative_to="tail_blade_2_joint" degrees="true">0.067 0 0 0 180 0</pose>
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>3.46667E-07</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>4.70083E-06</iyy>
+          <iyz>0</iyz>
+          <izz>5.02083E-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.075 0.02 0.004</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <pose degrees="true">0.035 0 0 -90 0 -90</pose>
+        <geometry>
+          <mesh>
+            <scale>1.75 1.75 1.75</scale>
+            <uri>meshes/trex450_tail_blade.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="tail_blade_2_joint" type="revolute">
+      <pose relative_to="tail_motor_link" degrees="true">0 0 0.05225 0 0 180</pose>
+      <parent>tail_motor_link</parent>
+      <child>tail_blade_2_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>0.10471975</lower>
+          <upper>0.10471975</upper>
         </limit>
         <dynamics>
           <damping>0.01</damping>
@@ -161,40 +220,54 @@
       <cmd_offset>0</cmd_offset>
     </plugin>
 
-    <!-- tail rotor lift -->
+    <!-- tail rotor lift NACA 0012 -->
     <plugin name="gz::sim::systems::LiftDrag"
       filename="gz-sim-lift-drag-system">
-      <a0>0.3</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.2500</cla>
-      <cda>0.10</cda>
+      <a0>0.0</a0>
+      <!-- <alpha_stall>0.2</alpha_stall> -->
+      <alpha_stall>1.0</alpha_stall>
+      <cla>6.1</cla>
+      <cda>0.18</cda>
       <cma>0.0</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
+      <cla_stall>-5.0</cla_stall>
+      <cda_stall>1.1</cda_stall>
       <cma_stall>0.0</cma_stall>
       <area>0.0015</area>
       <air_density>1.2041</air_density>
-      <cp>0.0375 0 0</cp>
+      <cp>0 0 0</cp>
       <forward>0 1 0</forward>
-      <upward>0 0 -1</upward>
-      <link_name>tail_motor_link</link_name>
+      <upward>0 0 1</upward>
+      <link_name>tail_blade_1_link</link_name>
+      <visualize_forces>
+        <visualize>1</visualize>
+        <!-- Disabled - impacts performance at high rate needed for analysis -->
+        <!-- <update_rate>1000</update_rate>
+        <topic>/model/rotor_head_ccw/link/tail_blade_1_link/forces/lift_drag</topic> -->
+      </visualize_forces>
     </plugin>
     <plugin name="gz::sim::systems::LiftDrag"
       filename="gz-sim-lift-drag-system">
-      <a0>0.3</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.2500</cla>
-      <cda>0.10</cda>
+      <a0>0.0</a0>
+      <!-- <alpha_stall>0.2</alpha_stall> -->
+      <alpha_stall>1.0</alpha_stall>
+      <cla>6.1</cla>
+      <cda>0.18</cda>
       <cma>0.0</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
+      <cla_stall>-5.0</cla_stall>
+      <cda_stall>1.1</cda_stall>
       <cma_stall>0.0</cma_stall>
       <area>0.0015</area>
       <air_density>1.2041</air_density>
-      <cp>-0.0375 0 0</cp>
-      <forward>0 -1 0</forward>
-      <upward>0 0 -1</upward>
-      <link_name>tail_motor_link</link_name>
+      <cp>0 0 0</cp>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>tail_blade_2_link</link_name>
+      <visualize_forces>
+        <visualize>1</visualize>
+        <!-- Disabled - impacts performance at high rate needed for analysis -->
+        <!-- <update_rate>1000</update_rate>
+        <topic>/model/rotor_head_ccw/link/tail_blade_2_link/forces/lift_drag</topic> -->
+      </visualize_forces>
     </plugin>
 
     <plugin name="ArduPilotPlugin"
@@ -238,8 +311,8 @@
       -->
       <control channel="3">
         <jointName>tail_motor_joint</jointName>
-        <multiplier>800</multiplier>
-        <offset>0</offset>
+        <multiplier>-1600</multiplier>
+        <offset>-0.5</offset>
         <servo_min>1000</servo_min>
         <servo_max>2000</servo_max>
         <type>COMMAND</type>

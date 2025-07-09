@@ -134,8 +134,8 @@
       <uri>model://helicopter_dual_intermesh</uri>
     </include> -->
 
-    <!-- Fix helicoper to gimbal to test CoM and control response
-    <model name="gimbal">
+    <!-- Fix helicoper to gimbal to test CoM and control response -->
+    <!-- <model name="gimbal">
       <pose degrees="true">0 0 0.26 0 0 0</pose>
       <link name="base_link">
         <pose degrees="true">0 0 0 0 0 0</pose>
@@ -276,7 +276,7 @@
         </axis>
       </joint>
       <include>
-        <pose degrees="true">0 -0.2 0.35 0 0 90</pose>
+        <pose degrees="true">0 0 0.35 0 0 90</pose>
         <uri>model://helicopter</uri>
       </include>
       <joint name="yaw_joint" type="revolute">
@@ -286,13 +286,11 @@
         <axis>
           <xyz>0 0 1</xyz>
           <limit>
-            <lower>0</lower>
-            <upper>0</upper>
+            <lower>-1e16</lower>
+            <upper>1e16</upper>
           </limit>
           <dynamics>
-            <damping>0.1</damping>
-            <spring_reference>0.0</spring_reference>
-            <spring_stiffness>10.0</spring_stiffness>
+            <damping>0.01</damping>
           </dynamics>
         </axis>
       </joint>

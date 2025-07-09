@@ -1629,7 +1629,10 @@ limitations in the DetachableJoint plugin.
       </axis>
     </joint>
 
-    <!-- rotor blades -->
+    <!-- rotor blades:
+      pose.x = 0.200 => hinge is 0.225mm - 0.200mm = 0.0250mm from hub
+      pose.x = 0.165 => hinge is 0.225mm - 0.165mm = 0.0625mm from hub
+    -->
     <link name="blade_1_link">
       <pose relative_to="blade_grip_1_link" degrees="true">-0.225 0 0 0 0 180</pose>
       <inertial>

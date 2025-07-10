@@ -1877,6 +1877,7 @@ Command motor angular velocity
       <initial_velocity>0.0</initial_velocity>
       <use_force_commands>1</use_force_commands>
       <use_actuator_msg>0</use_actuator_msg>
+      <disable_braking>1</disable_braking>
       <p_gain>0.2</p_gain>
       <i_gain>0.1</i_gain>
       <d_gain>0.0001</d_gain>

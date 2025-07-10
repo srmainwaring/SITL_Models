@@ -273,9 +273,9 @@
       <reversible>1</reversible>
       <visualize_forces>
         <visualize>1</visualize>
+        <update_rate>1000</update_rate>
         <!-- Disabled - impacts performance at high rate needed for analysis -->
-        <!-- <update_rate>1000</update_rate>
-        <topic>/model/rotor_head_ccw/link/tail_blade_1_link/forces/lift_drag</topic> -->
+        <!-- <topic>/model/rotor_head_ccw/link/tail_blade_1_link/forces/lift_drag</topic> -->
       </visualize_forces>
     </plugin>
     <plugin name="gz::sim::systems::LiftDrag"
@@ -298,9 +298,9 @@
       <reversible>1</reversible>
       <visualize_forces>
         <visualize>1</visualize>
+        <update_rate>1000</update_rate>
         <!-- Disabled - impacts performance at high rate needed for analysis -->
-        <!-- <update_rate>1000</update_rate>
-        <topic>/model/rotor_head_ccw/link/tail_blade_2_link/forces/lift_drag</topic> -->
+        <!-- <topic>/model/rotor_head_ccw/link/tail_blade_2_link/forces/lift_drag</topic> -->
       </visualize_forces>
     </plugin>
 

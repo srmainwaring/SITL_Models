@@ -270,6 +270,7 @@
       <forward>0 1 0</forward>
       <upward>0 0 1</upward>
       <link_name>tail_blade_1_link</link_name>
+      <reversible>1</reversible>
       <visualize_forces>
         <visualize>1</visualize>
         <!-- Disabled - impacts performance at high rate needed for analysis -->
@@ -294,6 +295,7 @@
       <forward>0 1 0</forward>
       <upward>0 0 1</upward>
       <link_name>tail_blade_2_link</link_name>
+      <reversible>1</reversible>
       <visualize_forces>
         <visualize>1</visualize>
         <!-- Disabled - impacts performance at high rate needed for analysis -->

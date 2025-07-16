@@ -273,7 +273,7 @@
       <reversible>1</reversible>
       <visualize_forces>
         <visualize>1</visualize>
-        <update_rate>1000</update_rate>
+        <!-- <update_rate>1000</update_rate> -->
         <!-- Disabled - impacts performance at high rate needed for analysis -->
         <!-- <topic>/model/rotor_head_ccw/link/tail_blade_1_link/forces/lift_drag</topic> -->
       </visualize_forces>
@@ -298,7 +298,7 @@
       <reversible>1</reversible>
       <visualize_forces>
         <visualize>1</visualize>
-        <update_rate>1000</update_rate>
+        <!-- <update_rate>1000</update_rate> -->
         <!-- Disabled - impacts performance at high rate needed for analysis -->
         <!-- <topic>/model/rotor_head_ccw/link/tail_blade_2_link/forces/lift_drag</topic> -->
       </visualize_forces>

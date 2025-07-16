@@ -1952,7 +1952,7 @@ Command motor angular velocity
       <link_name>blade_1_link</link_name>
       <visualize_forces>
         <visualize>1</visualize>
-        <update_rate>1000</update_rate>
+        <!-- <update_rate>1000</update_rate> -->
         <!-- Disabled - impacts performance at high rate needed for analysis -->
         <!-- <topic>/model/rotor_head_cw/link/blade_1_link/forces/lift_drag</topic> -->
       </visualize_forces>
@@ -1976,7 +1976,7 @@ Command motor angular velocity
       <link_name>blade_2_link</link_name>
       <visualize_forces>
         <visualize>1</visualize>
-        <update_rate>1000</update_rate>
+        <!-- <update_rate>1000</update_rate> -->
         <!-- Disabled - impacts performance at high rate needed for analysis -->
         <!-- <topic>/model/rotor_head_cw/link/blade_2_link/forces/lift_drag</topic> -->
       </visualize_forces>

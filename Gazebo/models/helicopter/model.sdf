@@ -5,22 +5,22 @@
   <model name="helicopter">
     <link name="base_link">
       <inertial>
-        <pose degrees="true">0.3625 0 0 0 0 0</pose>
+        <pose degrees="true">0.207142857 0 0 0 0 0</pose>
         <mass>0.5</mass>
         <inertia>
-          <ixx>0.001670833</ixx>
+          <ixx>0.001327891</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.017608333</iyy>
+          <iyy>0.002960544</iyy>
           <iyz>0</iyz>
-          <izz>0.019270833</izz>
+          <izz>0.002721088</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0.2 0 0 0 0 0</pose>
+        <pose degrees="true">0.114285714 0 0 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.4 0.2 0.24</size>
+            <size>0.228571429 0.114285714 0.137142857</size>
           </box>
         </geometry>
         <surface>
@@ -33,10 +33,10 @@
         </surface>
       </collision>
       <visual name="visual">
-        <pose degrees="true">0.15 0 0.05 90 0 -90</pose>
+        <pose degrees="true">0.085714286 0 0.028571429 90 0 -90</pose>
         <geometry>
           <mesh>
-            <scale>1.75 1.75 1.75</scale>
+            <scale>1 1 1</scale>
             <uri>meshes/trex450_frame.dae</uri>
           </mesh>
         </geometry>
@@ -44,13 +44,13 @@
 
       <!-- Sensors -->
       <sensor name="imu_sensor" type="imu">
-        <pose degrees="true">0.15 0 0 180 0 0</pose>
+        <pose degrees="true">0.085714286 0 0 180 0 0</pose>
         <always_on>1</always_on>
         <update_rate>1000.0</update_rate>
       </sensor>
 
       <sensor name="range" type="gpu_lidar">
-        <pose degrees="true">0.325 0 -0.03 0 90 0</pose>
+        <pose degrees="true">0.185714286 0 -0.017142857 0 90 0</pose>
         <always_on>1</always_on>
         <update_rate>100</update_rate>
         <visualize>1</visualize>
@@ -71,7 +71,7 @@
             </vertical>
           </scan>
           <range>
-            <min>0.1</min>
+            <min>0.01</min>
             <max>20</max>
             <resolution>0.02</resolution>
           </range>
@@ -82,7 +82,7 @@
     <include>
       <uri>model://rotor_head_cw</uri>
       <name>rotor_head_cw</name>
-      <pose degrees="true">0.15 0 0.23 0 0 13</pose>
+      <pose degrees="true">0.085714286 0 0.131428571 0 0 13</pose>
     </include>
     <joint name="rotor_head_joint" type="fixed">
       <pose degrees="true">0 0 0 0 0 0</pose>
@@ -91,31 +91,31 @@
     </joint>
 
     <link name="tail_motor_link">
-      <pose degrees="true">-0.605 0 0.075 90 0 0</pose>
+      <pose degrees="true">-0.345714286 0 0.042857143 90 0 0</pose>
       <inertial>
         <mass>0.05</mass>
         <inertia>
-          <ixx>5.9375E-06</ixx>
+          <ixx>1.93878E-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>5.9375E-06</iyy>
+          <iyy>1.93878E-06</iyy>
           <iyz>0</iyz>
-          <izz>0.00001</izz>
+          <izz>3.26531E-06</izz>
         </inertia>
       </inertial>
       <collision name="collision">
         <geometry>
           <cylinder>
-            <length>0.02</length>
-            <radius>0.015</radius>
+            <length>0.011428571</length>
+            <radius>0.008571429</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual_rotor_head">
-        <pose degrees="true">0 0 -0.007 0 0 -60</pose>
+        <pose degrees="true">0 0 -0.004 0 0 -60</pose>
         <geometry>
           <mesh>
-            <scale>1.75 1.75 1.75</scale>
+            <scale>1 1 1</scale>
             <uri>meshes/trex450_tail_rotor_head.dae</uri>
           </mesh>
         </geometry>
@@ -139,37 +139,37 @@
     </joint>
 
     <link name="tail_blade_1_link">
-      <pose relative_to="tail_blade_1_joint" degrees="true">0.067 0 0 0 180 0</pose>
+      <pose relative_to="tail_blade_1_joint" degrees="true">0.038285714 0 0 0 180 0</pose>
       <inertial>
         <mass>0.01</mass>
         <inertia>
           <ixx>3.46667E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.70083E-06</iyy>
+          <iyy>2.68619E-06</iyy>
           <iyz>0</iyz>
-          <izz>5.02083E-06</izz>
+          <izz>2.86905E-06</izz>
         </inertia>
       </inertial>
       <collision name="collision">
         <geometry>
           <box>
-            <size>0.075 0.02 0.004</size>
+            <size>0.042857143 0.011428571 0.002285714</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual">
-        <pose degrees="true">0.035 0 0 -90 0 -90</pose>
+        <pose degrees="true">0.02 0 0 -90 0 -90</pose>
         <geometry>
           <mesh>
-            <scale>1.75 1.75 1.75</scale>
+            <scale>1 1 1</scale>
             <uri>meshes/trex450_tail_blade.dae</uri>
           </mesh>
         </geometry>
       </visual>
     </link>
     <joint name="tail_blade_1_joint" type="revolute">
-      <pose relative_to="tail_motor_link" degrees="true">0 0 0.05225 0 0 0</pose>
+      <pose relative_to="tail_motor_link" degrees="true">0 0 0.029857143 0 0 0</pose>
       <parent>tail_motor_link</parent>
       <child>tail_blade_1_link</child>
       <axis>
@@ -185,37 +185,37 @@
     </joint>
 
     <link name="tail_blade_2_link">
-      <pose relative_to="tail_blade_2_joint" degrees="true">0.067 0 0 0 180 0</pose>
+      <pose relative_to="tail_blade_2_joint" degrees="true">0.038285714 0 0 0 180 0</pose>
       <inertial>
         <mass>0.01</mass>
         <inertia>
           <ixx>3.46667E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.70083E-06</iyy>
+          <iyy>2.68619E-06</iyy>
           <iyz>0</iyz>
-          <izz>5.02083E-06</izz>
+          <izz>2.86905E-06</izz>
         </inertia>
       </inertial>
       <collision name="collision">
         <geometry>
           <box>
-            <size>0.075 0.02 0.004</size>
+            <size>0.042857143 0.011428571 0.002285714</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual">
-        <pose degrees="true">0.035 0 0 -90 0 -90</pose>
+        <pose degrees="true">0.02 0 0 -90 0 -90</pose>
         <geometry>
           <mesh>
-            <scale>1.75 1.75 1.75</scale>
+            <scale>1 1 1</scale>
             <uri>meshes/trex450_tail_blade.dae</uri>
           </mesh>
         </geometry>
       </visual>
     </link>
     <joint name="tail_blade_2_joint" type="revolute">
-      <pose relative_to="tail_motor_link" degrees="true">0 0 0.05225 0 0 180</pose>
+      <pose relative_to="tail_motor_link" degrees="true">0 0 0.029857143 0 0 180</pose>
       <parent>tail_motor_link</parent>
       <child>tail_blade_2_link</child>
       <axis>

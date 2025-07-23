@@ -23,30 +23,30 @@ Command motor angular velocity
 <sdf version="1.11">
   <model name="rotor_head_cw">
     <link name="base_link">
-      <pose degrees="true">0 0 -0.2 0 0 -13</pose>
+      <pose degrees="true">0 0 -0.114285714 0 0 -13</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.1</mass>
         <inertia>
-          <ixx>4.16667E-05</ixx>
+          <ixx>1.36054E-05</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.16667E-05</iyy>
+          <iyy>1.36054E-05</iyy>
           <iyz>0</iyz>
-          <izz>4.16667E-05</izz>
+          <izz>1.36054E-05</izz>
         </inertia>
       </inertial>
       <collision name="collision">
         <geometry>
           <box>
-            <size>0.05 0.05 0.05</size>
+            <size>0.028571429 0.028571429 0.028571429</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <box>
-            <size>0.05 0.05 0.05</size>
+            <size>0.028571429 0.028571429 0.028571429</size>
           </box>
         </geometry>
         <material>
@@ -85,29 +85,29 @@ Command motor angular velocity
 
     <!-- guide (prismatic) -->
     <link name="guide_h_link">
-      <pose relative_to="servo_rod_3a_link" degrees="true">-0.01 0.003 0 0 0 0</pose>
+      <pose relative_to="servo_rod_3a_link" degrees="true">-0.005714286 0.001714286 0 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1.00000E-08</ixx>
+          <ixx>3.26531E-09</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1.00000E-08</iyy>
+          <iyy>3.26531E-09</iyy>
           <iyz>0</iyz>
-          <izz>1.00000E-08</izz>
+          <izz>3.26531E-09</izz>
         </inertia>
       </inertial>
       <collision name="collision">
         <geometry>
           <sphere>
-            <radius>0.005</radius>
+            <radius>0.002857143</radius>
           </sphere>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <sphere>
-            <radius>0.005</radius>
+            <radius>0.002857143</radius>
           </sphere>
         </geometry>
         <material>
@@ -138,25 +138,25 @@ Command motor angular velocity
       <inertial>
         <mass>0.01</mass>
         <inertia>
-          <ixx>1.00000E-07</ixx>
+          <ixx>3.26531E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1.00000E-07</iyy>
+          <iyy>3.26531E-08</iyy>
           <iyz>0</iyz>
-          <izz>1.00000E-07</izz>
+          <izz>3.26531E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
         <geometry>
           <sphere>
-            <radius>0.005</radius>
+            <radius>0.002857143</radius>
           </sphere>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <sphere>
-            <radius>0.005</radius>
+            <radius>0.002857143</radius>
           </sphere>
         </geometry>
         <material>
@@ -181,25 +181,25 @@ Command motor angular velocity
       <inertial>
         <mass>0.01</mass>
         <inertia>
-          <ixx>1.00000E-07</ixx>
+          <ixx>3.26531E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1.00000E-07</iyy>
+          <iyy>3.26531E-08</iyy>
           <iyz>0</iyz>
-          <izz>1.00000E-07</izz>
+          <izz>3.26531E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
         <geometry>
           <sphere>
-            <radius>0.005</radius>
+            <radius>0.002857143</radius>
           </sphere>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <sphere>
-            <radius>0.005</radius>
+            <radius>0.002857143</radius>
           </sphere>
         </geometry>
         <material>
@@ -228,30 +228,30 @@ Command motor angular velocity
 
     <!-- servos (prismatic) -->
     <link name="servo_3_link">
-      <pose degrees="true">-0.045 -0.01 -0.135 0 90 -13</pose>
+      <pose degrees="true">-0.025714286 -0.005714286 -0.077142857 0 90 -13</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.015</mass>
         <inertia>
-          <ixx>8.35513E-07</ixx>
+          <ixx>4.85735E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1.48756E-06</iyy>
+          <iyy>3.30465E-07</iyy>
           <iyz>0</iyz>
-          <izz>1.01205E-06</izz>
+          <izz>2.7282E-07</izz>
         </inertia>
       </inertial>
       <collision name="collision">
         <geometry>
           <box>
-            <size>0.012 0.0229 0.0258</size>
+            <size>0.006857143	0.013085714	0.014742857</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <box>
-            <size>0.012 0.0229 0.0258</size>
+            <size>0.006857143	0.013085714	0.014742857</size>
           </box>
         </geometry>
         <material>
@@ -267,29 +267,29 @@ Command motor angular velocity
       <child>servo_3_link</child>
     </joint>
     <link name="servo_arm_3_link">
-      <pose relative_to="servo_3_link" degrees="true">0.0 0.02 -0.005 0 0 0</pose>
+      <pose relative_to="servo_3_link" degrees="true">0 0.011428571 -0.002857143 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1.00000E-08</ixx>
+          <ixx>3.26531E-09</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1.00000E-08</iyy>
+          <iyy>3.26531E-09</iyy>
           <iyz>0</iyz>
-          <izz>1.00000E-08</izz>
+          <izz>3.26531E-09</izz>
         </inertia>
       </inertial>
       <collision name="collision">
         <geometry>
           <sphere>
-            <radius>0.005</radius>
+            <radius>0.002857143</radius>
           </sphere>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <sphere>
-            <radius>0.005</radius>
+            <radius>0.002857143</radius>
           </sphere>
         </geometry>
         <material>
@@ -317,32 +317,32 @@ Command motor angular velocity
       </axis>
     </joint>
     <link name="servo_rod_3b_link">
-      <pose degrees="true">-0.045662 0.01084 -0.0651 0 0 0</pose>
+      <pose degrees="true">-0.026092571 0.006194286 -0.0372 0 0 0</pose>
       <inertial>
-        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <pose degrees="true">0 0 -0.019177143 0 0 0</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>2.2575E-06</ixx>
+          <ixx>7.37143E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>2.2575E-06</iyy>
+          <iyy>7.37143E-07</iyy>
           <iyz>0</iyz>
-          <izz>0.00000018</izz>
+          <izz>5.87755E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <pose degrees="true">0 0 -0.019177143 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.051</length>
-            <radius>0.006</radius>
+            <length>0.029142857</length>
+            <radius>0.003428571</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/servo_rod.dae</uri>
           </mesh>
         </geometry>
@@ -365,32 +365,32 @@ Command motor angular velocity
     </joint>
 
     <link name="servo_2_link">
-      <pose degrees="true">0.0145 -0.066 -0.135 0 90 -13</pose>
+      <pose degrees="true">0.008285714 -0.037714286 -0.077142857 0 90 -13</pose>
       <inertial>
-        <pose>0 0.04 0 0 0 0</pose>
+        <pose>0 0.022857143 0 0 0 0</pose>
         <mass>0.015</mass>
         <inertia>
-          <ixx>8.35513E-07</ixx>
+          <ixx>4.85735E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1.48756E-06</iyy>
+          <iyy>3.30465E-07</iyy>
           <iyz>0</iyz>
-          <izz>1.01205E-06</izz>
+          <izz>2.7282E-07</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0.04 0 0 0 0</pose>
+        <pose degrees="true">0 0.022857143 0 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.012 0.0229 0.0258</size>
+            <size>0.006857143	0.013085714	0.014742857</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual">
-        <pose degrees="true">0 0.04 0 0 0 0</pose>
+        <pose degrees="true">0 0.022857143 0 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.012 0.0229 0.0258</size>
+            <size>0.006857143	0.013085714	0.014742857</size>
           </box>
         </geometry>
         <material>
@@ -406,29 +406,29 @@ Command motor angular velocity
       <child>servo_2_link</child>
     </joint>
     <link name="servo_arm_2_link">
-      <pose relative_to="servo_2_link" degrees="true">0.0 0.020 -0.005 0 0 0</pose>
+      <pose relative_to="servo_2_link" degrees="true">0	0.011428571	-0.002857143 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1.00000E-08</ixx>
+          <ixx>3.26531E-09</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1.00000E-08</iyy>
+          <iyy>3.26531E-09</iyy>
           <iyz>0</iyz>
-          <izz>1.00000E-08</izz>
+          <izz>3.26531E-09</izz>
         </inertia>
       </inertial>
       <collision name="collision">
         <geometry>
           <sphere>
-            <radius>0.005</radius>
+            <radius>0.002857143</radius>
           </sphere>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <sphere>
-            <radius>0.005</radius>
+            <radius>0.002857143</radius>
           </sphere>
         </geometry>
         <material>
@@ -456,32 +456,32 @@ Command motor angular velocity
       </axis>
     </joint>
     <link name="servo_rod_2b_link">
-      <pose degrees="true">0.01343 -0.04493 -0.0651 0 0 0</pose>
+      <pose degrees="true">0.007674286 -0.025674286 -0.0372 0 0 0</pose>
       <inertial>
-        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <pose degrees="true">0 0 -0.019177143 0 0 0</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>2.2575E-06</ixx>
+          <ixx>7.37143E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>2.2575E-06</iyy>
+          <iyy>7.37143E-07</iyy>
           <iyz>0</iyz>
-          <izz>0.00000018</izz>
+          <izz>5.87755E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <pose degrees="true">0 0 -0.019177143 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.051</length>
-            <radius>0.006</radius>
+            <length>0.029142857</length>
+            <radius>0.003428571</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/servo_rod.dae</uri>
           </mesh>
         </geometry>
@@ -504,30 +504,30 @@ Command motor angular velocity
     </joint>
 
     <link name="servo_1_link">
-      <pose degrees="true">0.0335 0.0135 -0.135 0 90 -13</pose>
+      <pose degrees="true">0.019142857 0.007714286 -0.077142857 0 90 -13</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.015</mass>
         <inertia>
-          <ixx>8.35513E-07</ixx>
+          <ixx>4.85735E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1.48756E-06</iyy>
+          <iyy>3.30465E-07</iyy>
           <iyz>0</iyz>
-          <izz>1.01205E-06</izz>
+          <izz>2.7282E-07</izz>
         </inertia>
       </inertial>
       <collision name="collision">
         <geometry>
           <box>
-            <size>0.012 0.0229 0.0258</size>
+            <size>0.006857143	0.013085714	0.014742857</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <box>
-            <size>0.012 0.0229 0.0258</size>
+            <size>0.006857143	0.013085714	0.014742857</size>
           </box>
         </geometry>
         <material>
@@ -543,29 +543,29 @@ Command motor angular velocity
       <child>servo_1_link</child>
     </joint>
     <link name="servo_arm_1_link">
-      <pose relative_to="servo_1_link" degrees="true">0.0 0.02 -0.005 0 0 0</pose>
+      <pose relative_to="servo_1_link" degrees="true">0 0.011428571 -0.002857143 0 0 0</pose>
       <inertial>
         <mass>0.001</mass>
         <inertia>
-          <ixx>1.00000E-08</ixx>
+          <ixx>3.26531E-09</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1.00000E-08</iyy>
+          <iyy>3.26531E-09</iyy>
           <iyz>0</iyz>
-          <izz>1.00000E-08</izz>
+          <izz>3.26531E-09</izz>
         </inertia>
       </inertial>
       <collision name="collision">
         <geometry>
           <sphere>
-            <radius>0.005</radius>
+            <radius>0.002857143</radius>
           </sphere>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <sphere>
-            <radius>0.005</radius>
+            <radius>0.002857143</radius>
           </sphere>
         </geometry>
         <material>
@@ -593,32 +593,32 @@ Command motor angular velocity
       </axis>
     </joint>
     <link name="servo_rod_1b_link">
-      <pose degrees="true">0.03219 0.03409 -0.0651 0 0 0</pose>
+      <pose degrees="true">0.018394286 0.01948 -0.0372 0 0 0</pose>
       <inertial>
-        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <pose degrees="true">0 0 -0.019177143 0 0 0</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>2.2575E-06</ixx>
+          <ixx>7.37143E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>2.2575E-06</iyy>
+          <iyy>7.37143E-07</iyy>
           <iyz>0</iyz>
-          <izz>0.00000018</izz>
+          <izz>5.87755E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <pose degrees="true">0 0 -0.019177143 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.051</length>
-            <radius>0.006</radius>
+            <length>0.029142857</length>
+            <radius>0.003428571</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/servo_rod.dae</uri>
           </mesh>
         </geometry>
@@ -643,29 +643,29 @@ Command motor angular velocity
     <!-- rotor head -->
     <link name="main_link">
       <inertial>
-        <pose>0 0 -0.1 0 0 0</pose>
+        <pose>0 0 -0.057142857 0 0 0</pose>
         <mass>0.10</mass>
         <inertia>
-          <ixx>0.000444167</ixx>
+          <ixx>0.000145034</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.000444167</iyy>
+          <iyy>0.000145034</iyy>
           <iyz>0</iyz>
-          <izz>6.66667E-06</izz>
+          <izz>2.17687E-06</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose>0 0 -0.1 0 0 0</pose>
+        <pose>0 0 -0.057142857 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.02 0.02 0.23</size>
+            <size>0.011428571	0.011428571	0.131428571</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual_main_body">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>main_body</name>
@@ -682,29 +682,29 @@ Command motor angular velocity
 
     <link name="blade_grip_1_link">
       <inertial>
-        <pose degrees="true">-0.06 0 0 0 0 0</pose>
+        <pose degrees="true">-0.034285714 0 0 0 0 0</pose>
         <mass>0.10</mass>
         <inertia>
-          <ixx>1.12667E-05</ixx>
+          <ixx>3.67891E-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>8.89667E-05</iyy>
+          <iyy>2.90503E-05</iyy>
           <iyz>0</iyz>
-          <izz>8.89667E-05</izz>
+          <izz>2.90503E-05</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">-0.06 0 0 0 0 0</pose>
+        <pose degrees="true">-0.034285714 0 0 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.1 0.026 0.026</size>
+            <size>0.057142857 0.014857143 0.014857143</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_grip_1</name>
@@ -719,7 +719,7 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="blade_grip_1_joint" type="revolute">
-      <pose degrees="true">-0.031 0 0 0 0 0</pose>
+      <pose degrees="true">-0.017714286 0 0 0 0 0</pose>
       <parent>main_link</parent>
       <child>blade_grip_1_link</child>
       <axis>
@@ -737,29 +737,29 @@ Command motor angular velocity
 
     <link name="blade_grip_2_link">
       <inertial>
-        <pose degrees="true">0.06 0 0 0 0 180</pose>
+        <pose degrees="true">0.034285714 0 0 0 0 180</pose>
         <mass>0.10</mass>
         <inertia>
-          <ixx>1.12667E-05</ixx>
+          <ixx>3.67891E-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>8.89667E-05</iyy>
+          <iyy>2.90503E-05</iyy>
           <iyz>0</iyz>
-          <izz>8.89667E-05</izz>
+          <izz>2.90503E-05</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0.06 0 0 0 0 0</pose>
+        <pose degrees="true">0.034285714 0 0 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.1 0.026 0.026</size>
+            <size>0.057142857	0.014857143	0.014857143</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_grip_2</name>
@@ -774,7 +774,7 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="blade_grip_2_joint" type="revolute">
-      <pose degrees="true">0.031 0 0 0 0 180</pose>
+      <pose degrees="true">0.017714286 0 0 0 0 180</pose>
       <parent>main_link</parent>
       <child>blade_grip_2_link</child>
       <axis>
@@ -792,29 +792,29 @@ Command motor angular velocity
 
     <link name="lever_1_link">
       <inertial>
-        <pose degrees="true">0.006 0.012 -0.036 0 0 0</pose>
+        <pose degrees="true">0.003428571 0.006857143 -0.020571429 0 0 0</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>1.84167E-07</ixx>
+          <ixx>6.01361E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1.64167E-06</iyy>
+          <iyy>5.36054E-07</iyy>
           <iyz>0</iyz>
-          <izz>1.62417E-06</izz>
+          <izz>5.36054E-07</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0.006 0.012 -0.036 0 0 0</pose>
+        <pose degrees="true">0.003428571 0.006857143 -0.020571429 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.043 0.01 0.011</size>
+            <size>0.024571429	0.005714286	0.006285714</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_1</name>
@@ -829,7 +829,7 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="lever_1_joint" type="revolute">
-      <pose degrees="true">-0.00949 0.012 -0.036 0 0 0</pose>
+      <pose degrees="true">-0.005422857 0.006857143 -0.020571429 0 0 0</pose>
       <parent>main_link</parent>
       <child>lever_1_link</child>
       <axis>
@@ -847,29 +847,29 @@ Command motor angular velocity
 
     <link name="lever_2_link">
       <inertial>
-        <pose degrees="true">-0.006 -0.012 -0.036 0 0 180</pose>
+        <pose degrees="true">-0.003428571 -0.006857143 -0.020571429 0 0 180</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>1.84167E-07</ixx>
+          <ixx>6.01361E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>1.64167E-06</iyy>
+          <iyy>5.36054E-07</iyy>
           <iyz>0</iyz>
-          <izz>1.62417E-06</izz>
+          <izz>5.36054E-07</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">-0.006 -0.012 -0.036 0 0 180</pose>
+        <pose degrees="true">-0.003428571 -0.006857143 -0.020571429 0 0 180</pose>
         <geometry>
           <box>
-            <size>0.043 0.01 0.011</size>
+            <size>0.024571429	0.005714286	0.006285714</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_2</name>
@@ -884,7 +884,7 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="lever_2_joint" type="revolute">
-      <pose degrees="true">0.00949 -0.012 -0.036 0 0 180</pose>
+      <pose degrees="true">0.005422857 -0.006857143 -0.020571429 0 0 180</pose>
       <parent>main_link</parent>
       <child>lever_2_link</child>
       <axis>
@@ -902,30 +902,30 @@ Command motor angular velocity
 
     <link name="swash_plate_bearing_link">
       <inertial>
-        <pose degrees="true">0 0 -0.0696 0 0 0</pose>
+        <pose degrees="true">0 0 -0.039771429 0 0 0</pose>
         <mass>0.01</mass>
         <inertia>
-          <ixx>2.85833E-07</ixx>
+          <ixx>9.33333E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>2.85833E-07</iyy>
+          <iyy>9.33333E-08</iyy>
           <iyz>0</iyz>
-          <izz>0.000000405</izz>
+          <izz>1.32245E-07</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0 -0.0696 0 0 0</pose>
+        <pose degrees="true">0 0 -0.039771429 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.01</length>
-            <radius>0.009</radius>
+            <length>0.005714286</length>
+            <radius>0.005142857</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>swash_plate_bearing</name>
@@ -940,7 +940,7 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="swash_plate_bearing_joint" type="prismatic">
-      <pose degrees="true">0 0 -0.068 0 0 0</pose>
+      <pose degrees="true">0 0 -0.038857143 0 0 0</pose>
       <parent>main_link</parent>
       <child>swash_plate_bearing_link</child>
       <axis>
@@ -958,30 +958,30 @@ Command motor angular velocity
 
     <link name="swash_plate_up_part_link">
       <inertial>
-        <pose degrees="true">0 0 -0.073 0 0 0</pose>
+        <pose degrees="true">0 0 -0.041714286 0 0 0</pose>
         <mass>0.03</mass>
         <inertia>
-          <ixx>0.00000607</ixx>
+          <ixx>1.98204E-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.00000607</iyy>
+          <iyy>1.98204E-06</iyy>
           <iyz>0</iyz>
-          <izz>0.00001014</izz>
+          <izz>3.31102E-06</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0 -0.073 0 0 0</pose>
+        <pose degrees="true">0 0 -0.041714286 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.02</length>
-            <radius>0.026</radius>
+            <length>0.011428571</length>
+            <radius>0.014857143</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>swash_plate_up_part</name>
@@ -996,7 +996,7 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="swash_plate_up_part_joint" type="ball">
-      <pose degrees="true">0 0 -0.068 0 0 0</pose>
+      <pose degrees="true">0 0 -0.038857143 0 0 0</pose>
       <parent>swash_plate_bearing_link</parent>
       <child>swash_plate_up_part_link</child>
       <axis>
@@ -1008,42 +1008,42 @@ Command motor angular velocity
 
     <link name="swash_plate_down_part_link">
       <inertial>
-        <pose degrees="true">0 0 -0.076 0 0 0</pose>
+        <pose degrees="true">0 0 -0.043428571 0 0 0</pose>
         <mass>0.03</mass>
         <inertia>
-          <ixx>5.7175E-06</ixx>
+          <ixx>1.86694E-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>5.7175E-06</iyy>
+          <iyy>1.86694E-06</iyy>
           <iyz>0</iyz>
-          <izz>0.000010935</izz>
+          <izz>3.57061E-06</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0 -0.076 0 0 0</pose>
+        <pose degrees="true">0 0 -0.043428571 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.01</length>
-            <radius>0.027</radius>
+            <length>0.005714286</length>
+            <radius>0.015428571</radius>
           </cylinder>
         </geometry>
       </collision>
 
       <collision name="collision_guide_rod">
-        <pose degrees="true">-0.060662 0.0145 -0.0651 0 90 -13</pose>
+        <pose degrees="true">-0.034664 0.008285714 -0.0372 0 90 -13</pose>
         <geometry>
           <cylinder>
-            <length>0.04</length>
-            <radius>0.003</radius>
+            <length>0.022857143</length>
+            <radius>0.001714286</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual_guide_rod">
-        <pose degrees="true">-0.060662 0.0145 -0.0651 0 90 -13</pose>
+        <pose degrees="true">-0.034664 0.008285714 -0.0372 0 90 -13</pose>
         <geometry>
           <cylinder>
-            <length>0.04</length>
-            <radius>0.003</radius>
+            <length>0.022857143</length>
+            <radius>0.001714286</radius>
           </cylinder>
         </geometry>
         <material>
@@ -1056,7 +1056,7 @@ Command motor angular velocity
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>swash_plate_down_part</name>
@@ -1071,7 +1071,7 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="swash_plate_down_part_joint" type="revolute">
-      <pose degrees="true">0 0 -0.068 0 0 0</pose>
+      <pose degrees="true">0 0 -0.038857143 0 0 0</pose>
       <parent>swash_plate_up_part_link</parent>
       <child>swash_plate_down_part_link</child>
       <axis>
@@ -1089,30 +1089,30 @@ Command motor angular velocity
 
     <link name="blade_rod_1a_link">
       <inertial>
-        <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
+        <pose degrees="true">0 0.016428571 -0.019177143 -10.3 0 0</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>2.2575E-06</ixx>
+          <ixx>7.37143E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>2.2575E-06</iyy>
+          <iyy>7.37143E-07</iyy>
           <iyz>0</iyz>
-          <izz>0.00000018</izz>
+          <izz>5.87755E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
+        <pose degrees="true">0 0.016428571 -0.019177143 -10.3 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.051</length>
-            <radius>0.006</radius>
+            <length>0.029142857</length>
+            <radius>0.003428571</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_coupling_1</name>
@@ -1127,7 +1127,7 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="blade_rod_1a_joint" type="ball">
-      <pose degrees="true">0 0.0349 0.000880 0 0 0</pose>
+      <pose degrees="true">0 0.019942857 0.000502857 0 0 0</pose>
       <parent>blade_grip_1_link</parent>
       <child>blade_rod_1a_link</child>
       <axis>
@@ -1139,30 +1139,30 @@ Command motor angular velocity
 
     <link name="blade_rod_1b_link">
       <inertial>
-        <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
+        <pose degrees="true">0 0.016428571 -0.019177143 -10.3 0 0</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>2.2575E-06</ixx>
+          <ixx>7.37143E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>2.2575E-06</iyy>
+          <iyy>7.37143E-07</iyy>
           <iyz>0</iyz>
-          <izz>0.00000018</izz>
+          <izz>5.87755E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0.02875 -0.03356 -10.3 0 0</pose>
+        <pose degrees="true">0 0.016428571 -0.019177143 -10.3 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.051</length>
-            <radius>0.006</radius>
+            <length>0.029142857</length>
+            <radius>0.003428571</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_coupling_1</name>
@@ -1177,7 +1177,7 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="blade_rod_1b_joint" type="ball">
-      <pose degrees="true">0 0.02252 -0.068 0 0 0</pose>
+      <pose degrees="true">0 0.012868571 -0.038857143 0 0 0</pose>
       <parent>swash_plate_up_part_link</parent>
       <child>blade_rod_1b_link</child>
       <axis>
@@ -1189,30 +1189,30 @@ Command motor angular velocity
 
     <link name="blade_rod_2a_link">
       <inertial>
-        <pose degrees="true">0 -0.02875 -0.03356 10.3 0 0</pose>
+        <pose degrees="true">0 -0.016428571 -0.019177143 10.3 0 0</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>2.2575E-06</ixx>
+          <ixx>7.37143E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>2.2575E-06</iyy>
+          <iyy>7.37143E-07</iyy>
           <iyz>0</iyz>
-          <izz>0.00000018</izz>
+          <izz>5.87755E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 -0.02875 -0.03356 10.3 0 0</pose>
+        <pose degrees="true">0 -0.016428571 -0.019177143 10.3 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.051</length>
-            <radius>0.006</radius>
+            <length>0.029142857</length>
+            <radius>0.003428571</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_coupling_2</name>
@@ -1227,7 +1227,7 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="blade_rod_2a_joint" type="ball">
-      <pose degrees="true">0 -0.0349 0.000880 0 0 180</pose>
+      <pose degrees="true">0 -0.019942857 0.000502857 0 0 180</pose>
       <parent>blade_grip_2_link</parent>
       <child>blade_rod_2a_link</child>
       <axis>
@@ -1239,30 +1239,30 @@ Command motor angular velocity
 
     <link name="blade_rod_2b_link">
       <inertial>
-        <pose degrees="true">0 -0.02875 -0.03356 10.3 0 0</pose>
+        <pose degrees="true">0 -0.016428571 -0.019177143 10.3 0 0</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>2.2575E-06</ixx>
+          <ixx>7.37143E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>2.2575E-06</iyy>
+          <iyy>7.37143E-07</iyy>
           <iyz>0</iyz>
-          <izz>0.00000018</izz>
+          <izz>5.87755E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 -0.02875 -0.03356 10.3 0 0</pose>
+        <pose degrees="true">0 -0.016428571 -0.019177143 10.3 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.051</length>
-            <radius>0.006</radius>
+            <length>0.029142857</length>
+            <radius>0.003428571</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>blade_coupling_2</name>
@@ -1277,7 +1277,7 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="blade_rod_2b_joint" type="ball">
-      <pose degrees="true">0 -0.02252 -0.068 0 0 0</pose>
+      <pose degrees="true">0 -0.012868571 -0.038857143 0 0 0</pose>
       <parent>swash_plate_up_part_link</parent>
       <child>blade_rod_2b_link</child>
       <axis>
@@ -1289,30 +1289,30 @@ Command motor angular velocity
 
     <link name="lever_rod_1a_link">
       <inertial>
-        <pose degrees="true">0.02251 0 -0.052 0 0 0</pose>
+        <pose degrees="true">0.012862857 0 -0.029714286 0 0 0</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>0.00000021</ixx>
+          <ixx>6.85714E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.00000021</iyy>
+          <iyy>6.85714E-08</iyy>
           <iyz>0</iyz>
-          <izz>0.00000018</izz>
+          <izz>5.87755E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0.02251 0 -0.052 0 0 0</pose>
+        <pose degrees="true">0.012862857 0 -0.029714286 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.012</length>
-            <radius>0.006</radius>
+            <length>0.006857143</length>
+            <radius>0.003428571</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_coupling_1</name>
@@ -1327,7 +1327,7 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="lever_rod_1a_joint" type="revolute">
-      <pose degrees="true">0.02251 0 -0.036 0 0 0</pose>
+      <pose degrees="true">0.012862857 0 -0.020571429 0 0 0</pose>
       <parent>lever_1_link</parent>
       <child>lever_rod_1a_link</child>
       <axis>
@@ -1345,30 +1345,30 @@ Command motor angular velocity
 
     <link name="lever_rod_2a_link">
       <inertial>
-        <pose degrees="true">-0.02251 0 -0.052 0 0 0</pose>
+        <pose degrees="true">-0.012862857 0 -0.029714286 0 0 0</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>0.00000021</ixx>
+          <ixx>6.85714E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.00000021</iyy>
+          <iyy>6.85714E-08</iyy>
           <iyz>0</iyz>
-          <izz>0.00000018</izz>
+          <izz>5.87755E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">-0.02251 0 -0.052 0 0 0</pose>
+        <pose degrees="true">-0.012862857 0 -0.029714286 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.012</length>
-            <radius>0.006</radius>
+            <length>0.006857143</length>
+            <radius>0.003428571</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_coupling_2</name>
@@ -1383,7 +1383,7 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="lever_rod_2a_joint" type="revolute">
-      <pose degrees="true">-0.02251 0 -0.036 0 0 180</pose>
+      <pose degrees="true">-0.012862857 0 -0.020571429 0 0 180</pose>
       <parent>lever_2_link</parent>
       <child>lever_rod_2a_link</child>
       <axis>
@@ -1401,30 +1401,30 @@ Command motor angular velocity
 
     <link name="lever_rod_1b_link">
       <inertial>
-        <pose degrees="true">0.02251 0 -0.052 0 0 0</pose>
+        <pose degrees="true">0.012862857 0 -0.029714286 0 0 0</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>0.00000021</ixx>
+          <ixx>6.85714E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.00000021</iyy>
+          <iyy>6.85714E-08</iyy>
           <iyz>0</iyz>
-          <izz>0.00000018</izz>
+          <izz>5.87755E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0.02251 0 -0.052 0 0 0</pose>
+        <pose degrees="true">0.012862857 0 -0.029714286 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.012</length>
-            <radius>0.006</radius>
+            <length>0.006857143</length>
+            <radius>0.003428571</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_coupling_1</name>
@@ -1439,7 +1439,7 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="lever_rod_1b_joint" type="ball">
-      <pose degrees="true">0.02251 0 -0.068 0 0 0</pose>
+      <pose degrees="true">0.012862857 0 -0.038857143 0 0 0</pose>
       <parent>swash_plate_up_part_link</parent>
       <child>lever_rod_1b_link</child>
       <axis>
@@ -1451,30 +1451,30 @@ Command motor angular velocity
 
     <link name="lever_rod_2b_link">
       <inertial>
-        <pose degrees="true">-0.02251 0 -0.052 0 0 0</pose>
+        <pose degrees="true">-0.012862857 0 -0.029714286 0 0 0</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>0.00000021</ixx>
+          <ixx>6.85714E-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.00000021</iyy>
+          <iyy>6.85714E-08</iyy>
           <iyz>0</iyz>
-          <izz>0.00000018</izz>
+          <izz>5.87755E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">-0.02251 0 -0.052 0 0 0</pose>
+        <pose degrees="true">-0.012862857 0 -0.029714286 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.012</length>
-            <radius>0.006</radius>
+            <length>0.006857143</length>
+            <radius>0.003428571</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/rotor_head_cw.dae</uri>
             <submesh>
               <name>lever_coupling_2</name>
@@ -1489,7 +1489,7 @@ Command motor angular velocity
       </visual>
     </link>
     <joint name="lever_rod_2b_joint" type="ball">
-      <pose degrees="true">-0.02251 0 -0.068 0 0 0</pose>
+      <pose degrees="true">-0.012862857 0 -0.038857143 0 0 0</pose>
       <parent>swash_plate_up_part_link</parent>
       <child>lever_rod_2b_link</child>
       <axis>
@@ -1501,32 +1501,32 @@ Command motor angular velocity
 
     <!-- servo rods -->
     <link name="servo_rod_3a_link">
-      <pose degrees="true">-0.045662 0.01084 -0.0651 0 0 0</pose>
+      <pose degrees="true">-0.026092571 0.006194286 -0.0372 0 0 0</pose>
       <inertial>
-        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <pose degrees="true">0 0 -0.019177143 0 0 0</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>2.2575E-06</ixx>
+          <ixx>7.37143E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>2.2575E-06</iyy>
+          <iyy>7.37143E-07</iyy>
           <iyz>0</iyz>
-          <izz>0.00000018</izz>
+          <izz>5.87755E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <pose degrees="true">0 0 -0.019177143 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.051</length>
-            <radius>0.006</radius>
+            <length>0.029142857</length>
+            <radius>0.003428571</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/servo_rod.dae</uri>
           </mesh>
         </geometry>
@@ -1549,32 +1549,32 @@ Command motor angular velocity
     </joint>
 
     <link name="servo_rod_2a_link">
-      <pose degrees="true">0.01343 -0.04493 -0.0651 0 0 0</pose>
+      <pose degrees="true">0.007674286 -0.025674286 -0.0372 0 0 0</pose>
       <inertial>
-        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <pose degrees="true">0 0 -0.019177143 0 0 0</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>2.2575E-06</ixx>
+          <ixx>7.37143E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>2.2575E-06</iyy>
+          <iyy>7.37143E-07</iyy>
           <iyz>0</iyz>
-          <izz>0.00000018</izz>
+          <izz>5.87755E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <pose degrees="true">0 0 -0.019177143 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.051</length>
-            <radius>0.006</radius>
+            <length>0.029142857</length>
+            <radius>0.003428571</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/servo_rod.dae</uri>
           </mesh>
         </geometry>
@@ -1597,32 +1597,32 @@ Command motor angular velocity
     </joint>
 
     <link name="servo_rod_1a_link">
-      <pose degrees="true">0.03219 0.03409 -0.0651 0 0 0</pose>
+      <pose degrees="true">0.018394286 0.01948 -0.0372 0 0 0</pose>
       <inertial>
-        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <pose degrees="true">0 0 -0.019177143 0 0 0</pose>
         <mass>0.010</mass>
         <inertia>
-          <ixx>2.2575E-06</ixx>
+          <ixx>7.37143E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>2.2575E-06</iyy>
+          <iyy>7.37143E-07</iyy>
           <iyz>0</iyz>
-          <izz>0.00000018</izz>
+          <izz>5.87755E-08</izz>
         </inertia>
       </inertial>
       <collision name="collision">
-        <pose degrees="true">0 0 -0.03356 0 0 0</pose>
+        <pose degrees="true">0 0 -0.019177143 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.051</length>
-            <radius>0.006</radius>
+            <length>0.029142857</length>
+            <radius>0.003428571</radius>
           </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>0.571428571 0.571428571 0.571428571</scale>
             <uri>meshes/servo_rod.dae</uri>
           </mesh>
         </geometry>
@@ -1669,10 +1669,10 @@ Command motor angular velocity
         </geometry>
       </collision>
       <visual name="visual">
-        <pose degrees="true">0.13 0 0 0 0 0</pose>
+        <pose degrees="true">0.17 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1.75 1.75 1.75</scale>
+            <scale>1 1 1</scale>
             <uri>meshes/rotor_blade.dae</uri>
           </mesh>
         </geometry>
@@ -1730,10 +1730,10 @@ Command motor angular velocity
         </geometry>
       </collision>
       <visual name="visual">
-        <pose degrees="true">0.13 0 0 0 0 0</pose>
+        <pose degrees="true">0.17 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1.75 1.75 1.75</scale>
+            <scale>1 1 1</scale>
             <uri>meshes/rotor_blade.dae</uri>
           </mesh>
         </geometry>

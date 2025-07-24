@@ -119,6 +119,11 @@
       <uri>model://runway</uri>
     </include>
 
+    <!-- <include>
+      <pose degrees="true">0 0 0.14 0 0 103</pose>
+      <uri>model://rotor_head_cw</uri>
+    </include> -->
+
     <include>
       <pose degrees="true">0 0 0.12 0 0 90</pose>
       <uri>model://helicopter</uri>
@@ -157,18 +162,6 @@
             </sphere>
           </geometry>
         </collision>
-        <visual name="visual">
-          <geometry>
-            <sphere>
-              <radius>0.25</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.3 0.3 0.3</ambient>
-            <diffuse>0.3 0.3 0.3</diffuse>
-            <specular>0.1 0.1 0.1 1</specular>
-          </material>
-        </visual>
       </link>
       <joint name="base_joint" type="fixed">
         <pose degrees="true">0 0 0 0 0 0</pose>
@@ -195,18 +188,6 @@
             </sphere>
           </geometry>
         </collision>
-        <visual name="visual">
-          <geometry>
-            <sphere>
-              <radius>0.25</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.3 0.3 0.3</ambient>
-            <diffuse>0.3 0.3 0.3</diffuse>
-            <specular>0.1 0.1 0.1 1</specular>
-          </material>
-        </visual>
       </link>
       <joint name="roll_joint" type="revolute">
         <pose degrees="true">0 0 0 0 0 0</pose>
@@ -245,18 +226,6 @@
             </sphere>
           </geometry>
         </collision>
-        <visual name="visual">
-          <geometry>
-            <sphere>
-              <radius>0.25</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.3 0.3 0.3</ambient>
-            <diffuse>0.3 0.3 0.3</diffuse>
-            <specular>0.1 0.1 0.1 1</specular>
-          </material>
-        </visual>
       </link>
       <joint name="pitch_joint" type="revolute">
         <pose degrees="true">0 0 0 0 0 0</pose>
@@ -265,18 +234,16 @@
         <axis>
           <xyz>0 1 0</xyz>
           <limit>
-            <lower>0</lower>
-            <upper>0</upper>
+            <lower>-1</lower>
+            <upper>1</upper>
           </limit>
           <dynamics>
-            <damping>0.1</damping>
-            <spring_reference>0.0</spring_reference>
-            <spring_stiffness>10.0</spring_stiffness>
+            <damping>0.01</damping>
           </dynamics>
         </axis>
       </joint>
       <include>
-        <pose degrees="true">0 0 0.35 0 0 90</pose>
+        <pose degrees="true">-0.085 0 0 0 0 0</pose>
         <uri>model://helicopter</uri>
       </include>
       <joint name="yaw_joint" type="revolute">

@@ -72,8 +72,7 @@ Command motor angular velocity
           -->
         </limit>
         <dynamics>
-          <damping>0.001</damping>
-          <friction>0</friction>
+          <damping>1.0e-3</damping>
         </dynamics>
       </axis>
       <!-- Disabled - impacts performance at high rate needed for analysis -->
@@ -128,8 +127,7 @@ Command motor angular velocity
           <upper>0.05</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
-          <friction>0</friction>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -172,7 +170,7 @@ Command motor angular velocity
       <child>guide_b_link</child>
       <axis>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -220,8 +218,7 @@ Command motor angular velocity
           <upper>0.05</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
-          <friction>0</friction>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -311,8 +308,7 @@ Command motor angular velocity
           <effort>1.0e7</effort>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
-          <friction>0</friction>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -359,7 +355,7 @@ Command motor angular velocity
       <child>servo_rod_3b_link</child>
       <axis>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -450,8 +446,7 @@ Command motor angular velocity
           <effort>1.0e7</effort>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
-          <friction>0</friction>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -498,7 +493,7 @@ Command motor angular velocity
       <child>servo_rod_2b_link</child>
       <axis>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -587,8 +582,7 @@ Command motor angular velocity
           <effort>1.0e7</effort>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
-          <friction>0</friction>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -635,7 +629,7 @@ Command motor angular velocity
       <child>servo_rod_1b_link</child>
       <axis>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -729,8 +723,7 @@ Command motor angular velocity
           <upper>1.570796</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
-          <friction>0</friction>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -784,8 +777,7 @@ Command motor angular velocity
           <upper>1.570796</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
-          <friction>0</friction>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -839,8 +831,7 @@ Command motor angular velocity
           <upper>1.570796</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
-          <friction>0</friction>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -894,8 +885,7 @@ Command motor angular velocity
           <upper>1.570796</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
-          <friction>0</friction>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -950,8 +940,7 @@ Command motor angular velocity
           <upper>0.05</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
-          <friction>0</friction>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -1001,7 +990,7 @@ Command motor angular velocity
       <child>swash_plate_up_part_link</child>
       <axis>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -1081,8 +1070,7 @@ Command motor angular velocity
           <upper>1.0e16</upper>
         </limit>
         <dynamics>
-          <damping>0.001</damping>
-          <friction>0</friction>
+          <damping>1.0e-3</damping>
         </dynamics>
       </axis>
     </joint>
@@ -1132,7 +1120,7 @@ Command motor angular velocity
       <child>blade_rod_1a_link</child>
       <axis>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -1182,7 +1170,7 @@ Command motor angular velocity
       <child>blade_rod_1b_link</child>
       <axis>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -1232,7 +1220,7 @@ Command motor angular velocity
       <child>blade_rod_2a_link</child>
       <axis>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -1282,7 +1270,7 @@ Command motor angular velocity
       <child>blade_rod_2b_link</child>
       <axis>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -1337,8 +1325,7 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
-          <friction>0</friction>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -1393,8 +1380,7 @@ Command motor angular velocity
           <upper>3.14159265</upper>
         </limit>
         <dynamics>
-          <damping>0.01</damping>
-          <friction>0</friction>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -1444,7 +1430,7 @@ Command motor angular velocity
       <child>lever_rod_1b_link</child>
       <axis>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -1494,7 +1480,7 @@ Command motor angular velocity
       <child>lever_rod_2b_link</child>
       <axis>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -1543,7 +1529,7 @@ Command motor angular velocity
       <child>servo_rod_3a_link</child>
       <axis>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -1591,7 +1577,7 @@ Command motor angular velocity
       <child>servo_rod_2a_link</child>
       <axis>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -1639,7 +1625,7 @@ Command motor angular velocity
       <child>servo_rod_1a_link</child>
       <axis>
         <dynamics>
-          <damping>0.01</damping>
+          <damping>1.0e-2</damping>
         </dynamics>
       </axis>
     </joint>
@@ -1895,10 +1881,10 @@ Command motor angular velocity
       <initial_position>0.0</initial_position>
       <use_velocity_commands>0</use_velocity_commands>
       <p_gain>1e4</p_gain>
-      <i_gain>2e3</i_gain>
+      <i_gain>1e3</i_gain>
       <d_gain>1</d_gain>
-      <i_max>1e4</i_max>
-      <i_min>-1e4</i_min>
+      <i_max>1e3</i_max>
+      <i_min>-1e3</i_min>
       <cmd_max>1e4</cmd_max>
       <cmd_min>-1e4</cmd_min>
     </plugin>
@@ -1910,10 +1896,10 @@ Command motor angular velocity
       <initial_position>0.0</initial_position>
       <use_velocity_commands>0</use_velocity_commands>
       <p_gain>1e4</p_gain>
-      <i_gain>2e3</i_gain>
+      <i_gain>1e3</i_gain>
       <d_gain>1</d_gain>
-      <i_max>1e4</i_max>
-      <i_min>-1e4</i_min>
+      <i_max>1e3</i_max>
+      <i_min>-1e3</i_min>
       <cmd_max>1e4</cmd_max>
       <cmd_min>-1e4</cmd_min>
     </plugin>
@@ -1925,10 +1911,10 @@ Command motor angular velocity
       <initial_position>0.0</initial_position>
       <use_velocity_commands>0</use_velocity_commands>
       <p_gain>1e4</p_gain>
-      <i_gain>2e3</i_gain>
+      <i_gain>1e3</i_gain>
       <d_gain>1</d_gain>
-      <i_max>1e4</i_max>
-      <i_min>-1e4</i_min>
+      <i_max>1e3</i_max>
+      <i_min>-1e3</i_min>
       <cmd_max>1e4</cmd_max>
       <cmd_min>-1e4</cmd_min>
     </plugin>

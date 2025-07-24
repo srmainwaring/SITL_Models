@@ -5,7 +5,7 @@
   <model name="helicopter">
     <link name="base_link">
       <inertial>
-        <pose degrees="true">0.207142857 0 0 0 0 0</pose>
+        <pose degrees="true">0.14526 0 0 0 0 0</pose>
         <mass>0.5</mass>
         <inertia>
           <ixx>0.001327891</ixx>
@@ -146,15 +146,15 @@
           <ixx>3.46667E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>2.68619E-06</iyy>
+          <iyy>4.70083E-06</iyy>
           <iyz>0</iyz>
-          <izz>2.86905E-06</izz>
+          <izz>5.02083E-06</izz>
         </inertia>
       </inertial>
       <collision name="collision">
         <geometry>
           <box>
-            <size>0.042857143 0.011428571 0.002285714</size>
+            <size>0.075 0.02 0.004</size>
           </box>
         </geometry>
       </collision>
@@ -175,8 +175,8 @@
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>0.10471975</lower>
-          <upper>0.10471975</upper>
+          <lower>0.13962634</lower>
+          <upper>0.13962634</upper>
         </limit>
         <dynamics>
           <damping>0.01</damping>
@@ -192,15 +192,15 @@
           <ixx>3.46667E-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>2.68619E-06</iyy>
+          <iyy>4.70083E-06</iyy>
           <iyz>0</iyz>
-          <izz>2.86905E-06</izz>
+          <izz>5.02083E-06</izz>
         </inertia>
       </inertial>
       <collision name="collision">
         <geometry>
           <box>
-            <size>0.042857143 0.011428571 0.002285714</size>
+            <size>0.075 0.02 0.004</size>
           </box>
         </geometry>
       </collision>
@@ -221,8 +221,8 @@
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>0.10471975</lower>
-          <upper>0.10471975</upper>
+          <lower>0.13962634</lower>
+          <upper>0.13962634</upper>
         </limit>
         <dynamics>
           <damping>0.01</damping>
@@ -345,7 +345,7 @@
       -->
       <control channel="3">
         <jointName>tail_motor_joint</jointName>
-        <multiplier>-1600</multiplier>
+        <multiplier>-2200</multiplier>
         <offset>-0.5</offset>
         <servo_min>1000</servo_min>
         <servo_max>2000</servo_max>

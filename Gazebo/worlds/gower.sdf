@@ -79,6 +79,7 @@
             <heightmap>
               <texture>
                 <diffuse>gower/map_gz.jpeg</diffuse>
+                <normal>gower/flat_normal.png</normal>
                 <size>17280.0001</size>
               </texture>
               <size>17280 17280 198.8</size>

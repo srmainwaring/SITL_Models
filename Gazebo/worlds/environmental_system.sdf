@@ -1,0 +1,160 @@
+<?xml version="1.0" ?>
+<!-- 
+  Environmental System Tests from a csv file
+
+  References
+    Using EnvironmentalData in a system plugin
+    gz-sim/test/worlds/hydrodynamics.sdf.in
+    gz-sim/test/worlds/hydrodynamic_currents.csv
+    gz-sim/src/systems/hydrodynamics/Hydrodynamics.hh
+    gz-sim/src/systems/hydrodynamics/Hydrodynamics.cc
+    SetWaterCurrentTable
+      - iterate over components:Environment
+      - extract enviroment-Data()
+      - gridField := gz::sim::components::EnvironmentalData
+      - gridField.frame: DataFrame<string, InMemoryTimeVaryingVolumetricGrid>
+      - the lookup key in the gridField.frame is the column label of the environment data
+      - the elements of the session[3] array are  gz::math::InMemorySession<double, double>
+        - these are tokems to improve the lookup performance in the volumetric grid
+
+    Using EnvironmentalData in a custom sensor
+    gz-sim/test/worlds/environmental_sensor.sdf.in
+    gz-sim/test/worlds/environmental_sensor.csv
+
+  Questions
+    - How can the EnvironmentalSensorSystem be used for multiple fields?
+      - Add each additional field as a column.
+      - Assumes that the data is available at same time interval and spatial position.
+    - The additional fields are set on the sensor (not the system). See test example.
+    - How may existing environment types be modified (e.g. wind)? 
+
+-->
+<sdf version="1.9">
+  <world name="map">
+    <physics name="1ms" type="ignore">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin name="gz::sim::systems::Physics"
+      filename="gz-sim-physics-system">
+    </plugin>
+    <plugin name="gz::sim::systems::Sensors"
+      filename="gz-sim-sensors-system">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin name="gz::sim::systems::UserCommands"
+      filename="gz-sim-user-commands-system">
+    </plugin>
+    <plugin name="gz::sim::systems::SceneBroadcaster"
+      filename="gz-sim-scene-broadcaster-system">
+    </plugin>
+    <plugin name="gz::sim::systems::Imu"
+      filename="gz-sim-imu-system">
+    </plugin>
+
+    <plugin name="gz::sim::systems::EnvironmentPreload"
+      filename="gz-sim-environment-preload-system">
+      <data>environmental_system_shuffled_n=10.csv</data>
+      <dimensions>
+        <time>timestamp</time>
+        <space>
+          <x>x</x>
+          <y>y</y>
+          <z>z</z>
+        </space>
+      </dimensions>
+    </plugin>
+
+    <!-- <plugin name="gz::sim::systems::EnvironmentalSystem"
+      filename="gz-sim-environmental-sensor-system">
+    </plugin> -->
+
+    <scene>
+      <ambient>1.0 1.0 1.0</ambient>
+      <background>0.8 0.8 0.8</background>
+      <sky></sky>
+    </scene>
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.8 0.8 0.8 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="model_with_sensor">
+      <pose>0 0 0.05 0 0 0</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.000166667</ixx>
+            <iyy>0.000166667</iyy>
+            <izz>0.000166667</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+        </visual>
+        <!-- <sensor name="wind_3d" type="custom" gz:type="environmental_sensor/wind_speed_3d">
+          <always_on>1</always_on>
+          <update_rate>30</update_rate>
+          <visualize>1</visualize>
+          <topic>sensors/wind_speed_3d</topic>
+          <output_format>vector3</output_format>
+          <environment_variable_x>wind_speed_x</environment_variable_x>
+          <environment_variable_y>wind_speed_y</environment_variable_y>
+          <environment_variable_z>wind_speed_z</environment_variable_z>
+          <transform_type>GLOBAL</transform_type>
+        </sensor> -->
+      </link>
+    </model>
+
+  </world>
+</sdf>

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <model name="hovercraft">
+    <link name="base_link">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.7</mass>
+        <inertia>
+          <ixx>0.002356667</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.005996667</iyy>
+          <iyz>0</iyz>
+          <izz>0.008306667</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose>0 0 0.015 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.32 0.2 0.03</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>0.0</mu>
+              <mu2>0.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <!-- <pose>0 0 0.015 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.32 0.2 0.03</size>
+          </box>
+        </geometry> -->
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+        <mesh>
+            <uri>models://hovercraft/meshes/hovercraft.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5</ambient>
+          <diffuse>0.5 0.5 0.5</diffuse>
+          <specular>0.1 0.1 0.1</specular>
+          <pbr>
+            <metal>
+              <metalness>0.2</metalness>
+              <roughness>0.2</roughness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
